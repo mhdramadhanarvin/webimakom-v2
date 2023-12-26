@@ -1,0 +1,67 @@
+:root
+{
+    --color-primary: #28284F;
+    --color-primary-dark: rgb(25, 25, 48);
+    --color-primary-transparent: hsla(240, 33%, 23%, 0.75);
+    
+    --color-secondary: #CD3B36;
+    --color-secondary-dark: rgb(168, 48, 44);
+    --color-secondary-light: #F8CFC6;
+    --color-secondary-light-2: rgb(255, 181, 164);
+    --color-secondary-transparent: rgba(205, 59, 54, 0.75);
+    
+    --color-tertienary: #006e58;
+    --color-tertienary-light: #b8fff1;
+    --color-tertienary-dark: #005343;
+    --color-tertienary-transparent: rgba(0, 110, 88, 0.75);
+
+    --color-quartenary: #f8b921;
+    --color-quartenary-dark: #d49d1d;
+    --color-quartenary-transparent: rgba(248, 184, 33, 0.75);
+
+    --color-quinary: #f8b921;
+    --color-quinary-dark: #d49d1d;
+    --color-quinary-transparent: rgba(248, 184, 33, 0.75);
+    
+    --border-radius: 10px;
+}
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Avenir';
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    outline: none !important;
+}
+
+html,body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.split
+{
+    border-width: 0.5px;
+    border-style: solid;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-color: #fff;
+}
+
+.split.primary
+{
+    border-color: var(--color-quartenary-transparent);
+}
+
+.split.tertienary
+{
+    border-color: var(--color-quartenary-transparent);
+}
+
+.split.secondary
+{
+    border-color: var(--color-quartenary-transparent);
+}

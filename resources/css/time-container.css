@@ -1,0 +1,78 @@
+/* <div class="time-container">
+    <div class="time-box">
+        <div class="time-number">
+            <span>0</span>
+            <span>0</span>
+        </div>
+        <p>Hours</p>
+    </div>
+    <div class="time-box">
+        <div class="time-number">
+            <span>0</span>
+            <span>0</span>
+        </div>
+        <p>Minutes</p>
+    </div>
+    <div class="time-box">
+        <div class="time-number">
+            <span>0</span>
+            <span>0</span>
+        </div>
+        <p>Seconds</p>
+    </div>
+</div> */
+
+.time-container
+{
+    display: flex;
+    text-align: center;
+}
+
+.time-container>.time-box>p
+{
+    color: var(--color-secondary-light);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.time-container>.time-box>.time-number
+{
+    display: flex;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.time-container>.time-box>.time-number>span
+{
+    display: block;
+    background: var(--color-secondary-light);
+    border-radius: var(--border-radius);
+    color: var(--color-secondary);
+    font-size: 24px;
+    width: 100px;
+    padding: 10px;
+}
+
+.time-container>.time-box>.time-number>span:first-child
+{
+    margin-right: 2px;
+}
+
+.time-container>.time-box>.time-number>span:last-child
+{
+    margin-left: 2px;
+}
+
+@media only screen and (max-width: 500px)
+{
+    .time-container
+    {
+        flex-direction: column;
+    }
+
+    .time-container>.time-box>p
+    {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}

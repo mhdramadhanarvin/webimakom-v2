@@ -1,0 +1,59 @@
+/* <div class="ukm-box full-image">
+    <div class="image">
+        <img src="images/teater-katak.jpg" />
+    </div>
+    <div class="overlay">
+        <div class="title">
+            <p>UKM</p>
+            <p>Bidang Seni dan Budaya</p>
+        </div>
+        <h1>Ultima Sonora</h1>
+    </div>
+</div> */
+
+.ukm-box
+{
+    display: block;
+    text-decoration: none;
+    line-height: normal;
+    height: 350px;
+}
+
+.ukm-box>.overlay
+{
+    padding: 35px;
+}
+
+.ukm-box>.overlay.none
+{
+    background: none
+}
+
+.ukm-box:hover .overlay
+{
+    transition: 0.25s all;
+    background: var(--color-secondary-transparent);
+}
+
+.ukm-box:hover .overlay.secondary
+{
+    background: var(--color-primary-transparent);
+}
+
+.ukm-box:hover .overlay.tertienary
+{
+    background: var(--color-secondary-transparent);
+}
+
+.ukm-box>.overlay>.title
+{
+    display: flex;
+    border-bottom: 1px solid #fff;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.ukm-box>.overlay>.title>p:last-child
+{
+    justify-content: flex-end;
+}

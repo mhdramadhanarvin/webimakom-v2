@@ -1,0 +1,31 @@
+/* .page
+{
+    position: absolute; 
+    width: 100%; 
+    bottom: 0; 
+    top: 0;  
+} */
+
+@keyframes slideOutLeft
+{
+    to { transform: translateY(-100%); }
+}
+
+@keyframes slideInRight
+{
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.ng-enter
+{
+    animation: slideInRight 0.5s both ease-in;
+    z-index: 8888;
+}
+
+.ng-leave
+{
+    position: absolute;
+    animation: slideOutLeft 0.5s both ease-in;
+    z-index: 9999;
+}
