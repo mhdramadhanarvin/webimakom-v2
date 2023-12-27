@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-6">
                         {{-- <span class="text-4xl">Hai...🖐</span> --}}
-                        <span class="text-4xl ">Selamat datang di</span>
+                        <span class="text-4xl">Selamat datang di</span>
                         <span class="text-4xl text-violet-500 inline-block">IMAKOM</span>
                         {{-- <span class="text-3xl text-red-500 inline-block">Ikatan Mahasiswa Komputer</span> --}}
                         <p class="text-xl">
@@ -25,7 +25,9 @@
                                 style="background:orange ; padding:15px; border-radius:15px; color:white; font-size:15px;">
                                 sobat imakom</button></a> --}}
                         {{-- <br> --}}
-                        <a href="#first-content"><button class="scroll-for-more"></button></a>
+                        {{-- <a href="#first-content">
+                        </a> --}}
+                        <button class="scroll-for-more"></button>
                     </div>
                 </div>
                 <div class="responsive-gap"></div>

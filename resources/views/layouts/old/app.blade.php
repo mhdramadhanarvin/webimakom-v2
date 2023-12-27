@@ -26,8 +26,8 @@
 
         </div>
         <div class="menu">
-            <a class="menu-item" href="/"> BERANDA</a>
-            <a class="menu-item" href="#">PENGURUS</a>
+            <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
+            <a class="menu-item" href="{{ route('structure') }}">PENGURUS</a>
             <a class="menu-item" href="#">PROGRAM KERJA</a>
             <a class="menu-item" href="#">AGENDA</a>
             <a class="menu-item" href="#">GALERY</a>
@@ -53,7 +53,7 @@
                         <p class="text-lg mb-3">
                             Ikuti selalu berita terbaru dari IMAKOM melalui sosial media
 
-                        <br />
+                            <br />
                         <div class="social-box">
                             <a href="https://www.facebook.com/imakom.unpab" class="text-lg block">
                                 <i class="fa-brands fa-facebook"></i>
