@@ -200,7 +200,7 @@
         {{-- <p></p><br /> --}}
     </div>
 
-    <section>
+    <div class="grid justify-center">
         <div class="container">
             <div class="card">
                 <div class="content">
@@ -361,5 +361,5 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </div>
 </x-new-app-layout>

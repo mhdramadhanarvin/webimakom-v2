@@ -61,7 +61,7 @@ section::after
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     margin: 40px 0;
 }
 .container .card
