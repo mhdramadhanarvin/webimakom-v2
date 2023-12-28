@@ -2,16 +2,23 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MemberResource\Pages;
-use App\Filament\Resources\MemberResource\RelationManagers;
-use App\Models\Member;
+use PositionEnum;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Member;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Fieldset;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\MemberResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\MemberResource\RelationManagers;
 
 class MemberResource extends Resource
 {
@@ -26,7 +33,21 @@ class MemberResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')->label('Nama')->required(),
+                Select::make('position')
+                    ->label('Jabatan')
+                    ->options([
+                        '1' => 'Ketua Divisi',
+                        '2' => 'Anggota Divisi',
+                    ])
+                    ->required(),
+                Select::make('division_id')
+                    ->label('Divisi')
+                    ->relationship(name: 'division', titleAttribute: 'name')
+                    ->required(),
+                // FileUpload::make('Foto')
+                //     ->image()
+                //     ->imageEditor()
             ]);
     }
 
@@ -34,7 +55,15 @@ class MemberResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->label('Nama')->searchable(),
+                TextColumn::make('position')
+                    ->sortable()
+                    ->label('Jabatan')
+                    ->badge(),
+                TextColumn::make('division.name')
+                    ->badge()
+                    ->sortable()
+                    ->searchable()
             ])
             ->filters([
                 //

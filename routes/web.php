@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StructureController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('homepage');
 // });
 Route::view('/', 'homepage')->name('home');
-Route::view('/structure', 'structure')->name('structure');
+Route::get('/structure', [StructureController::class, 'index'])->name('structure');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,3 +32,14 @@ Route::get('/dashboard', function () {
 // });
 
 // require __DIR__.'/auth.php';
+
+// Route::get('/login', function() {
+//     return redirect('/admin');
+// })->name('login');
+
+// Route::get('/register', function() {
+//     return redirect('/admin');
+// })->name('register');
+
+Route::redirect('/login', '/admin')->name('login');
+Route::redirect('/register', '/admin')->name('register');

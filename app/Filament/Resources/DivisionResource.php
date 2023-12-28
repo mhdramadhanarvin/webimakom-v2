@@ -5,10 +5,14 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\DivisionResource\Pages;
 use App\Filament\Resources\DivisionResource\RelationManagers;
 use App\Models\Division;
+use Filament\Actions\Action;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\ActionSize;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -26,7 +30,7 @@ class DivisionResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')->label('Nama')->required()
             ]);
     }
 
@@ -34,7 +38,7 @@ class DivisionResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->label('Nama Divisi')
             ])
             ->filters([
                 //
