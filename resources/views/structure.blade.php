@@ -202,197 +202,43 @@
         </div>
 
         <section>
-            <!-- START IPTEK IMAKOM -->
+            <!-- START KOMINFO IMAKOM -->
             <div class="container">
                 <div class="card" style="height:70px; border-radius: 15px; background: orange;">
                     <a href="" style="text-decoration:none;">
-                        <h4 style="margin:0 auto; color: white; font-size: 30px;">IPTEK</h4>
+                        <h4 style="margin:0 auto; color: white; font-size: 30px;">KOMINFO</h4>
                     </a>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/anggota/tway.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">TWAY<br><span style="font-size: 12px;">Ketua Korbid
-                                    IPTEK</span></h2>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/anggota/deka.png"
-                                alt=""></div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">DEKA<br><span style="font-size: 12px;">Koordinator</span>
+                            <h2>NAMA<br>
+                                <span>Kepala Divisi Kominfo</span>
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/anggota/elvia.png"
-                                alt=""></div>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">ELVIA<br><span style="font-size: 12px;">Koordinator</span>
+                            <h2>NAMA<br>
+                                <span>Anggota Divisi</span>
                             </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">JHOSUA<br><span style="font-size: 12px;">Anggota IPTEK</span>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">SIGIT</h2><br><span style="font-size: 12px;">Anggota
-                                IPTEK</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">MUHAMMAD RIZKY<br><span style="font-size: 12px;">Anggota
-                                    IPTEK</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">GITA REVANI<br><span style="font-size: 12px;">Anggota
-                                    IPTEK</span></h2>
                         </div>
                     </div>
                 </div>
             </div>
             <hr style="background:rgba(51, 46, 77, 0.82); padding:2px ; margin: 0 100px;">
-            <!-- <div  class="table-wrapper" style="padding:100px;">
-                    <table class="table-siswa"  >
-                        <thead >
-                            <tr class="text-center">
-                                <td rowspan="2"> <b> Nama</b></td>
-                                <td rowspan="2"><b>Npm</b></td>
-                                <td rowspan="2"><b>Jabatan</b></td>
-                            </tr>
 
-                        </thead>
-                        <tbody class="text-center">
-                            <tr data-id="001" >
-                                <td>
-                                    Tway
-                                </td>
-                                <td > <b> 2014370440 </b>
-
-                                </td>
-                                <td>
-                                    Ketua Koordinator
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Deka
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                     Koordinator
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Elvia
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                     Koordinator
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Jhosua
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Sigit
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                   Muhammad Risky
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Gita Revani
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> -->
-
-            <!-- AND IPTEK IMAKOM -->
+            <!-- END KOMINFO IMAKOM -->
 
             <!-- START HUMAS IMAKOM -->
             <div class="container">
@@ -402,558 +248,183 @@
                     </a>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img
-                                src="images/anggota/fernando.jpg" alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">AHMAD FERNADO<br><span style="font-size: 12px;">Ketua Korbid
-                                    HUMAS</span></h2>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/anggota/kevin.jpg"
-                                alt=""></div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">KEVIN<br><span style="font-size: 12px;">Koordinator</span>
+                            <h2>NAMA<br>
+                                <span>Kepala Divisi Humas</span>
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                            <h2>NAMA<br>
+                                <span>Anggota Divisi</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
             </div>
             <hr style="background:rgba(51, 46, 77, 0.82); padding:2px ; margin: 0 100px;">
-            <!-- <div  class="table-wrapper" style="padding:100px;">
-                        <table class="table-siswa"  >
-                            <thead >
-                                <tr class="text-center">
-                                    <td rowspan="2"> <b> Nama</b></td>
-                                    <td rowspan="2"><b>Npm</b></td>
-                                    <td rowspan="2"><b>Jabatan</b></td>
-                                </tr>
-
-                            </thead>
-                            <tbody class="text-center">
-                                <tr data-id="001" >
-                                    <td>
-                                        Tway
-                                    </td>
-                                    <td > <b> 2014370440 </b>
-
-                                    </td>
-                                    <td>
-                                        Ketua Koordinator
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Deka
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                         Koordinator
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Elvia
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                         Koordinator
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Jhosua
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Sigit
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                       Muhammad Risky
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Gita Revani
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
 
             <!-- AND HUMAS IMAKOM -->
 
 
-            <!-- START KOMINFO IMAKOM -->
+            <!-- START E-SPORT IMAKOM -->
             <div class="container">
                 <div class="card" style="height:70px; border-radius: 15px; background: orange;">
                     <a href="" style="text-decoration:none;">
-                        <h4 style="margin:0 auto; color: white; font-size: 30px;">KOMINFO</h4>
+                        <h4 style="margin:0 auto; color: white; font-size: 30px;">E-SPORT</h4>
                     </a>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                            <h2>NAMA<br>
+                                <span>Kepala Divisi E-Sport</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                            <h2>NAMA<br>
+                                <span>Anggota Divisi</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
             </div>
             <hr style="background:rgba(51, 46, 77, 0.82); padding:2px ; margin: 0 100px;">
-            <!-- <div  class="table-wrapper" style="padding:100px;">
-                    <table class="table-siswa"  >
-                        <thead >
-                            <tr class="text-center">
-                                <td rowspan="2"> <b> Nama</b></td>
-                                <td rowspan="2"><b>Npm</b></td>
-                                <td rowspan="2"><b>Jabatan</b></td>
-                            </tr>
 
-                        </thead>
-                        <tbody class="text-center">
-                            <tr data-id="001" >
-                                <td>
-                                    Tway
-                                </td>
-                                <td > <b> 2014370440 </b>
-
-                                </td>
-                                <td>
-                                    Ketua Koordinator
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Deka
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                     Koordinator
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Elvia
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                     Koordinator
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Jhosua
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Sigit
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                   Muhammad Risky
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-
-                            <tr data-id="001" >
-                                <td>
-                                    Gita Revani
-                                </td>
-                                <td > <b> - </b>
-
-                                </td>
-                                <td>
-                                    Anggota
-                                </td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> -->
             <!-- AND KOMINFO IMAKOM -->
 
-            <!-- START DANUS IMAKOM -->
+            <!-- START KEWIRAUSAHAAN IMAKOM -->
             <div class="container">
                 <div class="card" style="height:70px; border-radius: 15px; background: orange;">
                     <a href="" style="text-decoration:none;">
-                        <h4 style="margin:0 auto; color: white; font-size: 30px;">DANUS</h4>
+                        <h4 style="margin:0 auto; color: white; font-size: 30px;">KEWIRAUSAHAAN</h4>
                     </a>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                            <h2>NAMA<br>
+                                <span>Kepala Divisi Kewirausahaan</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" style="width: 200px; height: 300px;">
+                <div class="card max-w-52 max-h-64">
                     <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
                         <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; height: 300px;">
-                    <div class="content">
-                        <div class="imgBx" style="width: 120px; height: 120px;"><img src="images/gambar icon.jpg"
-                                alt=""></div>
-                        <div class="contentBx">
-                            <h2 style="font-size: 15px;">NAMA<br><span style="font-size: 12px;">JABATAN</span></h2>
+                            <h2>NAMA<br>
+                                <span>Anggota Divisi</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div  class="table-wrapper" style="padding:100px;">
-                        <table class="table-siswa"  >
-                            <thead >
-                                <tr class="text-center">
-                                    <td rowspan="2"> <b> Nama</b></td>
-                                    <td rowspan="2"><b>Npm</b></td>
-                                    <td rowspan="2"><b>Jabatan</b></td>
-                                </tr>
+            <hr style="background:rgba(51, 46, 77, 0.82); padding:2px ; margin: 0 100px;">
+            <!-- AND KEWIRAUSAHAAN IMAKOM -->
+            <!-- START PENDIDIKAN IMAKOM -->
+            <div class="container">
+                <div class="card" style="height:70px; border-radius: 15px; background: orange;">
+                    <a href="" style="text-decoration:none;">
+                        <h4 style="margin:0 auto; color: white; font-size: 30px;">PENDIDIKAN</h4>
+                    </a>
+                </div>
 
-                            </thead>
-                            <tbody class="text-center">
-                                <tr data-id="001" >
-                                    <td>
-                                        Tway
-                                    </td>
-                                    <td > <b> 2014370440 </b>
-
-                                    </td>
-                                    <td>
-                                        Ketua Koordinator
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Deka
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                         Koordinator
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Elvia
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                         Koordinator
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Jhosua
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Sigit
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                       Muhammad Risky
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-
-                                <tr data-id="001" >
-                                    <td>
-                                        Gita Revani
-                                    </td>
-                                    <td > <b> - </b>
-
-                                    </td>
-                                    <td>
-                                        Anggota
-                                    </td>
-
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="card max-w-52 max-h-64">
+                    <div class="content">
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>NAMA<br>
+                                <span>Kepala Divisi Pendidikan</span>
+                            </h2>
+                        </div>
                     </div>
-         -->
+                </div>
 
-            <!-- AND DANUS IMAKOM -->
+                <div class="card max-w-52 max-h-64">
+                    <div class="content">
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>NAMA<br>
+                                <span>Anggota Divisi</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr style="background:rgba(51, 46, 77, 0.82); padding:2px ; margin: 0 100px;">
+            <!-- AND PENDIDIKAN IMAKOM -->
+            <!-- START PRESTASI IMAKOM -->
+            <div class="container">
+                <div class="card" style="height:70px; border-radius: 15px; background: orange;">
+                    <a href="" style="text-decoration:none;">
+                        <h4 style="margin:0 auto; color: white; font-size: 30px;">PRESTASI</h4>
+                    </a>
+                </div>
+
+                <div class="card max-w-52 max-h-64">
+                    <div class="content">
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>NAMA<br>
+                                <span>Kepala Divisi Prestasi</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card max-w-52 max-h-64">
+                    <div class="content">
+                        <div class="imgBx max-h-32 max-w-32">
+                            <img src="{{ url('./images/default.jpg') }}" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>NAMA<br>
+                                <span>Anggota Divisi</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- <hr style="background:rgba(51, 46, 77, 0.82); padding:2px ; margin: 0 100px;"> --}}
+            <!-- AND PRESTASI IMAKOM -->
         </section>
 
         <!-- <section> -->
