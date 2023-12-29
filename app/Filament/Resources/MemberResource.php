@@ -29,6 +29,7 @@ class MemberResource extends Resource
 
     protected static ?string $navigationGroup = 'Organisasi';
     protected static ?string $navigationLabel = 'Anggota';
+    protected static ?string $label = "Anggota.";
 
     public static function form(Form $form): Form
     {

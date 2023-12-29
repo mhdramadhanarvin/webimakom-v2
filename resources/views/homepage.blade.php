@@ -204,33 +204,39 @@
 
     <div class="grid justify-center">
         <div class="container">
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                    <div class="contentBx">
-                        <h2>Ahmad Fernando<br><span>Ketua Umum</span></h2>
+            @foreach ($lead as $l)
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="{{ $l->photo == null ? url('./images/default.jpg') : asset('storage/' . $l->photo) }}"
+                                alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>{{ $l->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                            </h2>
+                        </div>
                     </div>
-                </div>
 
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="#">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="{{ $l->facebook ?? '#' }}">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="{{ $l->instagram ?? '#' }}">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="{{ $l->linkedin ?? '#' }}">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            @endforeach
+            {{-- <div class="card">
                 <div class="content">
                     <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
                     <div class="contentBx">
@@ -255,36 +261,42 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
         <div class="container">
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                    <div class="contentBx">
-                        <h2>Diza Salsabila<br><span>Sekretaris Umum</span></h2>
+            @foreach ($secretary as $secr)
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="{{ $secr->photo == null ? url('./images/default.jpg') : asset('storage/' . $secr->photo) }}"
+                                alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>{{ $secr->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                            </h2>
+                        </div>
                     </div>
-                </div>
 
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="#">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="{{ $secr->facebook ?? '#' }}">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="{{ $secr->instagram ?? '#' }}">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="{{ $secr->linkedin ?? '#' }}">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            @endforeach
+            {{-- <div class="card">
                 <div class="content">
                     <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
                     <div class="contentBx">
@@ -361,7 +373,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </div>
 </x-new-app-layout>

@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StructureController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('homepage');
-// });
-Route::view('/', 'homepage')->name('home');
+// Route::view('/', 'homepage')->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/structure', [StructureController::class, 'index'])->name('structure');
 
 Route::get('/dashboard', function () {
@@ -32,14 +31,6 @@ Route::get('/dashboard', function () {
 // });
 
 // require __DIR__.'/auth.php';
-
-// Route::get('/login', function() {
-//     return redirect('/admin');
-// })->name('login');
-
-// Route::get('/register', function() {
-//     return redirect('/admin');
-// })->name('register');
 
 Route::redirect('/login', '/admin')->name('login');
 Route::redirect('/register', '/admin')->name('register');

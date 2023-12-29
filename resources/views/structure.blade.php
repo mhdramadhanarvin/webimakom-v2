@@ -29,175 +29,79 @@
         </div>
         <div class="grid justify-center">
             <div class="container">
-                <div class="card"
-                    style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
-                    <div class="content">
-                        <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                        <div class="contentBx">
-                            <h2>Ahmad Fernando<br><span>Ketua Umum</span></h2>
+                @foreach ($lead as $l)
+                    <div class="card"
+                        style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="{{ $l->photo == null ? url('./images/default.jpg') : asset('storage/' . $l->photo) }}"
+                                    alt="">
+                            </div>
+                            <div class="contentBx">
+                                <h2>{{ $l->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                                </h2>
+                            </div>
                         </div>
-                    </div>
 
-                    <ul class="sci">
-                        <li style="--i:1">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card"
-                    style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
-                    <div class="content">
-                        <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                        <div class="contentBx">
-                            <h2>Tway Wandiki Lumban Gaol<br><span>Wakil Ketua Umum</span></h2>
-                        </div>
+                        <ul class="sci">
+                            <li style="--i:1">
+                                <a href="{{ $l->facebook ?? '#' }}">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li style="--i:2">
+                                <a href="{{ $l->instagram ?? '#' }}">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li style="--i:3">
+                                <a href="{{ $l->linkedin ?? '#' }}">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <ul class="sci">
-                        <li style="--i:1">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                @endforeach
             </div>
             <div class="container">
-                <div class="card"
-                    style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
-                    <div class="content">
-                        <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                        <div class="contentBx">
-                            <h2>Diza Salsabila<br><span>Sekretaris Umum</span></h2>
+                @foreach ($secretary as $secr)
+                    <div class="card"
+                        style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="{{ $secr->photo == null ? url('./images/default.jpg') : asset('storage/' . $secr->photo) }}"
+                                    alt="">
+                            </div>
+                            <div class="contentBx">
+                                <h2>{{ $secr->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                                </h2>
+                            </div>
                         </div>
-                    </div>
 
-                    <ul class="sci">
-                        <li style="--i:1">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card"
-                    style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
-                    <div class="content">
-                        <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                        <div class="contentBx">
-                            <h2>Ayu Nadia Lestari<br><span>Wakil Sekretaris Umum</span></h2>
-                        </div>
+                        <ul class="sci">
+                            <li style="--i:1">
+                                <a href="{{ $secr->facebook ?? '#' }}">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li style="--i:2">
+                                <a href="{{ $secr->instagram ?? '#' }}">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li style="--i:3">
+                                <a href="{{ $secr->linkedin ?? '#' }}">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <ul class="sci">
-                        <li style="--i:1">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card"
-                    style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
-                    <div class="content">
-                        <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                        <div class="contentBx">
-                            <h2>Sutra Nurani<br><span>Bendahara Umum</span></h2>
-                        </div>
-                    </div>
-
-                    <ul class="sci">
-                        <li style="--i:1">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card"
-                    style="background:transparent; border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
-                    <div class="content">
-                        <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                        <div class="contentBx">
-                            <h2>Muhammad Rizki<br><span>Wakil Bendahara Umum</span></h2>
-                        </div>
-                    </div>
-
-                    <ul class="sci">
-                        <li style="--i:1">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3">
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                @endforeach
             </div>
         </div>
 
         <div style="text-align: center; ">
-            <h3 class="fw-black"> DIVISI IMAKOM <br></h3>
+            <h3 class="fw-black"> DIVISI IMAKOM </h3>
             <p style="font-size:20px; color: orange;"></p><br />
         </div>
 
@@ -219,7 +123,8 @@
                         <div class="card max-w-52 max-h-64">
                             <div class="content">
                                 <div class="imgBx max-h-32 max-w-32">
-                                    <img src="{{ $member->photo == null ? url('./images/default.jpg') : asset('storage/'.$member->photo) }}" alt="">
+                                    <img src="{{ $member->photo == null ? url('./images/default.jpg') : asset('storage/' . $member->photo) }}"
+                                        alt="">
                                 </div>
                                 <div class="contentBx">
                                     <h2>{{ $member->name }}<br>

@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Enums\PositionEnum;
+use App\Enums\MemberPositionEnum;
 use App\Models\Division;
 use App\Models\Member;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class MemberDivisionSeeder extends Seeder
@@ -20,12 +19,12 @@ class MemberDivisionSeeder extends Seeder
         foreach ($division as $div) {
             Member::create([
                 'name' => "Ketua Divisi",
-                'position' => PositionEnum::Leader,
+                'position' => MemberPositionEnum::Leader,
                 'division_id' => $div->id
             ]);
             Member::create([
                 'name' => "Anggota",
-                'position' => PositionEnum::Member,
+                'position' => MemberPositionEnum::Member,
                 'division_id' => $div->id
             ]);
         }

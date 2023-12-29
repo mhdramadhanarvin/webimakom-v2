@@ -2,11 +2,10 @@
 
 namespace App\Enums;
 
-use Illuminate\Database\Eloquent\Model;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 
-enum PositionEnum: string implements HasLabel, HasColor
+enum MemberPositionEnum: string implements HasLabel, HasColor
 {
     case Leader = "1";
     case Member = "2";

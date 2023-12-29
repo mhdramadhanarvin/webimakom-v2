@@ -25,6 +25,7 @@ class DivisionResource extends Resource
 
     protected static ?string $navigationGroup = 'Organisasi';
     protected static ?string $navigationLabel = 'Divisi';
+    protected static ?string $label = "Divisi.";
 
     public static function form(Form $form): Form
     {
