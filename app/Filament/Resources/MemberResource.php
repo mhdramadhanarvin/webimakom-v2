@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\MemberResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\MemberResource\RelationManagers;
+use Filament\Tables\Columns\ImageColumn;
 
 class MemberResource extends Resource
 {
@@ -45,9 +46,13 @@ class MemberResource extends Resource
                     ->label('Divisi')
                     ->relationship(name: 'division', titleAttribute: 'name')
                     ->required(),
-                // FileUpload::make('Foto')
-                //     ->image()
-                //     ->imageEditor()
+                FileUpload::make('photo')
+                    ->label('Foto')
+                    ->image()
+                    ->imageEditor()
+                    ->imageResizeMode('cover')
+                    ->imageCropAspectRatio('1:1')
+
             ]);
     }
 
@@ -63,7 +68,9 @@ class MemberResource extends Resource
                 TextColumn::make('division.name')
                     ->badge()
                     ->sortable()
-                    ->searchable()
+                    ->searchable(),
+                ImageColumn::make('photo')
+                    ->defaultImageUrl(url('./images/default.jpg'))
             ])
             ->filters([
                 //

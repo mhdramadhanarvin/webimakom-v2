@@ -17,6 +17,7 @@ return new class extends Migration
             $table->enum('position', [1, 2])->comment('1=Ketua Divisi, 2=Anggota Divisi');
             $table->unsignedBigInteger('division_id');
             $table->foreign('division_id')->references('id')->on('divisions');
+            $table->text('photo')->nullable();
             $table->timestamps();
         });
     }
