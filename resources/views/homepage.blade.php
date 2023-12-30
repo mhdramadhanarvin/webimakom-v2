@@ -236,32 +236,6 @@
                     </ul>
                 </div>
             @endforeach
-            {{-- <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                    <div class="contentBx">
-                        <h2>Tway Wandiki Lumban Gaol<br><span>Wakil Ketua Umum</span></h2>
-                    </div>
-                </div>
-
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="#">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div> --}}
         </div>
         <div class="container">
             @foreach ($secretary as $secr)
@@ -296,84 +270,6 @@
                     </ul>
                 </div>
             @endforeach
-            {{-- <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                    <div class="contentBx">
-                        <h2>Ayu Nadia Lestari<br><span>Wakil Sekretaris Umum</span></h2>
-                    </div>
-                </div>
-
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="#">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                    <div class="contentBx">
-                        <h2>Sutra Nurani<br><span>Bendahara Umum</span></h2>
-                    </div>
-                </div>
-
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="#">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="{{ url('./images/default.jpg') }}" alt=""></div>
-                    <div class="contentBx">
-                        <h2>Muhammad Rizki<br><span>Wakil Bendahara Umum</span></h2>
-                    </div>
-                </div>
-
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="#">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div> --}}
         </div>
     </div>
 </x-new-app-layout>
