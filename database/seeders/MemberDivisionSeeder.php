@@ -18,12 +18,12 @@ class MemberDivisionSeeder extends Seeder
 
         foreach ($division as $div) {
             Member::create([
-                'name' => "Ketua Divisi",
+                'name' => "Nama",
                 'position' => MemberPositionEnum::Leader,
                 'division_id' => $div->id
             ]);
             Member::create([
-                'name' => "Anggota",
+                'name' => "Nama",
                 'position' => MemberPositionEnum::Member,
                 'division_id' => $div->id
             ]);
