@@ -45,6 +45,7 @@ class GalleryResource extends Resource
                             ->image()
                             ->imageEditor()
                             ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('1:1')
                             ->required(),
                         Textarea::make('caption')
                     ])
@@ -58,6 +59,7 @@ class GalleryResource extends Resource
                 ImageColumn::make('photo')
                     ->defaultImageUrl(url('./images/default.jpg')),
                 TextColumn::make('caption')
+                    ->limit(50)
                     ->searchable(),
                 TextColumn::make('category_gallery.name')
                     ->label('Kategori')

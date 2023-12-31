@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
             BoardSeeder::class,
             AdminSeeder::class,
             DivisionSeeder::class,
-            MemberDivisionSeeder::class
+            MemberDivisionSeeder::class,
+            CategoryGallerySeeder::class,
+            GallerySeeder::class
         ]);
     }
 }
