@@ -43,6 +43,12 @@ compose install
 ./vendor/bin/sail up -d
 ./vendor/bin/sail npm install
 ./vendor/bin/sail artisan migrate:refresh --seed
+./vendor/bin/sail npm run build
+```
+
+Saat proses development selalu jalankan perintah ini
+
+```$
 ./vendor/bin/sail npm run dev
 ```
 
@@ -56,6 +62,12 @@ compose install
 php artisan up -d
 npm install
 php artisan migrate:refresh --seed
+npm run build
+```
+
+Saat proses development selalu jalankan perintah ini
+
+```$
 npm run dev
 ```
 

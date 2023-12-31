@@ -4,7 +4,7 @@ import Alpine from "alpinejs";
 
 import "../css/globals.css";
 import "../css/loader.css";
-import "../css/fonts.css";
+// import "../css/fonts.css";
 import "../css/typography.css";
 import "../css/container.css";
 import "../css/columner.css";
