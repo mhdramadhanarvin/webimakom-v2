@@ -15,7 +15,7 @@ class Member extends Model
         'position' => MemberPositionEnum::class,
     ];
 
-    protected $fillable = ['name', 'position', 'user_id', 'division_id', 'photo'];
+    protected $fillable = ['name', 'position', 'division_id', 'photo'];
 
     public function division(): BelongsTo
     {

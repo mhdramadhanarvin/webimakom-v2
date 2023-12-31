@@ -2,31 +2,36 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CategoryGaleryResource\Pages;
-use App\Filament\Resources\CategoryGaleryResource\RelationManagers;
-use App\Models\CategoryGalery;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\CategoryGallery;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Grid;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\CategoryGalleryResource\Pages;
+use App\Filament\Resources\CategoryGalleryResource\RelationManagers;
 
-class CategoryGaleryResource extends Resource
+class CategoryGalleryResource extends Resource
 {
-    protected static ?string $model = CategoryGalery::class;
+    protected static ?string $model = CategoryGallery::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Galeri';
     protected static ?string $navigationLabel = 'Kategori';
+    protected static ?string $label = "Kategori.";
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')->label('Nama Kategori')->required()
             ]);
     }
 
@@ -34,7 +39,8 @@ class CategoryGaleryResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->label('Nama Kategori'),
+                TextColumn::make('galleries_count')->label('Jumlah Galeri')->counts('galleries')
             ])
             ->filters([
                 //
@@ -53,7 +59,7 @@ class CategoryGaleryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageCategoryGaleries::route('/'),
+            'index' => Pages\ManageCategoryGalleries::route('/'),
         ];
     }
 }
