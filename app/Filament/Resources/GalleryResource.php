@@ -27,7 +27,8 @@ class GalleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Galeri';
-    protected static ?string $navigationLabel = 'Galeri';
+    protected static ?string $navigationLabel = 'Dokumentasi';
+    protected static ?string $label = "Dokumentasi.";
 
     public static function form(Form $form): Form
     {

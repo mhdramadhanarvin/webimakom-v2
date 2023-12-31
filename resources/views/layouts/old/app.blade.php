@@ -29,8 +29,8 @@
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
             <a class="menu-item" href="{{ route('structure') }}">PENGURUS</a>
             <a class="menu-item" href="#">PROGRAM KERJA</a>
-            <a class="menu-item" href="#">AGENDA</a>
-            <a class="menu-item" href="{{ route('gallery') }}">GALERY</a>
+            <a class="menu-item" href="#">ARTIKEL</a>
+            <a class="menu-item" href="{{ route('gallery') }}">DOKUMENTASI</a>
         </div>
 
         <div class="nav-icon4" id="mobile-nav">
