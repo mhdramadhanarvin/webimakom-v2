@@ -73,6 +73,6 @@ npm run dev
 
 ### Access
 
-Home page dapat diakses pada [http://localhost](http://localhost)
-Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin)
+Home page dapat diakses pada [http://localhost](http://localhost)\
+Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin)\
 Untuk dapat akses admin panel gunakan akun ini, email: `admin@gmail.com` and password `admin`.
