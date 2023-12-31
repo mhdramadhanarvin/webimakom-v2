@@ -12,9 +12,8 @@
                     <div class="col-6">
                         <h3 class="fw-black" style=" color:tomato;">GALERY KEGIATAN IMAKOM </h3>
                         <p>Dokumentasi dari setiap kegiatan yang dilakukan oleh imakom.</p>
-                        <a href="#first-content"><button class="scroll-for-more"></button></a>
+                        <button class="scroll-for-more"></button>
                     </div>
-                    <div class="responsive-gap"></div>
                 </div>
             </div>
         </div>
@@ -74,81 +73,6 @@
                         </div>
                     </div>
                 @endforeach
-                {{-- <h4 class="inline">IMAKOM TAMASYA RIA</h4> --}}
-                {{-- <div class="-m-1 flex flex-wrap md:-m-2">
-                    <div class="flex w-1/3 flex-wrap">
-                        <div class="relative w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-                            <div
-                                class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
-                                <div class="flex-row text-center">
-                                    <h3 class="text-gray-50 font-bold text-lg">Be careful on the way.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex w-1/3 flex-wrap">
-                        <div class="relative w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
-                            <div
-                                class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
-                                <div class="flex-row text-center">
-                                    <h3 class="text-gray-50 font-bold text-lg">Be careful on the way.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex w-1/3 flex-wrap">
-                        <div class="relative w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
-                            <div
-                                class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
-                                <div class="flex-row text-center">
-                                    <h3 class="text-gray-50 font-bold text-lg">Be careful on the way.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex w-1/3 flex-wrap">
-                        <div class="relative w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
-                            <div
-                                class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
-                                <div class="flex-row text-center">
-                                    <h3 class="text-gray-50 font-bold text-lg">Be careful on the way.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex w-1/3 flex-wrap">
-                        <div class="relative w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" />
-                            <div
-                                class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
-                                <div class="flex-row text-center">
-                                    <h3 class="text-gray-50 font-bold text-lg">Be careful on the way.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex w-1/3 flex-wrap">
-                        <div class="relative w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
-                            <div
-                                class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
-                                <div class="flex-row text-center">
-                                    <h3 class="text-gray-50 font-bold text-lg">Be careful on the way.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>

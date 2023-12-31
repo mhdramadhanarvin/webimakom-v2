@@ -11,10 +11,7 @@
                     </div>
                     <div class="col-6">
                         <h3 class="fw-black text-red-600">PENGURUS & ANGGOTA KEORGANISASIAN 2023/2024</h3>
-                        {{-- <p>Pemilihan untuk pengurus keorganisasian untuk periode 2023/2024 akan dilaksanakan bulan Maret 2023</p><br/> --}}
                         <button class="scroll-for-more"></button>
-                        {{-- <a href="#first-content">
-                        </a> --}}
                     </div>
                 </div>
                 <div class="responsive-gap"></div>
