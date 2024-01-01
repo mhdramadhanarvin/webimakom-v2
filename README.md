@@ -43,6 +43,8 @@ compose install
 ./vendor/bin/sail up -d
 ./vendor/bin/sail npm install
 ./vendor/bin/sail artisan migrate:refresh --seed
+./vendor/bin/sail artisan shield:generate --all
+./vendor/bin/sail artisan shield:super-admin --user=1
 ./vendor/bin/sail npm run build
 ```
 
@@ -62,6 +64,8 @@ compose install
 php artisan up -d
 npm install
 php artisan migrate:refresh --seed
+php artisan shield:generate --all
+php artisan shield:super-admin --user=1
 npm run build
 ```
 
