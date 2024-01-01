@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\UserResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\UserResource\RelationManagers;
+use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 
 class UserResource extends Resource
@@ -32,7 +33,6 @@ class UserResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->label('Nama')
-                    ->autocapitalize('words')
                     ->required(),
                 TextInput::make('email')
                     ->email()
@@ -49,7 +49,12 @@ class UserResource extends Resource
                             ->password()
                             ->dehydrated(fn ($state) => filled($state))
                             ->required(fn (string $context): bool => $context === 'create')
-                    ])
+                    ]),
+                Select::make('roles')
+                    ->relationship('roles', 'name')
+                    ->multiple()
+                    ->preload()
+                    ->searchable()
             ]);
     }
 
@@ -91,5 +96,10 @@ class UserResource extends Resource
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->where('email', '!=', 'admin@gmail.com');
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }
