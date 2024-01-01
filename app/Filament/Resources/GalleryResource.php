@@ -27,8 +27,16 @@ class GalleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Galeri';
-    protected static ?string $navigationLabel = 'Dokumentasi';
-    protected static ?string $label = "Dokumentasi.";
+
+    public static function getPluralLabel(): string
+    {
+        return __('Dokumentasi');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('Dokumentasi');
+    }
 
     public static function form(Form $form): Form
     {
@@ -90,5 +98,10 @@ class GalleryResource extends Resource
         return [
             'index' => Pages\ManageGalleries::route('/'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }
