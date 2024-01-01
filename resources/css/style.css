@@ -812,10 +812,6 @@ section{
 
 @media (max-width:768px){
 
-   body{
-      padding-bottom: 10rem;
-   }
-
    #search-btn{
       display: inline-block;
    }
