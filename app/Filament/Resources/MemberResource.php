@@ -28,8 +28,16 @@ class MemberResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Organisasi';
-    protected static ?string $navigationLabel = 'Anggota';
-    protected static ?string $label = "Anggota.";
+
+    public static function getPluralLabel(): string
+    {
+        return __('Anggota');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('Anggota');
+    }
 
     public static function form(Form $form): Form
     {
@@ -92,5 +100,10 @@ class MemberResource extends Resource
         return [
             'index' => Pages\ManageMembers::route('/'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

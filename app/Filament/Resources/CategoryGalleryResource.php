@@ -24,8 +24,16 @@ class CategoryGalleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Galeri';
-    protected static ?string $navigationLabel = 'Kategori';
-    protected static ?string $label = "Kategori.";
+
+    public static function getPluralLabel(): string
+    {
+        return __('Kategori');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('Kategori');
+    }
 
     public static function form(Form $form): Form
     {

@@ -63,7 +63,7 @@
                                                 class="absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
                                                 <div class="flex-row text-center">
                                                     <h3 class="text-gray-50 font-bold text-lg">
-                                                        {{ str()->limit($gallery->caption, 100, '...') }}
+                                                        {{ str()->limit($gallery->caption, 100, '...') ?? 'No Caption' }}
                                                     </h3>
                                                 </div>
                                             </div>

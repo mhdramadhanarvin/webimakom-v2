@@ -20,7 +20,16 @@ class ArticleResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static ?string $navigationGroup = 'Artikel';
-    protected static ?string $navigationLabel = 'Artikel';
+
+    public static function getPluralLabel(): string
+    {
+        return __('Artikel');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('Artikel');
+    }
 
     public static function form(Form $form): Form
     {

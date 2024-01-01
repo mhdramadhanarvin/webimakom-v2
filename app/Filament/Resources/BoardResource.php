@@ -30,8 +30,16 @@ class BoardResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Organisasi';
-    protected static ?string $navigationLabel = 'Pengurus';
-    protected static ?string $label = "Pengurus.";
+
+    public static function getPluralLabel(): string
+    {
+        return __('Pengurus');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('Pengurus');
+    }
 
     public static function form(Form $form): Form
     {

@@ -24,8 +24,16 @@ class DivisionResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Organisasi';
-    protected static ?string $navigationLabel = 'Divisi';
-    protected static ?string $label = "Divisi.";
+
+    public static function getPluralLabel(): string
+    {
+        return __('Divisi');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('Divisi');
+    }
 
     public static function form(Form $form): Form
     {
@@ -39,7 +47,8 @@ class DivisionResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Nama Divisi')
+                TextColumn::make('name')->label('Nama Divisi'),
+                TextColumn::make('members_count')->label('Jumlah Anggota')->counts('members')
             ])
             ->filters([
                 //
@@ -60,5 +69,10 @@ class DivisionResource extends Resource
         return [
             'index' => Pages\ManageDivisions::route('/'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }
