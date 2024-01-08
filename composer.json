@@ -17,7 +17,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "spatie/laravel-permission": "^6.3"
+        "spatie/laravel-permission": "^6.3",
+        "webbingbrasil/filament-copyactions": "3.x"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -72,6 +73,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
