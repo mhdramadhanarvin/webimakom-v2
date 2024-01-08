@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\GalleryController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GalleryController;
+// use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StructureController;
 
 /*
@@ -21,6 +23,8 @@ use App\Http\Controllers\StructureController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/structure', [StructureController::class, 'index'])->name('structure');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+Route::get('/article', [ArticleController::class, 'index'])->name('article');
+Route::get('/article/{slug}', [ArticleController::class, 'detail'])->name('article.detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

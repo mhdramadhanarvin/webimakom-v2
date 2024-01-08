@@ -29,7 +29,7 @@
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
             <a class="menu-item" href="{{ route('structure') }}">PENGURUS</a>
             <a class="menu-item" href="#">PROGRAM KERJA</a>
-            <a class="menu-item" href="#">ARTIKEL</a>
+            <a class="menu-item" href="{{ route('article') }}">ARTIKEL</a>
             <a class="menu-item" href="{{ route('gallery') }}">DOKUMENTASI</a>
         </div>
 
@@ -41,15 +41,15 @@
     </nav>
     {{ $slot }}
     <!-- finish struktur -->
-    <div class="fullscreen max-h-dvh full-image">
+    <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
             <img src="{{ url('./images/footer.jpeg') }}" />
         </div>
-        <div class="overlay content-center first-content tertienary max-h-dvh">
+        <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
                     <div class="col-6">
-                        <h4 class="block-title">Berkarya Bersama Ikatan Mahasiswa Komputer</h4>
+                        <h2 class="block-title text-2xl">Berkarya Bersama Ikatan Mahasiswa Komputer</h2>
                         <p class="text-lg mb-3">
                             Ikuti selalu berita terbaru dari IMAKOM melalui sosial media
 
@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-    <div class="text-center p-3" style="background-color:rgba(51, 46, 77, 0.82);">
+    <div class="text-center text-slate-300 p-3" style="background-color:rgba(51, 46, 77, 0.82);">
         <span>Copyright &copy; 2023 All Right Reserved. Ikatan Mahasiswa Komputer.</span>
     </div>
 

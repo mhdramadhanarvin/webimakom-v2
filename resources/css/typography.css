@@ -3,7 +3,7 @@ p, a
     font-size: 14px;
     line-height: 175%;
 }
-
+/*
 h1,h2,h3,h4,h5,h6
 {
     margin-bottom: 10px;
@@ -16,7 +16,7 @@ h1
     line-height: 95%;
 }
 
-h2 
+h2
 {
     font-size: 48px;
     padding-bottom: 15px;
@@ -41,7 +41,7 @@ h5
 h6
 {
     font-size: 14px;
-}
+} */
 
 .serif
 {

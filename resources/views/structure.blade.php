@@ -1,5 +1,5 @@
 <x-new-app-layout>
-    <div class="fullscreen full-image">
+    <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
             <img src="{{ url('./images/agenda.jpeg') }}" />
         </div>
@@ -10,7 +10,7 @@
                         <!-- <img class="responsive-img logo-stempel" src="images/logo imakom.png" /> -->
                     </div>
                     <div class="col-6">
-                        <h3 class="fw-black text-red-600">PENGURUS & ANGGOTA KEORGANISASIAN 2023/2024</h3>
+                        <h1 class="text-3xl text-red-600">PENGURUS & ANGGOTA KEORGANISASIAN 2023/2024</h1>
                         <button class="scroll-for-more"></button>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
     <!-- ARTIKEL -->
     <div class="tertienary bg-[#2a263dd1]">
         <div class="text-center pt-20">
-            <h3 class="fw-black">STRUKTUR KEPENGURUSAN IMAKOM</h3>
+            <h2 class="text-3xl">STRUKTUR KEPENGURUSAN IMAKOM</h2>
         </div>
         <div class="grid justify-center">
             <div class="container">
@@ -35,7 +35,7 @@
                                     alt="">
                             </div>
                             <div class="contentBx">
-                                <h2>{{ $l->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                                <h2 class="text-xl">{{ $l->name }}<br><span class="text-yellow-300 text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
                                 </h2>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     alt="">
                             </div>
                             <div class="contentBx">
-                                <h2>{{ $secr->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                                <h2 class="text-xl">{{ $secr->name }}<br><span class="text-yellow-300 text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
                                 </h2>
                             </div>
                         </div>
@@ -124,8 +124,8 @@
                                         alt="">
                                 </div>
                                 <div class="contentBx">
-                                    <h2>{{ $member->name }}<br>
-                                        <span>{{ $member->position->value == '1' ? 'Ketua Divisi' : 'Anggota Divisi' }}</span>
+                                    <h2 class="xl">{{ $member->name }}<br>
+                                        <span class="text-lg">{{ $member->position->value == '1' ? 'Ketua Divisi' : 'Anggota Divisi' }}</span>
                                     </h2>
                                 </div>
                             </div>
