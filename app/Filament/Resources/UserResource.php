@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\UserResource\RelationManagers;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\FileUpload;
 
 class UserResource extends Resource
 {
@@ -58,9 +59,14 @@ class UserResource extends Resource
                             ->dehydrated(fn ($state) => filled($state))
                             ->required(fn (string $context): bool => $context === 'create')
                     ]),
+                FileUpload::make('photo')
+                            ->label('Foto')
+                            ->image()
+                            ->imageEditor()
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('1:1'),
                 Select::make('roles')
                     ->relationship('roles', 'name')
-                    ->multiple()
                     ->preload()
                     ->searchable()
             ]);
@@ -78,7 +84,7 @@ class UserResource extends Resource
                 TextColumn::make('created_at')
                     ->label('Tanggal Dibuat')
                     ->since()
-                    ->sortable()
+                    ->sortable(),
             ])
             ->filters([
                 //

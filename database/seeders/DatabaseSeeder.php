@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             DivisionSeeder::class,
             MemberDivisionSeeder::class,
             CategoryGallerySeeder::class,
-            GallerySeeder::class
+            GallerySeeder::class,
+            ArticleCategorySeeder::class
         ]);
     }
 }

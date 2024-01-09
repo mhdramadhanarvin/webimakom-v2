@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -9,11 +10,16 @@ class ArticleController extends Controller
 {
     public function index(): View
     {
-        return view('article');
+        $all_article = Article::where('status', true)->latest()->paginate(10);
+        $article_popular = Article::popularAllTime()->limit(3)->get();
+        return view('article', compact('all_article','article_popular'));
     }
 
-    public function detail(): View
+    public function detail($slug): View
     {
-        return view('detail-article');
+        $article = Article::where('slug', $slug)->withTotalVisitCount()->first();
+        if ($article == false) abort(404);
+        $article->visit()->withIP();
+        return view('detail-article', compact('article'));
     }
 }

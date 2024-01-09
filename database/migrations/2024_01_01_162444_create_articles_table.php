@@ -17,8 +17,11 @@ return new class extends Migration
             $table->string('slug', '200');
             $table->unsignedBigInteger('article_category_id');
             $table->foreign('article_category_id')->references('id')->on('article_categories');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->text('thumbnail');
             $table->text('content');
+            $table->text('keyword');
             $table->boolean('status');
             $table->timestamps();
         });
