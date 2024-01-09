@@ -12,7 +12,7 @@ class ArticleController extends Controller
     {
         $all_article = Article::where('status', true)->latest()->paginate(10);
         $article_popular = Article::popularAllTime()->limit(3)->get();
-        return view('article', compact('all_article','article_popular'));
+        return view('article', compact('all_article', 'article_popular'));
     }
 
     public function detail($slug): View

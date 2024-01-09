@@ -60,11 +60,11 @@ class UserResource extends Resource
                             ->required(fn (string $context): bool => $context === 'create')
                     ]),
                 FileUpload::make('photo')
-                            ->label('Foto')
-                            ->image()
-                            ->imageEditor()
-                            ->imageResizeMode('cover')
-                            ->imageCropAspectRatio('1:1'),
+                    ->label('Foto')
+                    ->image()
+                    ->imageEditor()
+                    ->imageResizeMode('cover')
+                    ->imageCropAspectRatio('1:1'),
                 Select::make('roles')
                     ->relationship('roles', 'name')
                     ->preload()

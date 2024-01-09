@@ -18,7 +18,8 @@
                                     <div>
                                         <a href="#" rel="author"
                                             class="text-xl font-bold text-gray-900 dark:text-white">{{ $article->user->name }}</a>
-                                        <p class="text-base text-gray-500 dark:text-gray-400">{{ $article->user->roles()->first()->name }}</p>
+                                        <p class="text-base text-gray-500 dark:text-gray-400">
+                                            {{ $article->user->roles()->first()->name }}</p>
                                         <p class="text-base text-gray-500 dark:text-gray-400">
                                             <time>{{ \Carbon\Carbon::parse($article->created_at)->format('d M Y') }}</time>
                                         </p>
@@ -29,9 +30,10 @@
                                 class="mb-0 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-3 lg:text-4xl dark:text-white">
                                 {{ $article->title }}
                                 @if ($article->status === 0)
-                                  <span class="inline-block align-middle rounded-md bg-zinc-400 px-2 py-1 text-lg font-medium text-white ring-1 ring-inset ring-blue-700/10">
-                                      DRAFT 
-                                  </span>
+                                    <span
+                                        class="inline-block align-middle rounded-md bg-zinc-400 px-2 py-1 text-lg font-medium text-white ring-1 ring-inset ring-blue-700/10">
+                                        DRAFT
+                                    </span>
                                 @endif
                             </h1>
                             <a href="#"
@@ -40,18 +42,20 @@
                         <div>{!! $article->content !!}</div>
                         <div class="row mt-10">
                             <span class="align-text-bottom mr-2"> KATA KUNCI : </span>
-                                @foreach ($article->keyword as $keyword)
+                            @foreach ($article->keyword as $keyword)
                                 <a href="#"
                                     class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 m-1">{{ $keyword }}</a>
-                                @endforeach
+                            @endforeach
                         </div>
                         <div class="pt-5 justify-center">
                             <hr class="h-px my-8 bg-zinc-400 border-0 dark:bg-gray-700">
                             <a href="{{ $l->facebook ?? '#' }}">
-                                <i class="text-3xl mr-5 fa-brands fa-facebook hover:text-blue-700" aria-hidden="true"></i>
+                                <i class="text-3xl mr-5 fa-brands fa-facebook hover:text-blue-700"
+                                    aria-hidden="true"></i>
                             </a>
                             <a href="{{ $l->instagram ?? '#' }}">
-                                <i class="text-3xl mr-5 fa-brands fa-twitter hover:text-blue-700" aria-hidden="true"></i>
+                                <i class="text-3xl mr-5 fa-brands fa-twitter hover:text-blue-700"
+                                    aria-hidden="true"></i>
                             </a>
                             <a href="{{ $l->linkedin ?? '#' }}">
                                 <i class="text-2xl mr-5 fa-solid fa-link hover:text-blue-700" aria-hidden="true"></i>

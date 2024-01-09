@@ -48,12 +48,12 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    
+
     public function canAccessPanel(Panel $panel): bool
     {
         return true;
     }
-    
+
     public function getFilamentAvatarUrl(): ?string
     {
         return $this->avatar_url;

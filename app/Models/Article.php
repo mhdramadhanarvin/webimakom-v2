@@ -22,11 +22,11 @@ class Article extends Model implements CanVisit
         'keyword',
         'status'
     ];
-    
+
     protected $casts = [
         'keyword' => 'array',
     ];
-    
+
     public function article_category(): BelongsTo
     {
         return $this->belongsTo(ArticleCategory::class);
