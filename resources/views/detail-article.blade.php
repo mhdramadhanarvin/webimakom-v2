@@ -3,8 +3,8 @@
         <div class="overlay content-center first-content tertienary">
         </div>
     </div>
-    <div class="grid grid-cols-6 px-20 py-10">
-        <div class="col-span-4">
+    <div class="grid grid-cols-1 lg:grid-cols-6">
+        <div class="col-span-4 px-5 lg:px-20 py-10">
             <main class="lg:pt-16 lg:pb-24 antialiased">
                 <div class="px-4 max-w-screen-xl ">
                     <article
@@ -69,12 +69,12 @@
         </div>
         <div class="col-span-2 py-16">
             <div class="block w-screen px-2 mb-3">
-                <h2 class="text-2xl font-extrabold"> Artikel Terkait </h2>
+                <h2 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Terkait </h2>
             </div>
             @foreach ($related_article as $related) 
-                <article class="flex max-w-md flex-col rounded-2xl px-1 md:max-w-5xl md:flex-row md:items-center">
+                <article class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
-                        <img class="rounded-2xl object-cover h-28 w-28"
+                        <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
                             src="{{ asset('storage/' . $related->thumbnail) }}"
                             alt="" />
                     </div>
