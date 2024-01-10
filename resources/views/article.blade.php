@@ -40,7 +40,9 @@
                     </div>
                 </article>
             @endforeach
-            {{ $all_article->links() }}
+            <div class="flex justify-center mb-10 pb-10">
+                {{ $all_article->links('custom.pagination-article') }}
+            </div>
             @if ($all_article->count() == 0)
                 <div class="p-5">
                     BELUM ADA ARTIKEL
@@ -52,36 +54,30 @@
                 <h2 class="text-2xl font-extrabold"> Artikel Populer </h2>
             </div>
             @foreach ($article_popular as $popular)
-                <div
-                    class="max-w-sm mb-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="rounded-t-lg"
-                            src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_640.jpg"
+                <article class="flex max-w-md flex-col rounded-2xl px-1 md:max-w-5xl md:flex-row md:items-center">
+                    <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
+                        <img class="rounded-2xl object-cover h-28 w-28"
+                            src="{{ asset('storage/' . $popular->thumbnail) }}"
                             alt="" />
-                    </a>
-                    <div class="p-5">
-                        <div class="mb-1 text-slate-600">
-                            <span
-                                class="">{{ \Carbon\Carbon::parse($popular->created_at)->format('d M Y') }}</span>
-                            <a href="#"
-                                class="inline-flex items-center ml-5 py-1 px-3 rounded-full text-md font-medium text-gray-800 bg-slate-200 dark:bg-white/10 dark:text-white">{{ $popular->article_category->name }}</a>
+                    </div>
+                    <div class="">
+                        <div class="mb-px text-slate-600">
+                            <span class="">{{ \Carbon\Carbon::parse($popular->created_at)->format('d M Y') }}</span>
                         </div>
-                        <a href="{{ route('article.detail', ['slug' => $popular->slug]) }}">
-                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                {{ $popular->title }}
-                            </h5>
+                        <a href="#"
+                            class="mb-1 block text-lg font-medium text-gray-700">
+                            {{ Illuminate\Support\Str::words($popular->title, 7, '...') }}
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{!! Illuminate\Support\Str::words($popular->content, 5, '...') !!}</p>
-                        <div class="flex items-center">
-                            <img class="h-10 w-10 rounded-full object-cover"
-                                src="{{ asset('storage/' . $popular->user->photo) }}" alt="Simon Lewis" />
-                            <p class="ml-4 w-56">
+                        <div class="">
+                            {{-- <img class="h-6 w-6 rounded-full object-cover"
+                                src="https://media.licdn.com/dms/image/D5603AQG8ylXBmFRqoA/profile-displayphoto-shrink_200_200/0/1693843323807?e=1710374400&v=beta&t=opdzJTjwy-_uUfIqZH2ee7iBh1lRgdj1zyANkx_cB4w"
+                                alt="Simon Lewis" /> --}}
+                            <p class="w-56">
                                 <strong class="block font-medium text-gray-700">{{ $popular->user->name }}</strong>
-                                <span class="text-sm text-gray-400">{{ $popular->user->roles()->first()->name }}</span>
                             </p>
                         </div>
                     </div>
-                </div>
+                </article>
             @endforeach
         </div>
     </div>

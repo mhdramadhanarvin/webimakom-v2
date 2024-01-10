@@ -11,7 +11,7 @@ class ArticleController extends Controller
     public function index(): View
     {
         $all_article = Article::where('status', true)->latest()->paginate(10);
-        $article_popular = Article::popularAllTime()->limit(3)->get();
+        $article_popular = Article::popularAllTime()->limit(5)->get();
         return view('article', compact('all_article', 'article_popular'));
     }
 
@@ -20,6 +20,7 @@ class ArticleController extends Controller
         $article = Article::where('slug', $slug)->withTotalVisitCount()->first();
         if ($article == false) abort(404);
         $article->visit()->withIP();
-        return view('detail-article', compact('article'));
+        $related_article = Article::inRandomOrder()->limit(5)->get();
+        return view('detail-article', compact('article', 'related_article'));
     }
 }

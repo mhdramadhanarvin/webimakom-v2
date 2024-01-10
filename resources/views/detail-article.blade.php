@@ -71,37 +71,29 @@
             <div class="block w-screen px-2 mb-3">
                 <h2 class="text-2xl font-extrabold"> Artikel Terkait </h2>
             </div>
-            @for ($i = 0; $i < 4; $i++)
+            @foreach ($related_article as $related) 
                 <article class="flex max-w-md flex-col rounded-2xl px-1 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <img class="rounded-2xl object-cover h-28 w-28"
-                            src="https://images.unsplash.com/photo-1663287695452-bf59337d8746?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                            src="{{ asset('storage/' . $related->thumbnail) }}"
                             alt="" />
                     </div>
                     <div class="">
                         <div class="mb-px text-slate-600">
-                            <span class=""> {{ $i + 1 }} Maret 2020 </span>
+                            <span class="">{{ \Carbon\Carbon::parse($related->created_at)->format('d M Y') }}</span>
                         </div>
-                        <a href="{{ route('article.detail', ['slug' => $i + 1]) }}"
+                        <a href="{{ route('article.detail', ['slug' => $related->slug]) }}"
                             class="mb-1 block text-lg font-medium text-gray-700">
-                            Long walks are helpful in
-                            decreasing stress levels
+                            {{ $related->title }}
                         </a>
-                        {{-- <p class="mb-6 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reprehenderit
-                            illum consequatur quia doloremque! Similique eius enim nostrum totam.</p> --}}
                         <div class="">
-                            {{-- <img class="h-6 w-6 rounded-full object-cover"
-                                src="https://media.licdn.com/dms/image/D5603AQG8ylXBmFRqoA/profile-displayphoto-shrink_200_200/0/1693843323807?e=1710374400&v=beta&t=opdzJTjwy-_uUfIqZH2ee7iBh1lRgdj1zyANkx_cB4w"
-                                alt="Simon Lewis" /> --}}
                             <p class="w-56">
-                                <strong class="block font-medium text-gray-700">Johanson Levinsiki</strong>
-                                {{-- <span class="text-sm text-gray-400">Content Writer</span> --}}
+                                <strong class="block font-medium text-gray-700">{{ $related->user->name }}</strong>
                             </p>
                         </div>
                     </div>
                 </article>
-            @endfor
+            @endforeach
         </div>
     </div>
 </x-new-app-layout>
