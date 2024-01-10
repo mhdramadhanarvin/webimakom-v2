@@ -1,5 +1,5 @@
 <x-new-app-layout>
-    <div class="fullscreen full-image">
+    <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
             <img src="{{ url('./images/foto_imakom2.jpeg') }}" />
         </div>
@@ -10,8 +10,8 @@
                         <!-- <img class="responsive-img logo-stempel" src="images/logo imakom.png" /> -->
                     </div>
                     <div class="col-6">
-                        <h3 class="fw-black" style=" color:tomato;">GALERY KEGIATAN IMAKOM </h3>
-                        <p>Dokumentasi dari setiap kegiatan yang dilakukan oleh imakom.</p>
+                        <h1 class="text-3xl" style=" color:tomato;">GALERY KEGIATAN IMAKOM </h1>
+                        <p class="text-lg">Dokumentasi dari setiap kegiatan yang dilakukan oleh imakom.</p>
                         <button class="scroll-for-more"></button>
                     </div>
                 </div>

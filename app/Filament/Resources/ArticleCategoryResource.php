@@ -6,9 +6,11 @@ use App\Filament\Resources\ArticleCategoryResource\Pages;
 use App\Filament\Resources\ArticleCategoryResource\RelationManagers;
 use App\Models\ArticleCategory;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -35,7 +37,7 @@ class ArticleCategoryResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')->label('Nama')->required()
             ]);
     }
 
@@ -43,7 +45,9 @@ class ArticleCategoryResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('articles_count')->label('Jumlah Artikel')->counts('articles'),
+                TextColumn::make('created_at')->label('Dibuat Pada')->sortable()
             ])
             ->filters([
                 //

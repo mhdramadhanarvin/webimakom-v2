@@ -22,4 +22,5 @@ export default {
     },
 
     plugins: [forms, require("tw-elements/dist/plugin.cjs")],
+    important: true,
 };

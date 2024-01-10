@@ -1,32 +1,23 @@
 <x-new-app-layout>
     <!-- HEADER -->
-    <div class="fullscreen full-image">
+    <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/pancabudi.jpg') }}" style="" />
+            <img src="{{ url('./images/pancabudi.jpg') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
                     <div class="col-6">
                         <img class="responsive-img logo-stempel" src="{{ url('./images/logo_imakom.png') }}">
-                        {{-- style="width: 300px; height: 300px; border:1px solid tomato; box-shadow: 0 0 5px 5px rgb(165, 84, 70);" /> --}}
                     </div>
                     <div class="col-6">
-                        {{-- <span class="text-4xl">Hai...🖐</span> --}}
                         <span class="text-4xl">Selamat datang di</span>
                         <span class="text-4xl text-violet-500 inline-block">IMAKOM</span>
-                        {{-- <span class="text-3xl text-red-500 inline-block">Ikatan Mahasiswa Komputer</span> --}}
                         <p class="text-xl">
-                            <span class="text-red-500"> Mahasiswa Komputer (IMAKOM) </span> merupakan organisasi resmi
-                            kemahasiswaan pada tingkat
-                            program studi sebagai eksekutor di Universitas Pembangunan Panca Budi.
+                            <span class="text-red-500"> Mahasiswa Komputer (IMAKOM) </span>
+                            merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di
+                            Universitas Pembangunan Panca Budi.
                         </p>
-                        {{-- <a href=""><button
-                                style="background:orange ; padding:15px; border-radius:15px; color:white; font-size:15px;">
-                                sobat imakom</button></a> --}}
-                        {{-- <br> --}}
-                        {{-- <a href="#first-content">
-                        </a> --}}
                         <button class="scroll-for-more"></button>
                     </div>
                 </div>
@@ -36,52 +27,50 @@
     </div>
 
     <!-- ARTIKEL -->
-    <div class="fullscreen tertienary" id="first-content">
-        <div class="header-clear"></div>
+    <div class="tertienary py-16" id="first-content">
         <div class="content">
             <div class="row">
                 <div class="col-6">
-                    <h5>Tentang IMAKOM</h5>
-                    <p style="text-indent: 40px; text-align: justify;">
+                    <h3 class="font-bold mb-2 text-2xl">Tentang IMAKOM</h3>
+                    <p class="text-lg">
                         Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi (IMAKOM-UNPAB) bersifat mandiri,
                         kekeluargaan, adil, aspiratif, artisipatif, representatif, efektif, efisien, beserta transparan.
                         IMAKOM-UNPAB diselenggarakan berdasarkan prinsip dari, oleh, dan untuk mahasiswa Komputer dengan
                         memberi peranan serta keleluasaan lebih kepada mahasiswa. IMAKOM-UNPAB disahkan pada Tahun 2000,
                         dan sekarang sudah memasuki usia yang ke 21 dengan tagline “kreatif dan bersahabat”.
                     </p>
-                    {{-- <br /> --}}
-
                     <hr class="split tertienary" />
-
-                    {{-- <br /><br /> --}}
                 </div>
                 <div class="col-6">
-                    <h5>Visi</h5>
-                    <p>1. Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi diharapkan dapat menjadi suatu
-                        kesatuan
-                        yang utuh dalam mewujudkan solidaritas dan sinergi.</p>
+                    <h3 class="font-bold mb-2 text-2xl">Visi</h3>
+                    <ol class="list-decimal list-outside text-lg">
+                        <li>
+                            Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi diharapkan dapat menjadi suatu
+                            kesatuan
+                            yang utuh dalam mewujudkan solidaritas dan sinergi
+                        </li>
+                        <li>
+                            Selain itu Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi (IMAKOM-UNPAB) bisa
+                            menjadi
+                            pribadi yang lebih aktif, berkompeten, kreatif,inovatif, dan mandiri.
+                        </li>
+                    </ol>
                     <hr class="split tertienary" />
 
-                    <p>2. Selain itu Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi (IMAKOM-UNPAB) bisa
-                        menjadi
-                        pribadi yang lebih aktif, berkompeten, kreatif,inovatif, dan mandiri.</p>
+                    <h3 class="font-bold mb-2 text-2xl">Misi</h3>
+                    <ol class="list-decimal list-outside text-lg">
+                        <li>
+                            Menaungi mahasiswa Komputer UNPAB agar dapat menjadi pribadi yang bermafaat bagi masyarakat.
+                        </li>
+                        <li>
+                            Mempererat relasi antara mahasiswa dengan dosen dan staff untuk mencapai kesejahteraan
+                            sekaligus dapat membangun keharmonisan sebagai satu keluarga.
+                        </li>
+                        <li>
+                            Mengoptimalkan himpunan sebagai wadah aspirasi mahasiswa Komputer Unpab.
+                        </li>
+                    </ol>
                     <hr class="split tertienary" />
-                    <br /><br />
-                    <h5>Misi</h5>
-
-                    <p>1. Menaungi mahasiswa Komputer UNPAB agar dapat menjadi pribadi yang bermafaat bagi masyarakat.
-                    </p>
-                    <hr class="split tertienary" />
-
-                    <p>2. Mempererat relasi antara mahasiswa dengan dosen dan staff untuk mencapai kesejahteraan
-                        sekaligus
-                        dapat membangun keharmonisan sebagai satu keluarga.</p>
-                    <hr class="split tertienary" />
-
-                    <p>3. Mengoptimalkan himpunan sebagai wadah aspirasi mahasiswa Komputer Unpab.</p>
-                    <hr class="split tertienary" />
-
-
                 </div>
             </div>
         </div>
@@ -189,7 +178,7 @@
     <!-- vidio singkat end-->
     <!-- Struktur Kepengurusan -->
     <div class="text-center mt-20">
-        <h3 class="fw-black">
+        <h3 class="text-3xl font-bold">
             STRUKTUR KEPENGURUSAN IMAKOM
         </h3>
         <span class="text-3xl font-semibold block mb-3">
@@ -199,7 +188,6 @@
             <img src="{{ url('./images/logo_imakom.png') }}" width="70" height="70" alt="">
             <img src="{{ url('./images/logo_pancabudi.png') }}" width="70" height="70" alt="">
         </div>
-        {{-- <p></p><br /> --}}
     </div>
 
     <div class="grid justify-center">
@@ -212,7 +200,7 @@
                                 alt="">
                         </div>
                         <div class="contentBx">
-                            <h2>{{ $l->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                            <h2 class="text-xl">{{ $l->name }}<br><span class="text-yellow-300 text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
                             </h2>
                         </div>
                     </div>
@@ -246,7 +234,7 @@
                                 alt="">
                         </div>
                         <div class="contentBx">
-                            <h2>{{ $secr->name }}<br><span>{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                            <h2 class="text-xl">{{ $secr->name }}<br><span class="text-yellow-300 text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
                             </h2>
                         </div>
                     </div>
