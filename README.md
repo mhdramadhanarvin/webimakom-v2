@@ -74,9 +74,46 @@ Saat proses development selalu jalankan perintah ini
 ```$
 npm run dev
 ```
-test
-### Access
 
-Home page dapat diakses pada [http://localhost](http://localhost)\
-Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin)\
+dan pada terminal lain jalankan 
+
+```$
+php artisan serve
+```
+## Access
+
+Home page dapat diakses pada [http://localhost](http://localhost) atau [http://localhost:8000](http://localhost:8000)
+Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin) atau [http://localhost:8000/admin](http://localhost:8000/admin)
 Untuk dapat akses admin panel gunakan akun ini, email: `admin@gmail.com` and password `admin`.
+
+## Kontribusi
+
+Projek ini menggunakan [Trunk Base Development](https://trunkbaseddevelopment.com/) sebagai branching strategy. Pada Trunk Base Development kita hanya memiliki satu long-lived development branch yaitu **main** branch. Apabila ingin berkontribusi untuk menambahkan fitur atau memperbaiki bug maka perlu membuat branch baru dari *main* branch lalu lakukan PR ke **main** branch. 
+
+Selain menggunakan Trunk Base Development projek ini juga menggunakan [Conventional Commit](https://www.conventionalcommits.org/) untuk setiap nama branch dan commit untuk mempermudah tracking dan pemahaman setiap commit.
+
+### Penamaan Branch 
+
+- **main**: Main branch. Kita menggunakan Trunk-Based Development
+- **feat/<ticket-number>-<short-detail>**: Feature branch. Ex: feat/122-new-implementation-algorithm
+- **fix/<ticket-number>-<short-detail>**: Bugfix branch. Ex: fix/122-error-ini
+- **refactor/<ticket-number>-<short-detail>**: Branch untuk cleanup kode atau refactor. Ex: refactor/122-missing-comments
+- **test/<ticket-number>-<short-detail>**: Branch untuk penambahan testing. Ex: test/122-missing-test-when-update-user
+
+### Jenis Commit
+
+Referensi : [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+- **feat**: Fitur baru 
+- **fix**: Perbaikan bugs 
+- **refactor**: Perbaikan kode atau refactor 
+- **test**: Penambahan test 
+- **chore**: Penambahan dependency 
+
+### Pull Request / Merge Request (PR/MR)
+
+Setiap PR harus sesuai nama commit dan judul PR nya 
+
+**<type>[optional scope]: <description>**
+
+**feat(web): adding authentication**
+**fix(backoffice): fix the order list**
