@@ -74,7 +74,7 @@ Saat proses development selalu jalankan perintah ini
 ```$
 npm run dev
 ```
-
+test
 ### Access
 
 Home page dapat diakses pada [http://localhost](http://localhost)\
