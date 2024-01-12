@@ -74,10 +74,16 @@ Saat proses development selalu jalankan perintah ini
 ```$
 npm run dev
 ```
+
+dan pada terminal lain jalankan 
+
+```$
+php artisan serve
+```
 ## Access
 
-Home page dapat diakses pada [http://localhost](http://localhost)\
-Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin)\
+Home page dapat diakses pada [http://localhost](http://localhost) atau [http://localhost:8000](http://localhost:8000)
+Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin) atau [http://localhost:8000/admin](http://localhost:8000/admin)
 Untuk dapat akses admin panel gunakan akun ini, email: `admin@gmail.com` and password `admin`.
 
 ## Kontribusi
