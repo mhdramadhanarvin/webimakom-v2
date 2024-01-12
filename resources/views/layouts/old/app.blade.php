@@ -19,7 +19,7 @@
     <!-- Header -->
     <nav class="nav-dark">
         <div class="logo light">
-            {{-- <a href="#"><img src="{{ url('./images/kata_imakom.png') }}" alt="" height="50"></a> --}}
+            <a href="#"><img src="{{ url('./images/kata_imakom.png') }}" alt="" height="50"></a>
         </div>
         <div class="logo dark">
             <a href="#"><img src="{{ url('./images/logo_imakom.png') }}" style="height: 50px; width: 90px;" /></a>
@@ -28,7 +28,7 @@
         <div class="menu">
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
             <a class="menu-item" href="{{ route('structure') }}">PENGURUS</a>
-            <a class="menu-item" href="#">PROGRAM KERJA</a>
+            <a class="menu-item" href="{{ route('workplan') }}">PROGRAM KERJA</a>
             <a class="menu-item" href="{{ route('article') }}">ARTIKEL</a>
             <a class="menu-item" href="{{ route('gallery') }}">DOKUMENTASI</a>
         </div>

@@ -47,7 +47,7 @@ class ArticleCategoryResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('articles_count')->label('Jumlah Artikel')->counts('articles'),
-                TextColumn::make('created_at')->label('Dibuat Pada')->sortable()
+                TextColumn::make('created_at')->label('Dibuat Pada')->dateTime('d M Y H:i')->sortable()
             ])
             ->filters([
                 //

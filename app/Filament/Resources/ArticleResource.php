@@ -122,9 +122,15 @@ class ArticleResource extends Resource
                 TextColumn::make('article_category.name')
                     ->label('Kategori')
                     ->badge()
+                    ->sortable()
                     ->searchable(),
                 ImageColumn::make('thumbnail'),
-                ToggleColumn::make('status')->label('Publish')
+                ToggleColumn::make('status')
+                    ->label('Publish')
+                    ->sortable(),
+                TextColumn::make('created_at')
+                    ->dateTime('d M Y H:i')
+                    ->label('Dibuat Pada')
             ])
             ->filters([
                 //

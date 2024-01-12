@@ -13,7 +13,7 @@
                             <address class="flex items-center mb-6 not-italic">
                                 <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
                                     <img class="mr-4 w-16 h-16 rounded-full"
-                                        src="{{ asset('storage/' . $article->user->photo) }}"
+                                        src="{{ $article->user->photo == null ? url('./images/default.jpg') : asset('storage/' . $article->user->photo) }}"
                                         alt="{{ $article->user->name }}">
                                     <div>
                                         <a href="#" rel="author"
@@ -71,12 +71,14 @@
             <div class="block w-screen px-2 mb-3">
                 <h2 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Terkait </h2>
             </div>
-            @foreach ($related_article as $related) 
+            @foreach ($related_article as $related)
                 <article class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
-                        <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
+                        <a href="{{ route('article.detail', ['slug' => $related->slug]) }}">
+                            <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
                             src="{{ asset('storage/' . $related->thumbnail) }}"
                             alt="" />
+                        </a>
                     </div>
                     <div class="">
                         <div class="mb-px text-slate-600">

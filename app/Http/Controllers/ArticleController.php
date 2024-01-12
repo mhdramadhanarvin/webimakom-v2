@@ -20,7 +20,7 @@ class ArticleController extends Controller
         $article = Article::where('slug', $slug)->withTotalVisitCount()->first();
         if ($article == false) abort(404);
         $article->visit()->withIP();
-        $related_article = Article::inRandomOrder()->limit(5)->get();
+        $related_article = Article::inRandomOrder()->where('status', true)->limit(5)->get();
         return view('detail-article', compact('article', 'related_article'));
     }
 }
