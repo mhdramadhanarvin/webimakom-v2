@@ -7,6 +7,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\GalleryController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StructureController;
+use App\Http\Controllers\WorkplanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/structure', [StructureController::class, 'index'])->name('structure
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/article/{slug}', [ArticleController::class, 'detail'])->name('article.detail');
+Route::get('/workplan', [WorkplanController::class, 'index'])->name('workplan');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

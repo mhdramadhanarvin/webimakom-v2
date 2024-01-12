@@ -83,7 +83,7 @@ class UserResource extends Resource
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->label('Tanggal Dibuat')
-                    ->since()
+                    ->dateTime('d M Y H:i')
                     ->sortable(),
             ])
             ->filters([

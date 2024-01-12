@@ -76,7 +76,7 @@ class GalleryResource extends Resource
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->label('Dibuat Pada')
-                    ->since()
+                    ->dateTime('d M Y H:i')
                     ->sortable()
             ])
             ->filters([
