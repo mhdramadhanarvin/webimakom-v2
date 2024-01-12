@@ -72,17 +72,18 @@
                 <h2 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Terkait </h2>
             </div>
             @foreach ($related_article as $related)
-                <article class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
+                <article
+                    class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <a href="{{ route('article.detail', ['slug' => $related->slug]) }}">
                             <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
-                            src="{{ asset('storage/' . $related->thumbnail) }}"
-                            alt="" />
+                                src="{{ asset('storage/' . $related->thumbnail) }}" alt="" />
                         </a>
                     </div>
                     <div class="">
                         <div class="mb-px text-slate-600">
-                            <span class="">{{ \Carbon\Carbon::parse($related->created_at)->format('d M Y') }}</span>
+                            <span
+                                class="">{{ \Carbon\Carbon::parse($related->created_at)->format('d M Y') }}</span>
                         </div>
                         <a href="{{ route('article.detail', ['slug' => $related->slug]) }}"
                             class="mb-1 block text-lg font-medium text-gray-700">

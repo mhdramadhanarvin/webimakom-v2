@@ -27,15 +27,15 @@
         <div class="grid justify-center mb-10">
             <div class="container">
                 @foreach ($lead as $l)
-                    <div class="card"
-                        style=" border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
+                    <div class="card" style=" border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
                         <div class="content">
                             <div class="imgBx">
                                 <img src="{{ $l->photo == null ? url('./images/default.jpg') : asset('storage/' . $l->photo) }}"
                                     alt="">
                             </div>
                             <div class="contentBx ">
-                                <h2 class="text-xl text-white font-bold">{{ $l->name }}<br><span class="text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                                <h2 class="text-xl text-white font-bold">{{ $l->name }}<br><span
+                                        class="text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
                                 </h2>
                             </div>
                         </div>
@@ -62,15 +62,15 @@
             </div>
             <div class="container">
                 @foreach ($secretary as $secr)
-                    <div class="card"
-                        style="border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
+                    <div class="card" style="border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
                         <div class="content">
                             <div class="imgBx">
                                 <img src="{{ $secr->photo == null ? url('./images/default.jpg') : asset('storage/' . $secr->photo) }}"
                                     alt="">
                             </div>
                             <div class="contentBx">
-                                <h2 class="text-xl text-white font-bold">{{ $secr->name }}<br><span class="text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
+                                <h2 class="text-xl text-white font-bold">{{ $secr->name }}<br><span
+                                        class="text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>
                                 </h2>
                             </div>
                         </div>
@@ -125,7 +125,8 @@
                                 </div>
                                 <div class="contentBx">
                                     <h2 class="xl">{{ $member->name }}<br>
-                                        <span class="text-lg">{{ $member->position->value == '1' ? 'Ketua Divisi' : 'Anggota Divisi' }}</span>
+                                        <span
+                                            class="text-lg">{{ $member->position->value == '1' ? 'Ketua Divisi' : 'Anggota Divisi' }}</span>
                                     </h2>
                                 </div>
                             </div>

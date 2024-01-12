@@ -12,16 +12,18 @@
                 <h2 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Terbaru </h2>
             </div>
             @foreach ($all_article as $all)
-                <article class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:md-1 md:max-w-5xl md:flex-row md:items-center">
+                <article
+                    class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:md-1 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <a href="{{ route('article.detail', ['slug' => $all->slug]) }}">
-                            <img class="rounded-2xl object-cover h-60 w-full lg:w-60" src="{{ asset('storage/' . $all->thumbnail) }}"
-                                alt="" />
+                            <img class="rounded-2xl object-cover h-60 w-full lg:w-60"
+                                src="{{ asset('storage/' . $all->thumbnail) }}" alt="" />
                         </a>
                     </div>
                     <div class="py-4 sm:py-8">
                         <div class="mb-4 text-slate-600">
-                            <span class="">{{ \Carbon\Carbon::parse($all->created_at)->format('d M Y H:i') }}</span>
+                            <span
+                                class="">{{ \Carbon\Carbon::parse($all->created_at)->format('d M Y H:i') }}</span>
                             <a href="#"
                                 class="inline-flex items-center ml-5 py-1 px-3 rounded-full text-md font-medium text-gray-800 bg-slate-200 dark:bg-white/10 dark:text-white">
                                 {{ $all->article_category->name }}
@@ -34,7 +36,8 @@
                         <p class="mb-5 text-gray-500">{!! Illuminate\Support\Str::words($all->content, 25, '...') !!}</p>
                         <div class="flex items-center">
                             <img class="h-10 w-10 rounded-full object-cover"
-                                src="{{ $all->user->photo == null ? url('./images/default.jpg') : asset('storage/' . $all->user->photo) }}" alt="Simon Lewis" />
+                                src="{{ $all->user->photo == null ? url('./images/default.jpg') : asset('storage/' . $all->user->photo) }}"
+                                alt="Simon Lewis" />
                             <p class="ml-4 w-56">
                                 <strong class="block font-medium text-gray-700">{{ $all->user->name }}</strong>
                                 <span class="text-sm text-gray-400">{{ $all->user->roles()->first()->name }}</span>
@@ -57,17 +60,18 @@
                 <h2 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Populer </h2>
             </div>
             @foreach ($article_popular as $popular)
-                <article class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
+                <article
+                    class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <a href="{{ route('article.detail', ['slug' => $popular->slug]) }}">
                             <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
-                                src="{{ asset('storage/' . $popular->thumbnail) }}"
-                                alt="" />
+                                src="{{ asset('storage/' . $popular->thumbnail) }}" alt="" />
                         </a>
                     </div>
                     <div class="">
                         <div class="mb-px text-slate-600">
-                            <span class="">{{ \Carbon\Carbon::parse($popular->created_at)->format('d M Y') }}</span>
+                            <span
+                                class="">{{ \Carbon\Carbon::parse($popular->created_at)->format('d M Y') }}</span>
                         </div>
                         <a href="{{ route('article.detail', ['slug' => $popular->slug]) }}"
                             class="mb-1 block text-lg font-medium text-gray-700">

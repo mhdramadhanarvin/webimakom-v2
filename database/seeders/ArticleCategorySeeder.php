@@ -14,10 +14,10 @@ class ArticleCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i=0;$i<5;$i++) {
-          ArticleCategory::create([
-            'name' => 'Kategori '. $i + 1
-          ]);
+        for ($i = 0; $i < 5; $i++) {
+            ArticleCategory::create([
+                'name' => 'Kategori ' . $i + 1
+            ]);
         }
 
         Article::factory()->count(30)->create();
