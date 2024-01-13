@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
 use Filament\Tables;
 use App\Models\Article;
 use Filament\Forms\Set;
@@ -11,7 +10,6 @@ use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Grid;
-use Filament\Tables\Actions\Action;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Tables\Columns\TextColumn;
@@ -21,10 +19,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TagsInput;
 use Filament\Tables\Columns\ToggleColumn;
-use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ArticleResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\ArticleResource\RelationManagers;
 use Webbingbrasil\FilamentCopyActions\Tables\Actions\CopyAction;
 
 class ArticleResource extends Resource
@@ -56,7 +51,8 @@ class ArticleResource extends Resource
                     ->afterStateUpdated(function (Set $set, $state, $context) {
                         if ($context === 'create') $set('slug', Str::slug($state));
                     })
-                    ->maxLength(200),
+                    ->maxLength(200)
+                    ->required(),
                 Select::make('article_category_id')
                     ->label('Kategori Artikel')
                     ->relationship(name: 'article_category', titleAttribute: 'name')
@@ -66,7 +62,8 @@ class ArticleResource extends Resource
                         TextInput::make('slug')
                             ->readonly()
                             ->prefix(route('article') . '/')
-                            ->maxLength(200),
+                            ->maxLength(200)
+                            ->required(),
                         TagsInput::make('keyword')
                             ->label('Kata Kunci')
                             ->placeholder('Kata kunci baru')
@@ -101,12 +98,9 @@ class ArticleResource extends Resource
                                 'underline',
                                 'undo',
                             ])
-                            ->disableToolbarButtons([
-                                'blockquote',
-                                'strike',
-                            ])
                             ->fileAttachmentsDirectory('attachments')
-                            ->fileAttachmentsVisibility('private')
+                            ->fileAttachmentsVisibility('public')
+                            ->required()
                     ]),
                 Toggle::make('status')->label('Publish')
                     ->onColor('success')
@@ -118,7 +112,10 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title')->label('Judul')->words(10),
+                TextColumn::make('title')
+                    ->label('Judul')
+                    ->words(10)
+                    ->searchable(),
                 TextColumn::make('article_category.name')
                     ->label('Kategori')
                     ->badge()
@@ -131,6 +128,7 @@ class ArticleResource extends Resource
                 TextColumn::make('created_at')
                     ->dateTime('d M Y H:i')
                     ->label('Dibuat Pada')
+                    ->sortable()
             ])
             ->filters([
                 //
