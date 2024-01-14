@@ -88,32 +88,36 @@ Saat proses development selalu jalankan perintah ini, dan biarkan tetap berjalan
 ./vendor/bin/sail npm run dev
 ```
 
-dan pada terminal lain jalankan 
+dan pada terminal lain jalankan
 
 ```bash
 php artisan serve
 ```
+
 ## Access
 
 Home page dapat diakses pada :
-- Docker Installation : [http://localhost](http://localhost) atau 
+
+- Docker Installation : [http://localhost](http://localhost) atau
 - Manual Installation : [http://localhost:8000](http://localhost:8000)
 
 Admin panel dapat diakses pada : 
-- Docker Installation : [http://localhost/admin](http://localhost/admin) atau 
+
+- Docker Installation : [http://localhost/admin](http://localhost/admin) atau
 - Manual Installation : [http://localhost:8000/admin](http://localhost:8000/admin)
 
 Gunakan akun ini untuk akses admin panel :
-- email: `admin@gmail.com` 
-  password `admin`
+
+- email: `admin@gmail.com`
+password `admin`
 
 ## Kontribusi
 
-Projek ini menggunakan [Trunk Base Development](https://trunkbaseddevelopment.com/) sebagai branching strategy. Pada Trunk Base Development kita hanya memiliki satu long-lived development branch yaitu **main** branch. Apabila ingin berkontribusi untuk menambahkan fitur atau memperbaiki bug maka perlu membuat branch baru dari *main* branch lalu lakukan PR ke **main** branch. 
+Projek ini menggunakan [Trunk Base Development](https://trunkbaseddevelopment.com/) sebagai branching strategy. Pada Trunk Base Development kita hanya memiliki satu long-lived development branch yaitu **main** branch. Apabila ingin berkontribusi untuk menambahkan fitur atau memperbaiki bug maka perlu membuat branch baru dari *main* branch lalu lakukan PR ke **main** branch.
 
 Selain menggunakan Trunk Base Development projek ini juga menggunakan [Conventional Commit](https://www.conventionalcommits.org/) untuk setiap nama branch dan commit untuk mempermudah tracking dan pemahaman setiap commit.
 
-### Penamaan Branch 
+### Penamaan Branch
 
 - **main**: Main branch. Kita menggunakan Trunk-Based Development
 - **feat/<ticket-number>-<short-detail>**: Feature branch. Ex: feat/122-new-implementation-algorithm
@@ -124,27 +128,32 @@ Selain menggunakan Trunk Base Development projek ini juga menggunakan [Conventio
 ### Jenis Commit
 
 Referensi : [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/#summary)
-- **feat**: Fitur baru 
-- **fix**: Perbaikan bugs 
-- **refactor**: Perbaikan kode atau refactor 
-- **test**: Penambahan test 
-- **chore**: Penambahan dependency 
+
+- **feat**: Fitur baru
+- **fix**: Perbaikan bugs
+- **refactor**: Perbaikan kode atau refactor
+- **test**: Penambahan test
+- **chore**: Penambahan dependency
 
 ### Pull Request / Merge Request (PR/MR)
 
-Setiap title PR harus sesuai dengan format dibawah ini 
+Setiap title PR harus sesuai dengan format dibawah ini
+
+Format
 
 **<type>[optional scope]: <description>**
+
+Contoh
 
 - **feat(web): adding authentication**
 - **fix(backoffice): fix the order list**
 
-### Langkah Langkah Kontribusi 
+### Langkah Langkah Kontribusi
 
 1. Pilih atau buat [issue](https://github.com/mhdramadhanarvin/webimakom-v2/issues) baru yang ingin dikerjakan.  
 2. Buat branch baru dari issue tersebut.
 ![Alt text](docs/create-branch.png)
-![Alt text](image-1.png)
+![Alt text](docs/image-1.png)
 3. Jalankan perintah ini di local.
 
     ```bash
@@ -157,4 +166,4 @@ Setiap title PR harus sesuai dengan format dibawah ini
 4. Sekarang sudah bisa mulai mengerjakan.
 5. Apabila selesai mengerjakan, buat PR dengan title yang sesuai dengan issue tersebut, dan assign reviewer.
 6. Forward ke channel untuk mempercepat proses review PR sekaligus menyertakan before dan after (optional).
-7. Apabila salah satu reviewer sudah **Approve** PR yang dibuat maka selanjutnya PR bisa di merge dengan pilih **Rebase and Merge** ![Alt text](image-2.png)
+7. Apabila salah satu reviewer sudah **Approve** PR yang dibuat maka selanjutnya PR bisa di merge dengan pilih **Rebase and Merge** ![Alt text](docs/image-2.png)
