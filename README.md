@@ -8,11 +8,11 @@ Ini repositori project website Ikatan Mahasiswa Komputer - Universitas Pembangun
 
 Beberapa fitur di project ini :
 
-- Struktur Organisasi
-- Divisi Organisasi
-- Program Kerja (**COMING SOON**). Program kerja yang dilakukan organisasi.
-- Artikel (**COMING SOON**). Berita terbaru seputar teknologi dan kegiatan organisai.
-- Dokumentasi. Dokumentasi setiap kegiatan organisasi.
+- Struktur Organisasi (**DONE**).
+- Divisi Organisasi (**DONE**).
+- Program Kerja (**DONE**). 
+- Artikel (**DONE**). 
+- Dokumentasi (**DONE**). 
 
 ## Technology
 
@@ -37,20 +37,28 @@ Step ini disarankan untuk dilakukan dengan pengetahuan tentang Docker. Kebutuhan
 
 Jalankan perintah ini di terminal
 
-```$
+```bash
+# copy env file
 cp .env.example .env
+# install dependency php 
 compose install
+# jalankan container
 ./vendor/bin/sail up -d
+# install dependency js 
 ./vendor/bin/sail npm install
+# jalankan migrasi dan seeder
 ./vendor/bin/sail artisan migrate:refresh --seed
+# generate ulang shield
 ./vendor/bin/sail artisan shield:generate --all
+# buat akun admin
 ./vendor/bin/sail artisan shield:super-admin --user=1
+# build ui
 ./vendor/bin/sail npm run build
 ```
 
-Saat proses development selalu jalankan perintah ini
+Saat proses development selalu jalankan perintah ini, dan biarkan tetap berjalan
 
-```$
+```bash
 ./vendor/bin/sail npm run dev
 ```
 
@@ -58,33 +66,46 @@ Saat proses development selalu jalankan perintah ini
 
 Jalankan perintah ini di terminal
 
-```$
+```bash
+# copy env file
 cp .env.example .env
-compose install
-php artisan up -d
+composer install 
+# install dependency js 
 npm install
+# jalankan migrasi dan seeder
 php artisan migrate:refresh --seed
+# generate ulang shield
 php artisan shield:generate --all
+# buat akun admin
 php artisan shield:super-admin --user=1
+# build ui
 npm run build
 ```
 
-Saat proses development selalu jalankan perintah ini
+Saat proses development selalu jalankan perintah ini, dan biarkan tetap berjalan
 
-```$
-npm run dev
+```bash
+./vendor/bin/sail npm run dev
 ```
 
 dan pada terminal lain jalankan 
 
-```$
+```bash
 php artisan serve
 ```
 ## Access
 
-Home page dapat diakses pada [http://localhost](http://localhost) atau [http://localhost:8000](http://localhost:8000)
-Admin panel dapat diakses pada [http://localhost/admin](http://localhost/admin) atau [http://localhost:8000/admin](http://localhost:8000/admin)
-Untuk dapat akses admin panel gunakan akun ini, email: `admin@gmail.com` and password `admin`.
+Home page dapat diakses pada :
+- Docker Installation : [http://localhost](http://localhost) atau 
+- Manual Installation : [http://localhost:8000](http://localhost:8000)
+
+Admin panel dapat diakses pada : 
+- Docker Installation : [http://localhost/admin](http://localhost/admin) atau 
+- Manual Installation : [http://localhost:8000/admin](http://localhost:8000/admin)
+
+Gunakan akun ini untuk akses admin panel :
+- email: `admin@gmail.com` 
+  password `admin`
 
 ## Kontribusi
 
@@ -111,9 +132,29 @@ Referensi : [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/
 
 ### Pull Request / Merge Request (PR/MR)
 
-Setiap PR harus sesuai nama commit dan judul PR nya 
+Setiap title PR harus sesuai dengan format dibawah ini 
 
 **<type>[optional scope]: <description>**
 
-**feat(web): adding authentication**
-**fix(backoffice): fix the order list**
+- **feat(web): adding authentication**
+- **fix(backoffice): fix the order list**
+
+### Langkah Langkah Kontribusi 
+
+1. Pilih atau buat [issue](https://github.com/mhdramadhanarvin/webimakom-v2/issues) baru yang ingin dikerjakan.  
+2. Buat branch baru dari issue tersebut.
+![Alt text](docs/create-branch.png)
+![Alt text](image-1.png)
+3. Jalankan perintah ini di local.
+
+    ```bash
+    # fetch semua perubahan dari origin termasuk branch baru
+    git fetch origin
+    # checkout ke branch baru
+    git checkout fix/15-improve-minor-ui
+    ```
+
+4. Sekarang sudah bisa mulai mengerjakan.
+5. Apabila selesai mengerjakan, buat PR dengan title yang sesuai dengan issue tersebut, dan assign reviewer.
+6. Forward ke channel untuk mempercepat proses review PR sekaligus menyertakan before dan after (optional).
+7. Apabila salah satu reviewer sudah **Approve** PR yang dibuat maka selanjutnya PR bisa di merge dengan pilih **Rebase and Merge** ![Alt text](image-2.png)
