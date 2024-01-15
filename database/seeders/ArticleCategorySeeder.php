@@ -20,8 +20,8 @@ class ArticleCategorySeeder extends Seeder
             ]);
         }
 
-        Article::factory()->count(30)->create();
-        Article::factory()->count(5)->create([
+        Article::factory()->count(3)->create();
+        Article::factory()->count(1)->create([
             'status' => false
         ]);
     }

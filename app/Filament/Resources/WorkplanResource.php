@@ -50,6 +50,7 @@ class WorkplanResource extends Resource
                     ]),
                 DatePicker::make('start_date')->label('Tanggal Mulai'),
                 DatePicker::make('end_date')->label('Tanggal Selesai'),
+                TextInput::make('link')->placeholder('https://google.com/'),
             ]);
     }
 

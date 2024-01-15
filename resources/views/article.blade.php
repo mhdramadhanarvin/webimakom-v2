@@ -30,7 +30,7 @@
                             </a>
                         </div>
                         <a href="{{ route('article.detail', ['slug' => $all->slug]) }}"
-                            class="block text-2xl font-medium text-gray-700">
+                            class="block text-2xl font-medium text-gray-700 mb-2">
                             {{ $all->title }}
                         </a>
                         <p class="mb-5 text-gray-500">{!! Illuminate\Support\Str::words($all->content, 25, '...') !!}</p>
