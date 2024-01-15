@@ -1,14 +1,14 @@
 <x-new-app-layout>
     <!-- HEADER -->
-    <div class="fullscreen full-image max-h-[40em]">
+    <div class="fullscreen full-image lg:max-h-[40em] max-h-full">
         <div class="image">
             <img src="{{ url('./images/pancabudi.jpg') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
-                    <div class="col-6">
-                        <img class="responsive-img logo-stempel" src="{{ url('./images/logo_imakom.png') }}">
+                    <div class="col-6 flex justify-center lg:justify-normal mb-10 lg:mb-0">
+                        <img class="responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.png') }}">
                     </div>
                     <div class="col-6">
                         <span class="text-4xl">Selamat datang di</span>
