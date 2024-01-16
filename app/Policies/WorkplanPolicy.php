@@ -147,4 +147,5 @@ class WorkplanPolicy
     {
         return $user->can('reorder_workplan');
     }
+
 }
