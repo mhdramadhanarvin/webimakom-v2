@@ -4,20 +4,16 @@ namespace App\Filament\Resources\ArticleResource\Pages;
 
 use App\Filament\Resources\ArticleResource;
 use Filament\Actions;
-use Filament\Resources\Pages\ManageRecords;
+use Filament\Resources\Pages\EditRecord;
 
-class ManageArticles extends ManageRecords
+class EditArticle extends EditRecord
 {
     protected static string $resource = ArticleResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make()->mutateFormDataUsing(function (array $data): array {
-                $data['user_id'] = auth()->id();
-
-                return $data;
-            }),
+            Actions\DeleteAction::make(),
         ];
     }
 }

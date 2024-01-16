@@ -11,7 +11,7 @@ class ArticleController extends Controller
     public function index(): View
     {
         $all_article = Article::where('status', true)->latest()->paginate(10);
-        $article_popular = Article::popularAllTime()->limit(5)->get();
+        $article_popular = Article::popularAllTime()->where('status', true)->limit(5)->get();
         return view('article', compact('all_article', 'article_popular'));
     }
 
