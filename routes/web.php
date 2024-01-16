@@ -8,6 +8,8 @@ use App\Http\Controllers\GalleryController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StructureController;
 use App\Http\Controllers\WorkplanController;
+use App\Http\Controllers\PekanEsportController;
+use App\Http\Controllers\ValorantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,9 @@ Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/article/{slug}', [ArticleController::class, 'detail'])->name('article.detail');
 Route::get('/workplan', [WorkplanController::class, 'index'])->name('workplan');
+
+Route::get('/pekanesport', [PekanEsportController::class, 'index']);
+Route::get('/pekanesport/{game}', [PekanEsportController::class, 'game'])->name('pekanesport.game');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
