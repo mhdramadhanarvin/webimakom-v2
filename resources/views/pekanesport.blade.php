@@ -53,7 +53,7 @@
     </div>
 
 {{-- ROW2 --}}
-    <div class="max-w-7xl mx-auto my-5 mb-20 flex justify-center">
+    <div class="max-w-7xl mx-auto my-5 mb-10 flex justify-center">
         {{-- CARD TEMPLATE --}}
         <div class="mx-5 relative grid h-[20rem] w-full max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
             <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://images5.alphacoders.com/111/1118682.jpg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
@@ -92,6 +92,23 @@
                     MAGIC CHESS MOBILE LEGENDS
                 </h2>
                 <a href="{{ route('pekanesport.game', ['game' => 'magicchess']) }}" type="button" class="mx-auto focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar</a>
+            </div>
+        </div>
+        {{-- END CARD TEMPLATE --}}
+    </div>
+
+    {{-- ROW3 --}}
+    <div class="max-w-7xl mx-auto my-5 mb-20 flex justify-center">
+        {{-- CARD TEMPLATE --}}
+        <div class="mx-5 relative grid h-[20rem] w-full max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/96/2023/07/14/DynaStones-game-yang-memadukan-MOBA-dan-Battle-Royale-membuka-akses-open-beta-mulai-hari-ini-Majamojo5-3015908797.jpg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+                <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
+            </div>
+            <div class="relative p-2 px-2 py-8 md:px-6">
+                <h2 class="block font-sans text-xl font-medium leading-[1.5] tracking-normal text-white antialiased">
+                    DYNASTONES
+                </h2>
+                <a href="{{ route('pekanesport.game', ['game' => 'dynastones']) }}" type="button" class="mx-auto focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar</a>
             </div>
         </div>
         {{-- END CARD TEMPLATE --}}

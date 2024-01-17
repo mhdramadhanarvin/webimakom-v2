@@ -26,6 +26,8 @@ class PekanEsportController extends Controller
             return view ('pekanesport_games/psfootball');
         } else if ($game == 'magicchess') {
             return view ('pekanesport_games/magicchess');
+        } else if ($game == 'dynastones') {
+            return view ('pekanesport_games/dynastones');
         } else {
             return view ('pekanesport_games/game_not_found');
         }
