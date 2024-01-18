@@ -10,7 +10,7 @@
             pilihan mu, bersiap untuk merajai medan perang Valorant! Mari kita daftar dengan persyaratan di bawah ini:
         </p>
         <div class="mt-4">
-            <h1 class="text-center text-center font-bold">PERSYARATAN PENDAFTARAN</h1>
+            <h1 class="text-center font-bold">PERSYARATAN PENDAFTARAN</h1>
         </div>
         <ul style="list-style-type:square; margin-bottom:10px; list-style-position:outside">
             <li>
