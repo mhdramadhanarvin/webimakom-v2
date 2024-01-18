@@ -44,7 +44,7 @@ class PekanEsportController extends Controller
                 break;
 
             default:
-                return view('pekanesport/pekanesport_games/game_not_found');
+                return view('pekanesport_games/game_not_found');
         }
     }
 
@@ -80,7 +80,7 @@ class PekanEsportController extends Controller
                 break;
 
             default:
-                return view('pekanesport/pekanesport_games/game_not_found');
+                return view('pekanesport_games/game_not_found');
         }
     }
 }
