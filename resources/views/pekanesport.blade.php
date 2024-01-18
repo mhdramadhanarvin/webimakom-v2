@@ -5,7 +5,7 @@
     </div>
     {{-- KONTEN --}}
     <div class="max-w-7xl mx-auto my-20">
-        <h1 class="text-center text-4xl font-black" >CABANG OLAHRAGA</h1>
+        <h1 class="text-center text-4xl font-black text-zinc-700" >CABANG OLAHRAGA</h1>
     </div>
 {{-- ROW1 --}}
     <div class="max-w-7xl mx-auto my-10 flex justify-center">
