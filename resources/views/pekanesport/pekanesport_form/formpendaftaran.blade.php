@@ -125,14 +125,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Ambil referensi formulir
             var formPendaftaran = document.getElementById('formPendaftaran');
-    
+
             // Tambahkan event listener untuk menangani pengiriman formulir
             formPendaftaran.addEventListener('submit', function (event) {
                 event.preventDefault(); // Mencegah formulir dikirim dengan cara default
-    
+
                 // Tampilkan alert berhasil
                 alert('Formulir berhasil dikirim!');
-    
+
                 // Kembali ke menu utama (gunakan fungsi route untuk menghasilkan URL berdasarkan nama route)
                 window.location.href = '{{ route("home") }}';
             });
