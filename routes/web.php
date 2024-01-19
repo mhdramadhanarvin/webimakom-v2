@@ -32,6 +32,7 @@ Route::get('/workplan', [WorkplanController::class, 'index'])->name('workplan');
 
 Route::get('/pekanesport', [PekanEsportController::class, 'index']);
 Route::get('/pekanesport/{game}', [PekanEsportController::class, 'game'])->name('pekanesport.game');
+Route::get('/pekanesport/game/{form}', [PekanEsportController::class, 'form'])->name('pekanesport.form');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
