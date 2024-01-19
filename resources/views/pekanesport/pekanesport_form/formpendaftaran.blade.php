@@ -6,10 +6,10 @@
     <div class="max-w-6xl mx-auto my-20 bg-white p-10 rounded-3xl drop-shadow-md">
     <form class="max-w-4xl mx-auto">
         <div class="mb-5">
-            <h1 class="text-center text-4xl font-black text-zinc-800" >Form Pendaftaran Mobile Legends</h1>
+            <h1 class="text-center text-4xl font-black text-zinc-800" >Form Pendaftaran Pekan Esport</h1>
                 <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
                     <label for="namaTim" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Tim</label>
-                    <input type="text" id="namaTim" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama tim" required>
+                    <input type="text" id="namaTim" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama tim">
         </div>
         <div class="mb-5">
             <label for="nomorWa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomor WA Leader</label>
@@ -39,75 +39,75 @@
         {{-- PLAYER 2 --}}
         <div class="mb-5">
             <label for="namaPlayer2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Player 2</label>
-            <input type="text" id="namaPlayer2" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama player 2" required>
+            <input type="text" id="namaPlayer2" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama player 2">
         </div>
         <div class="mb-5">
             <label for="nicknamePlayer2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Player 2</label>
-            <input type="text" id="nicknamePlayer2" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname player 2" required>
+            <input type="text" id="nicknamePlayer2" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname player 2">
         </div>
         <div class="mb-5">
             <label for="idPlayer2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Player 2</label>
-            <input type="text" id="idPlayer2" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id player 2" required>
+            <input type="text" id="idPlayer2" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id player 2">
         </div>
         <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
 
         {{-- PLAYER 3 --}}
         <div class="mb-5">
             <label for="namaPlayer3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Player 3</label>
-            <input type="text" id="namaPlayer3" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 3" required>
+            <input type="text" id="namaPlayer3" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 3">
         </div>
         <div class="mb-5">
             <label for="nicknamePlayer3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Player 3</label>
-            <input type="text" id="nicknamePlayer3" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 3" required>
+            <input type="text" id="nicknamePlayer3" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 3">
         </div>
         <div class="mb-5">
             <label for="idPlayer3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Player 3</label>
-            <input type="text" id="idPlayer3" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 3" required>
+            <input type="text" id="idPlayer3" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 3">
         </div>
         <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
 
         {{-- PLAYER 4 --}}
         <div class="mb-5">
             <label for="namaPlayer4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Player 4</label>
-            <input type="text" id="namaPlayer4" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 4" required>
+            <input type="text" id="namaPlayer4" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 4">
         </div>
         <div class="mb-5">
             <label for="nicknamePlayer4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Player 4</label>
-            <input type="text" id="nicknamePlayer4" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 4" required>
+            <input type="text" id="nicknamePlayer4" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 4">
         </div>
         <div class="mb-5">
             <label for="idPlayer4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Player 4</label>
-            <input type="text" id="idPlayer4" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 4" required>
+            <input type="text" id="idPlayer4" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 4">
         </div>
         <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
 
         {{-- PLAYER 5 --}}
         <div class="mb-5">
             <label for="namaPlayer5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Player 5</label>
-            <input type="text" id="namaPlayer5" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 5" required>
+            <input type="text" id="namaPlayer5" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 5">
         </div>
         <div class="mb-5">
             <label for="nicknamePlayer5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Player 5</label>
-            <input type="text" id="nicknamePlayer5" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 5" required>
+            <input type="text" id="nicknamePlayer5" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 5">
         </div>
         <div class="mb-5">
             <label for="idPlayer5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Player 5</label>
-            <input type="text" id="idPlayer5" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 5" required>
+            <input type="text" id="idPlayer5" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 5">
         </div>
         <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
 
         {{-- PLAYER 6 --}}
         <div class="mb-5">
             <label for="namaPlayer6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Player 6 (Cadangan)</label>
-            <input type="text" id="namaPlayer6" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 6" required>
+            <input type="text" id="namaPlayer6" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nama Player 6">
         </div>
         <div class="mb-5">
             <label for="nicknamePlayer6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Player 6 (Cadangan)</label>
-            <input type="text" id="nicknamePlayer6" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 6" required>
+            <input type="text" id="nicknamePlayer6" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nickname Player 6">
         </div>
         <div class="mb-5">
             <label for="idPlayer6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Player 6 (Cadangan)</label>
-            <input type="text" id="idPlayer6" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 6" required>
+            <input type="text" id="idPlayer6" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="id Player 6">
         </div>
         <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
 
