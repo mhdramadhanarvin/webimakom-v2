@@ -4,6 +4,7 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FormPendaftaranController;
 use App\Http\Controllers\GalleryController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StructureController;
@@ -33,6 +34,7 @@ Route::get('/workplan', [WorkplanController::class, 'index'])->name('workplan');
 Route::get('/pekanesport', [PekanEsportController::class, 'index']);
 Route::get('/pekanesport/{game}', [PekanEsportController::class, 'game'])->name('pekanesport.game');
 Route::get('/pekanesport/game/{form}', [PekanEsportController::class, 'form'])->name('pekanesport.form');
+Route::post('/submit-form-pendaftaran', [FormPendaftaranController::class, 'store'])->name('submit.form.pendaftaran');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
