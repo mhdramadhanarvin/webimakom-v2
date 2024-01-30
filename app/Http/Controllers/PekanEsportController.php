@@ -44,43 +44,12 @@ class PekanEsportController extends Controller
                 break;
 
             default:
-                return view('pekanesport_games/game_not_found');
+                return view('pekanesport/pekanesport_games/game_not_found');
         }
     }
 
-    public function form($form): View
+    public function form(): View
     {
-        switch ($form) {
-            case 'valorantform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            case 'pubgmform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            case 'mobilelegendsform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            case 'freefireform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            case 'psfootballform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            case 'magicchessform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            case 'dynastonesform':
-                return view('pekanesport/pekanesport_form/formpendaftaran');
-                break;
-
-            default:
-                return view('pekanesport_games/game_not_found');
-        }
+        return view('pekanesport/pekanesport_form/formpendaftaran');
     }
 }
