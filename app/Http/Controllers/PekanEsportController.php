@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\PekanEsportFormValidation;
+// use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class PekanEsportController extends Controller
@@ -51,5 +52,11 @@ class PekanEsportController extends Controller
     public function form(): View
     {
         return view('pekanesport/pekanesport_form/formpendaftaran');
+    }
+
+    public function formSubmit(PekanEsportFormValidation $request)
+    {
+        dd($request->all());
+
     }
 }
