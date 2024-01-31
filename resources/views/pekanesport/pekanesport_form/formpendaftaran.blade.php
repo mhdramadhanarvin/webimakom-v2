@@ -23,37 +23,37 @@
                 <input type="text" id="nama_tim" name="team_name" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama tim" value="{{ old('team_name') }}" >
             </div>
             <div class="mb-5">
-                <label for="nomor_wa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomor WA Leader</label>
-                <input type="text" id="nomor_wa" name="whatsapp_leader" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nomor WA leader" value="{{ old('whatsapp_leader') }}" required>
+                <label for="nomor_wa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomor WA Pemain 1</label>
+                <input type="text" id="nomor_wa" name="whatsapp_leader" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nomor WA pemain 1" value="{{ old('whatsapp_leader') }}" required>
             </div>
             <div class="mb-5">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Leader</label>
-                <input type="email" id="email" name="email" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan email leader" value="{{ old('email') }}" required>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Pemain 1</label>
+                <input type="email" id="email" name="email" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan email pemain 1" value="{{ old('email') }}" required>
             </div>
 
             {{-- PLAYER 1 (LEADER) --}}
             <div class="mb-5">
-                <label for="name_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Leader</label>
-                <input type="text" id="name_player[]" name="name_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama leader" value="{{ old('name_player.0') }}" required>
+                <label for="name_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pemain 1</label>
+                <input type="text" id="name_player[]" name="name_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama pemain 1" value="{{ old('name_player.0') }}" required>
             </div>
             <div class="mb-5">
-                <label for="nickname_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Game Leader</label>
-                <input type="text" id="nickname_player[]" name="nickname_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nickname game leader" value="{{ old('nickname_player.0') }}" required>
+                <label for="nickname_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Game Pemain 1</label>
+                <input type="text" id="nickname_player[]" name="nickname_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nickname game pemain 1" value="{{ old('nickname_player.0') }}" required>
             </div>
             <div class="mb-5">
-                <label for="id_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Game Leader</label>
-                <input type="text" id="id_player[]" name="id_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan id game leader" value="{{ old('id_player.0') }}" required>
+                <label for="id_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Game Pemain 1</label>
+                <input type="text" id="id_player[]" name="id_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan id game pemain 1" value="{{ old('id_player.0') }}" required>
             </div>
 
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ss_game">
-                    Screenshot Profile Game Leader
+                    Screenshot Profile Game Pemain 1
                 </label>
                 <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" id="ss_game" name="ss_game[]" type="file" accept="image/png, image/jpeg" required>
             </div>
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ktp">
-                    Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Leader
+                    Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain 1
                 </label>
                 <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" id="ktp" name="identity_card[]" type="file" accept="image/png, image/jpeg" required>
             </div>
