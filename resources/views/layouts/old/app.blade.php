@@ -27,6 +27,12 @@
         </div>
         <div class="menu bg-black lg:bg-inherit" :class="open ? 'open' : ''">
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
+            <a class="menu-item" href="{{ route('pekanesport') }}">
+                <span class="inline-flex items-center ml-5 py-1 px-3 rounded-full text-md font-medium text-gray-800 bg-red-500 dark:bg-white/10 dark:text-white">
+                    NEW
+                </span>
+                PEKAN ESPORT
+            </a>
             <a class="menu-item" href="{{ route('structure') }}">PENGURUS</a>
             <a class="menu-item" href="{{ route('workplan') }}">PROGRAM KERJA</a>
             <a class="menu-item" href="{{ route('article') }}">ARTIKEL</a>
