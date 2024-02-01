@@ -18,7 +18,7 @@
             </li>
             <li>
                 Player
-                <ul style="list-style-type:armenian; margin-top: 5px; list-style-position:inside">
+                <ul style="margin-top: 5px; list-style-position:inside">
                     <li>Nama Player 1-5 <strong>[Nama Lengkap]</strong></li>
                     <li>Nickname Player 1-5 <strong>[Nama Game]</strong></li>
                     <li>ID Dynastones Player 1-5</li>
