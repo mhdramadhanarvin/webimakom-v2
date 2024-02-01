@@ -29,7 +29,7 @@ Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/article/{slug}', [ArticleController::class, 'detail'])->name('article.detail');
 Route::get('/workplan', [WorkplanController::class, 'index'])->name('workplan');
 
-Route::get('/pekanesport', [PekanEsportController::class, 'index']);
+Route::get('/pekanesport', [PekanEsportController::class, 'index'])->name('pekanesport');
 Route::get('/pekanesport/register', [PekanEsportController::class, 'form'])->name('pekanesport.form');
 Route::get('/pekanesport/{game}', [PekanEsportController::class, 'game'])->name('pekanesport.game');
 Route::post('/pekanesport/register', [PekanEsportController::class, 'formSubmit'])->name('pekanesport.form.submit');
