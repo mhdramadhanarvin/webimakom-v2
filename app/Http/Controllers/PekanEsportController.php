@@ -57,6 +57,5 @@ class PekanEsportController extends Controller
     public function formSubmit(PekanEsportFormValidation $request)
     {
         dd($request->all());
-
     }
 }
