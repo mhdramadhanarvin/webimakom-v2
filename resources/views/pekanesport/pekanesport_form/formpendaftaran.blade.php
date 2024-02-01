@@ -6,19 +6,31 @@
     <div class="max-w-2xl mx-auto my-20 bg-white p-10 rounded-3xl drop-shadow-md">
         <form id="formPendaftaran" class="max-w-4xl mx-auto" action="{{ route('pekanesport.form.submit') }}" method="post" enctype="multipart/form-data">
             @csrf
-            <div class=" mb-5">
-                <h1 class="text-center text-4xl font-black text-zinc-800">Form Pendaftaran Pekan Esport</h1>
-                <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
-                @if ($errors->any())
-                    {{ var_dump(old('name_player.0')) }}
-                    <div class="relative leading-normal py-4 px-5 text-red-700 bg-red-100 rounded-lg" role="alert">
-                        <ul class="list-disc list-inside">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+            <h1 class="text-center text-4xl font-black text-zinc-800">Form Pendaftaran Pekan Esport</h1>
+            <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
+            @if ($errors->any())
+                <div class="relative leading-normal py-4 px-5 text-red-700 bg-red-100 rounded-lg" role="alert">
+                    <ul class="list-disc list-inside">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <div class="mb-5">
+                <label for="game" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Cabang Olahraga</label>
+                <select id="countries" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option selected>Pilih</option>
+                  <option value="valo">VALORANT</option>
+                  <option value="pubgm">PUBGM</option>
+                  <option value="ml">MOBILE LEGENDS</option>
+                  <option value="ff">FREE FIRE</option>
+                  <option value="ps">PS FOOTBALL</option>
+                  <option value="mc">MAGIC CHESS - MOBILE LEGENDS</option>
+                  <option value="dn">DYNASTONES</option>
+                </select>
+            </div>
+            <div class="mb-5">
                 <label for="nama_tim" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Tim</label>
                 <input type="text" id="nama_tim" name="team_name" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama tim" value="{{ old('team_name') }}" >
             </div>
