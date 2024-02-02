@@ -20,14 +20,14 @@
             <div class="mb-5">
                 <label for="game" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Cabang Olahraga</label>
                 <select id="countries" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Pilih</option>
-                  <option value="valo">VALORANT</option>
-                  <option value="pubgm">PUBGM</option>
-                  <option value="ml">MOBILE LEGENDS</option>
-                  <option value="ff">FREE FIRE</option>
-                  <option value="ps">PS FOOTBALL</option>
-                  <option value="mc">MAGIC CHESS - MOBILE LEGENDS</option>
-                  <option value="dn">DYNASTONES</option>
+                    <option selected>Pilih</option>
+                    <option value="1">VALORANT</option>
+                    <option value="2">PUBGM</option>
+                    <option value="3">MOBILE LEGENDS</option>
+                    <option value="4">FREE FIRE</option>
+                    <option value="5">PS FOOTBALL</option>
+                    <option value="6">MAGIC CHESS - MOBILE LEGENDS</option>
+                    <option value="7">DYNASTONES</option>
                 </select>
             </div>
             <div class="mb-5">
