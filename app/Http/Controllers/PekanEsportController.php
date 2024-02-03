@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PekanEsportFormValidation;
+use App\Models\PekanEsport;
 // use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -56,6 +57,32 @@ class PekanEsportController extends Controller
 
     public function formSubmit(PekanEsportFormValidation $request)
     {
-        dd($request->all());
+        $pathSSProfile = [];
+        foreach ($request->file('ss_game') as $key => $file) {
+            $pathSSProfile[] = $file->storeAs(
+                'ss_game', md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+            );
+        }
+
+        $pathIdentityCard = [];
+        foreach ($request->file('identity_card') as $key => $file) {
+            $pathIdentityCard[] = $file->storeAs(
+                'identity_card', md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+            );
+        }
+
+        PekanEsport::create([
+            'game_id'           => $request->game_id,
+            'team_name'         => $request->team_name,
+            'whatsapp_number'   => $request->whatsapp_leader,
+            'email'             => $request->email,
+            'player_name'       => $request->name_player,
+            'nickname_player'   => $request->nickname_player,
+            'id_player'         => $request->id_player,
+            'screenshot_profile_player'         => $pathSSProfile,
+            'identity_player'         => $pathIdentityCard,
+        ]);
+
+        return redirect()->route('home');
     }
 }

@@ -28,8 +28,8 @@ class PekanEsportFormValidation extends FormRequest
             'name_player.*' => ['required', 'string', 'max:255'],
             'nickname_player.*' => ['required', 'string', 'max:255'],
             'id_player.*' => ['required', 'string', 'max:255'],
-            'ss_game.*' => ['required', 'file', 'max:255'],
-            'identity_card.*' => ['required', 'file', 'max:255'],
+            'ss_game.*' => ['required', 'file'],
+            'identity_card.*' => ['required', 'file'],
         ];
     }
 }
