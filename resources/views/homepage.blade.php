@@ -77,7 +77,7 @@
     </div>
 
     <!-- FOTO-FOTO -->
-    {{-- <div class="content-shadow" style="">
+    {{-- <div class="content-shadow">
         <div class="row no-padding">
             <div class="col-3">
                 <a class="ukm-box full-image">

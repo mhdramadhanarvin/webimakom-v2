@@ -18,7 +18,7 @@
             </li>
             <li>
                 Player
-                <ul style="list-style-type:armenian; margin-top: 5px; list-style-position:inside">
+                <ul style="margin-top: 5px; list-style-position:inside">
                     <li>Nama Player 1-5 <strong>[Nama Lengkap]</strong></li>
                     <li>Nickname Player 1-5 <strong>[Nama Game]</strong></li>
                     <li>ID Dynastones Player 1-5</li>
@@ -37,8 +37,9 @@
             kesempatan ini untuk mengeksplorasi dunia misterius yang menantang dan menjadi bagian dari sejarah legenda!
         </div>
         <div class="flex justify-center">
-            <button type="button"
-                class="mx-auto w-1/2 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar</button>
+            <a href="{{ route('pekanesport.form') }}"
+                class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar
+            </a>
         </div>
     </div>
 </x-new-app-layout>

@@ -13,6 +13,7 @@
         "coderflexx/laravisit": "^1.4",
         "filament/filament": "^3.1",
         "filament/forms": "^3.1",
+        "filament/infolists": "^3.2",
         "filament/tables": "^3.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",

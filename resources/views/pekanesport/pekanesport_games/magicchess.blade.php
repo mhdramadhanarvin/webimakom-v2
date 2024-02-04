@@ -16,7 +16,7 @@
         <ul style="list-style-type:square; margin-bottom:10px; list-style-position:outside">
             <li>
                 Player
-                <ul style="list-style-type:armenian; margin-top: 5px; list-style-position:inside">
+                <ul style="margin-top: 5px; list-style-position:inside">
                     <li>Nama Player <strong>[Nama Lengkap]</strong></li>
                     <li>Nickname Player <strong>[Nama Game]</strong></li>
                     <li>ID MLBB Player</li>
@@ -35,8 +35,9 @@
             Ayo tunjukkan kepiawaian kalian dalam mengendalikan pasukan ajaib dan meraih gelar juara dalam turnamen ini.
         </div>
         <div class="flex justify-center">
-            <button type="button"
-                class="mx-auto w-1/2 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar</button>
+            <a href="{{ route('pekanesport.form') }}"
+                class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar
+            </a>
         </div>
     </div>
 </x-new-app-layout>

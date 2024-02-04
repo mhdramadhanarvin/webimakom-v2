@@ -10,7 +10,7 @@
             pilihan mu, bersiap untuk merajai medan perang Valorant! Mari kita daftar dengan persyaratan di bawah ini:
         </p>
         <div class="mt-4">
-            <h1 class="text-center text-center font-bold">PERSYARATAN PENDAFTARAN</h1>
+            <h1 class="text-center font-bold">PERSYARATAN PENDAFTARAN</h1>
         </div>
         <ul style="list-style-type:square; margin-bottom:10px; list-style-position:outside">
             <li>
@@ -18,7 +18,7 @@
             </li>
             <li>
                 Player
-                <ul style="list-style-type:armenian; margin-top: 5px; list-style-position:inside">
+                <ul style="margin-top: 5px;">
                     <li>Nama Player 1-5 <strong>[Nama Lengkap]</strong></li>
                     <li>Nickname Player 1-5 <strong>[Nama Game]</strong></li>
                     <li>ID Riot Player 1-5</li>
@@ -38,8 +38,9 @@
             Mari bersama-sama kita hentakkan tanah, rebut kemenangan, dan ukir prestasi gemilang di bawah bendera Astra
             Valorants!</div>
         <div class="flex justify-center">
-            <button type="button"
-                class="mx-auto w-1/2 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar</button>
+            <a href="{{ route('pekanesport.form') }}"
+                class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar
+            </a>
         </div>
     </div>
 </x-new-app-layout>

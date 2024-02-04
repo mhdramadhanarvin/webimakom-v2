@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Article;
+// use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
@@ -9,7 +9,6 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\StructureController;
 use App\Http\Controllers\WorkplanController;
 use App\Http\Controllers\PekanEsportController;
-use App\Http\Controllers\ValorantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +29,14 @@ Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/article/{slug}', [ArticleController::class, 'detail'])->name('article.detail');
 Route::get('/workplan', [WorkplanController::class, 'index'])->name('workplan');
 
-Route::get('/pekanesport', [PekanEsportController::class, 'index']);
+Route::get('/pekanesport', [PekanEsportController::class, 'index'])->name('pekanesport');
+Route::get('/pekanesport/register', [PekanEsportController::class, 'form'])->name('pekanesport.form');
 Route::get('/pekanesport/{game}', [PekanEsportController::class, 'game'])->name('pekanesport.game');
+Route::post('/pekanesport/register', [PekanEsportController::class, 'formSubmit'])->name('pekanesport.form.submit');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
