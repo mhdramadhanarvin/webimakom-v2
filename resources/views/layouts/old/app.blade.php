@@ -28,7 +28,7 @@
         <div class="menu bg-black lg:bg-inherit" :class="open ? 'open' : ''">
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
             <a class="menu-item" href="{{ route('pekanesport') }}">
-                <span class="inline-flex items-center ml-5 py-1 px-3 rounded-full text-md font-medium text-gray-800 bg-red-500 dark:bg-white/10 dark:text-white">
+                <span class="inline-flex items-center py-1 px-3 rounded-full text-md font-medium text-gray-800 bg-red-500 dark:bg-white/10 dark:text-white">
                     NEW
                 </span>
                 PEKAN ESPORT VOL. 2
