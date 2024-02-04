@@ -1,5 +1,5 @@
 <x-mail::message>
-# Hai, {{ $notifiable->player_name[0] }}
+# Hai, {{ $notifiable->player_name['player1'] }}
 
 Terima kasih sudah mendaftar pada **Pekan E-Sport Vol. 2**
 Berikut rangkuman data yang kami terima.
@@ -54,21 +54,21 @@ Berikut rangkuman data yang kami terima.
 | Nama Tim        | {{ $notifiable->team_name }}       |
 | Nomor Whatsapp  | {{ $notifiable->whatsapp_number }} |
 @foreach ($notifiable->player_name as $key => $player_name)
-    @if ($key === 0)
+    @if ($key === 'player1')
     | Nama Pemain | {{ $player_name }} |
     @else
     | | {{ $player_name }} |
     @endif
 @endforeach
 @foreach ($notifiable->nickname_player as $key => $nickname_player)
-    @if ($key === 0)
+    @if ($key === 'player1')
     | Nickname Pemain | {{ $nickname_player }} |
     @else
     | | {{ $nickname_player }} |
     @endif
 @endforeach
 @foreach ($notifiable->id_player as $key => $id_player)
-    @if ($key === 0)
+    @if ($key === 'player1')
     | ID Pemain | {{ $id_player }} |
     @else
     | | {{ $id_player }} |

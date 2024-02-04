@@ -46,28 +46,28 @@
             {{-- PLAYER 1 (LEADER) --}}
             <div class="mb-5">
                 <label for="name_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pemain 1</label>
-                <input type="text" id="name_player[]" name="name_player[0]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama pemain 1" value="{{ old('name_player.0') }}" required>
+                <input type="text" id="name_player[]" name="name_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama pemain 1" value="{{ old('name_player.0') }}" required>
             </div>
             <div class="mb-5">
                 <label for="nickname_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Game Pemain 1</label>
-                <input type="text" id="nickname_player[]" name="nickname_player[0]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nickname game pemain 1" value="{{ old('nickname_player.0') }}" required>
+                <input type="text" id="nickname_player[]" name="nickname_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nickname game pemain 1" value="{{ old('nickname_player.0') }}" required>
             </div>
             <div class="mb-5">
                 <label for="id_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Game Pemain 1</label>
-                <input type="text" id="id_player[]" name="id_player[0]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan id game pemain 1" value="{{ old('id_player.0') }}" required>
+                <input type="text" id="id_player[]" name="id_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan id game pemain 1" value="{{ old('id_player.0') }}" required>
             </div>
 
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ss_game">
                     Screenshot Profile Game Pemain 1
                 </label>
-                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" id="ss_game" name="ss_game[0]" type="file" accept="image/png, image/jpeg" required>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" id="ss_game" name="ss_game[player1]" type="file" accept="image/png, image/jpeg" required>
             </div>
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ktp">
                     Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain 1
                 </label>
-                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" id="ktp" name="identity_card[0]" type="file" accept="image/png, image/jpeg" required>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" id="ktp" name="identity_card[player1]" type="file" accept="image/png, image/jpeg" required>
             </div>
 
 
@@ -81,30 +81,30 @@
                             <label :for="index+'name_player'" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Nama Pemain <span x-text="index+2"></span>
                             </label>
-                            <input type="text" :id="index+'name_player'" name="name_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama pemain 2" required>
+                            <input type="text" :id="index+'name_player'" :name="'name_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nama pemain 2" required>
                         </div>
                         <div class="mb-5">
                             <label :for="index+'nickname_player'" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Nickname Game Pemain <span x-text="index+2"></span>
                             </label>
-                            <input type="text" :id="index+'nickname_player'" name="nickname_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nickname game pemain 2" required>
+                            <input type="text" :id="index+'nickname_player'" :name="'nickname_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan nickname game pemain 2" required>
                         </div>
                         <div class="mb-5">
                             <label :for="index+'id_player'" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Game Pemain <span x-text="index+2"></span></label>
-                            <input type="text" :id="index+'id_player'" name="id_player[]" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan id game pemain 2" required>
+                            <input type="text" :id="index+'id_player'" :name="'id_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan id game pemain 2" required>
                         </div>
 
                         <div class="mb-5">
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" :for="index+'ss_game'">
                                 Screenshot Profile Game Pemain <span x-text="index+2"></span></label>
                             </label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" :id="index+'ss_game'" name="ss_game[]" type="file" accept="image/png, image/jpeg" required>
+                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" :id="index+'ss_game'" :name="'ss_game[player'+ increment(index) +']'" type="file" accept="image/png, image/jpeg" required>
                         </div>
                         <div class="mb-5">
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" :for="index+'ktp'">
                                 Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain <span x-text="index+2"></span></label>
                             </label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" :id="index+'ktp'" type="file" name="identity_card[]" accept="image/png, image/jpeg" required>
+                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-zinc-200 dark:text-zinc-400 focus:outline-none dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 p-0.5" :id="index+'ktp'" type="file" :name="'identity_card[player'+ increment(index) +']'" accept="image/png, image/jpeg" required>
                         </div>
                     </div>
                 </template>
@@ -180,6 +180,9 @@
                 },
                 removeField(field) {
                     this.fields.splice(this.fields.indexOf(field), 1);
+                },
+                increment(int) {
+                    return int+2
                 }
             }
         }
