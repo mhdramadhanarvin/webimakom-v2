@@ -12,9 +12,6 @@ class PekanEsportController extends Controller
 {
     public function index(): View
     {
-        $pekanesport = PekanEsport::first();
-        $pekanesport->notify(new PekanEsportRegisterSuccess);
-
         return view('pekanesport');
     }
 
