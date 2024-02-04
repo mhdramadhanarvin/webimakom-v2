@@ -60,14 +60,16 @@ class PekanEsportController extends Controller
         $pathSSProfile = [];
         foreach ($request->file('ss_game') as $key => $file) {
             $pathSSProfile[] = $file->storeAs(
-                'ss_game', md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+                'ss_game',
+                md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
             );
         }
 
         $pathIdentityCard = [];
         foreach ($request->file('identity_card') as $key => $file) {
             $pathIdentityCard[] = $file->storeAs(
-                'identity_card', md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+                'identity_card',
+                md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
             );
         }
 
@@ -83,6 +85,6 @@ class PekanEsportController extends Controller
             'identity_player'         => $pathIdentityCard,
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('pekanesport.form')->with('status', true);
     }
 }
