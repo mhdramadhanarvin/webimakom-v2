@@ -50,13 +50,17 @@ class PekanEsportResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('team_name')->label('Nama Tim'),
-                TextColumn::make('email')->label('Email'),
-                TextColumn::make('whatsapp_number')->label('Nomor Whatsapp'),
+                TextColumn::make('team_name')->label('Nama Tim')->sortable()->searchable(),
+                TextColumn::make('email')->label('Email')->searchable(),
+                TextColumn::make('whatsapp_number')->label('Nomor Whatsapp')->searchable(),
                 TextColumn::make('game_id')
                     ->sortable()
                     ->label('Cabor Game')
                     ->badge(),
+                TextColumn::make('created_at')
+                    ->dateTime('d M Y H:i')
+                    ->label('Daftar Pada')
+                    ->sortable()
             ])
             ->filters([
                 //
@@ -81,11 +85,14 @@ class PekanEsportResource extends Resource
                         TextEntry::make('team_name')->label('Nama Tim'),
                         TextEntry::make('email'),
                         TextEntry::make('whatsapp_number')->label('Nomor Whatsapp'),
+                        TextEntry::make('created_at')
+                            ->label('Daftar Pada')
+                            ->dateTime('d M Y H:i'),
                         KeyValueEntry::make('player_name')->label('Name Pemain')->keyLabel('Property name')->valueLabel('Property value'),
                         KeyValueEntry::make('nickname_player')->label('Nickname Pemain')->keyLabel('Property name')->valueLabel('Property value'),
                         KeyValueEntry::make('id_player')->label('ID Pemain')->keyLabel('Property name')->valueLabel('Property value'),
-                        PekanEsportImageEntry::make('screenshot_profile_player'),
-                        PekanEsportImageEntry::make('identity_player'),
+                        PekanEsportImageEntry::make('screenshot_profile_player')->label('Screenshot Profile Pemain'),
+                        PekanEsportImageEntry::make('identity_player')->label('Identitas Pemain'),
                     ])
             ]);
     }
@@ -110,5 +117,10 @@ class PekanEsportResource extends Resource
     public static function canCreate(): bool
     {
         return false;
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }
