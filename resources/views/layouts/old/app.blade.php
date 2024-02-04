@@ -31,7 +31,7 @@
                 <span class="inline-flex items-center ml-5 py-1 px-3 rounded-full text-md font-medium text-gray-800 bg-red-500 dark:bg-white/10 dark:text-white">
                     NEW
                 </span>
-                PEKAN ESPORT
+                PEKAN ESPORT VOL. 2
             </a>
             <a class="menu-item" href="{{ route('structure') }}">PENGURUS</a>
             <a class="menu-item" href="{{ route('workplan') }}">PROGRAM KERJA</a>

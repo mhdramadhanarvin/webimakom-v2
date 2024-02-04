@@ -6,8 +6,8 @@
     <div class="max-w-2xl mx-auto my-20 bg-white p-10 rounded-3xl drop-shadow-md">
         <form id="formPendaftaran" class="max-w-4xl mx-auto" action="{{ route('pekanesport.form.submit') }}" method="post" enctype="multipart/form-data">
             @csrf
-            <h1 class="text-center text-4xl font-black text-zinc-800">Form Pendaftaran Pekan Esport</h1>
-            <hr class=" h-1 mx-auto my-4 bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
+            <h1 class="text-center text-4xl font-black text-zinc-800">Pendaftaran <br>Pekan Esport Vol. 2</h1>
+            <hr class="h-1 mx-auto bg-purple-500 border-0 rounded md:my-10 dark:bg-white">
             @if ($errors->any())
             <div class="relative leading-normal py-4 px-5 text-red-700 bg-red-100 rounded-lg" role="alert">
                 <ul class="list-disc list-inside">

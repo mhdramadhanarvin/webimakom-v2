@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PekanEsportFormValidation;
 use App\Models\PekanEsport;
+use App\Notifications\PekanEsportRegisterSuccess;
 // use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -11,6 +12,9 @@ class PekanEsportController extends Controller
 {
     public function index(): View
     {
+        $pekanesport = PekanEsport::first();
+        $pekanesport->notify(new PekanEsportRegisterSuccess);
+
         return view('pekanesport');
     }
 
@@ -73,7 +77,7 @@ class PekanEsportController extends Controller
             );
         }
 
-        PekanEsport::create([
+        $pekanesport = PekanEsport::create([
             'game_id'           => $request->game_id,
             'team_name'         => $request->team_name,
             'whatsapp_number'   => $request->whatsapp_leader,
@@ -84,6 +88,8 @@ class PekanEsportController extends Controller
             'screenshot_profile_player'         => $pathSSProfile,
             'identity_player'         => $pathIdentityCard,
         ]);
+
+        $pekanesport->notify(new PekanEsportRegisterSuccess);
 
         return redirect()->route('pekanesport.form')->with('status', true);
     }
