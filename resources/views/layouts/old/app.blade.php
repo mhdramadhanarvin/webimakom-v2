@@ -19,11 +19,10 @@
     <!-- Header -->
     <nav class="nav-dark" x-data="{ open: false }">
         <div class="logo light">
-            <a href="#"><img src="{{ url('./images/kata_imakom.png') }}" alt="" height="50"></a>
+            <a href="{{ route('home') }}"><img src="{{ url('./images/kata_imakom.png') }}" alt="" height="50"></a>
         </div>
         <div class="logo dark">
-            <a href="#"><img src="{{ url('./images/logo_imakom.png') }}" style="height: 50px; width: 90px;" /></a>
-
+            <a href="{{ route('home') }}"><img src="{{ url('./images/logo_imakom.png') }}" style="height: 50px; width: 90px;" /></a>
         </div>
         <div class="menu bg-black lg:bg-inherit" :class="open ? 'open' : ''">
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
