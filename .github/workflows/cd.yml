@@ -1,13 +1,13 @@
 name: Deploy App
 
-# 'on':
-#   push:
-#     branches:
-#       - main
-on:
-  pull_request:
+'on':
+  push:
     branches:
       - main
+# on:
+#   pull_request:
+#     branches:
+#       - main
 
 jobs:
   tests:
