@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="text-center text-slate-300 p-3" style="background-color:rgba(51, 46, 77, 0.82);">
-        <span>Copyright &copy; 2023 All Right Reserved. Ikatan Mahasiswa Komputer.</span>
+        <span>Copyright &copy; {{ date('Y') }} All Right Reserved. Ikatan Mahasiswa Komputer.</span>
     </div>
 </body>
 
