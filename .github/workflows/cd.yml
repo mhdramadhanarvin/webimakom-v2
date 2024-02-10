@@ -34,7 +34,7 @@ jobs:
 
       - uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r deploy/app.zip ./ -x ".git/*" -x ".node_modules/*"
+          args: zip -qq -r deploy/app.zip ./ -x ".git/*" -x "node_modules/*"
 
       - uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
