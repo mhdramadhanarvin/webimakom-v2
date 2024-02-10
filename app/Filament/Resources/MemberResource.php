@@ -58,6 +58,8 @@ class MemberResource extends Resource
                 FileUpload::make('photo')
                     ->label('Foto')
                     ->image()
+                    ->optimize('webp')
+                    ->resize(50)
                     ->imageEditor()
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('1:1')
