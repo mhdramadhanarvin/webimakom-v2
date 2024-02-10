@@ -1,4 +1,5 @@
 @section('title', 'Program Kerja - Imakom Unpab')
+@section('description', 'List of workplan organization in current structural including already done, ongoing, and on coming')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         {{-- <div class="image">

@@ -1,4 +1,5 @@
 @section('title', $article->title . '- Imakom Unpab')
+@section('description', {!! Illuminate\Support\Str::words($all->content, 25, '...') !!})
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">
