@@ -117,14 +117,14 @@
                     @endphp
 
                     @foreach ($members as $member)
-                        <div class="card max-w-52 max-h-64">
-                            <div class="content">
+                        <div class="card max-w-60 h-80 lg:h-72 max-h-96">
+                            <div class="content static">
                                 <div class="imgBx max-h-32 max-w-32">
                                     <img src="{{ $member->photo == null ? url('./images/default.jpg') : asset('storage/' . $member->photo) }}"
                                         alt="">
                                 </div>
                                 <div class="contentBx">
-                                    <h2 class="xl">{{ $member->name }}<br>
+                                    <h2 class="max-w-56">{{ $member->name }}<br>
                                         <span
                                             class="text-lg">{{ $member->position->value == '1' ? 'Ketua Divisi' : 'Anggota Divisi' }}</span>
                                     </h2>
