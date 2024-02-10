@@ -57,3 +57,4 @@ jobs:
           script: |
             cd /home/${{ secrets.SSH_USERNAME }}/public_html
             unzip -o app.zip -d /home/${{ secrets.SSH_USERNAME }}/public_html/
+            rm -rf app.zip
