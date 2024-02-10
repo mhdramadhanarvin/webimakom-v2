@@ -2,11 +2,13 @@
 <html lang="en" ng-app="uscope">
 
 <head>
-    <title>Imakom - UNPAB</title>
+    <title>@yield('title', 'Imakom Unpab')</title>
+    <meta name="description" content="@yield('description')">
     <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WRVPWRHSN"></script>
     <script>
@@ -60,7 +62,7 @@
     <!-- finish struktur -->
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/footer.webp') }}" />
+            <img src="{{ url('./images/footer.webp') }}" alt="" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">

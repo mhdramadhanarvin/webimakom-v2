@@ -1,3 +1,5 @@
+@section('title', 'Artikel - Imakom Unpab')
+@section('description', 'List of article posted about news in technology, entreprenuer, and event or agenda in organization')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         {{-- <div class="image">

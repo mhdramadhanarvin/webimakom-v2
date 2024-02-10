@@ -1,3 +1,5 @@
+@section('title', 'Magic Chess - Imakom Unpab')
+@section('description', 'Magic Chess is one of the games that will be competed in the Pekan Esport Vol. 2 Esport.')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">

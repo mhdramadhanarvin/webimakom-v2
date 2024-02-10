@@ -1,3 +1,5 @@
+@section('title', 'PS Football - Imakom Unpab')
+@section('description', 'PS Football is one of the games that will be competed in the Pekan Esport Vol. 2 Esport.')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">

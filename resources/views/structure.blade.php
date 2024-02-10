@@ -1,3 +1,5 @@
+@section('title', 'Struktur Kepengurusan - Imakom Unpab')
+@section('description', 'Page for each member in structural organization not only the top of leader but including the member of each division of organization')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
@@ -11,7 +13,6 @@
                     </div>
                     <div class="col-6">
                         <h1 class="text-3xl text-red-600">PENGURUS & ANGGOTA KEORGANISASIAN 2023/2024</h1>
-                        <button class="scroll-for-more"></button>
                     </div>
                 </div>
                 <div class="responsive-gap"></div>
