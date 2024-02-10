@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">VALORANT</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/valorant-min.jpeg') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/valorant-min.webp') }}" alt="">
         <p class="text-center">Selamat datang di dunia ketegangan dan strategi taktis di Game Valorants, daftarkan tim
             pilihan mu, bersiap untuk merajai medan perang Valorant! Mari kita daftar dengan persyaratan di bawah ini:
         </p>

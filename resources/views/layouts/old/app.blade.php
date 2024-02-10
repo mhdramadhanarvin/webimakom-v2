@@ -3,8 +3,8 @@
 
 <head>
     <title>Imakom - UNPAB</title>
-    <link rel="shortcut icon" href="{{ url('./images/logo_imakom.png') }}" type="image/x-icon" />
-    <link rel="icon" href="{{ url('./images/logo_imakom.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -13,16 +13,16 @@
 
 <body>
     {{-- <div class="loading-screen loader-visible" id="loader">
-        <img src="{{ url('./images/logo_imakom.png') }}" />
+        <img src="{{ url('./images/logo_imakom.webp') }}" />
     </div> --}}
 
     <!-- Header -->
     <nav class="nav-dark" x-data="{ open: false }">
         <div class="logo light">
-            <a href="{{ route('home') }}"><img src="{{ url('./images/kata_imakom.png') }}" alt="" height="50"></a>
+            <a href="{{ route('home') }}"><img src="{{ url('./images/kata_imakom.webp') }}" alt="" height="50"></a>
         </div>
         <div class="logo dark">
-            <a href="{{ route('home') }}"><img src="{{ url('./images/logo_imakom.png') }}" style="height: 50px; width: 90px;" /></a>
+            <a href="{{ route('home') }}"><img src="{{ url('./images/logo_imakom.webp') }}" style="height: 50px; width: 90px;" /></a>
         </div>
         <div class="menu bg-black lg:bg-inherit" :class="open ? 'open' : ''">
             <a class="menu-item" href="{{ route('home') }}"> BERANDA</a>
@@ -48,7 +48,7 @@
     <!-- finish struktur -->
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/footer.jpeg') }}" />
+            <img src="{{ url('./images/footer.webp') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="text-center text-slate-300 p-3" style="background-color:rgba(51, 46, 77, 0.82);">
-        <span>Copyright &copy; 2023 All Right Reserved. Ikatan Mahasiswa Komputer.</span>
+        <span>Copyright &copy; {{ date('Y') }} All Right Reserved. Ikatan Mahasiswa Komputer.</span>
     </div>
 </body>
 

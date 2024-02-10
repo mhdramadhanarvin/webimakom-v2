@@ -1,7 +1,7 @@
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/agenda.jpeg') }}" />
+            <img src="{{ url('./images/agenda.webp') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
@@ -30,7 +30,7 @@
                     <div class="card" style=" border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
                         <div class="content">
                             <div class="imgBx">
-                                <img src="{{ $l->photo == null ? url('./images/default.jpg') : asset('storage/' . $l->photo) }}"
+                                <img src="{{ $l->photo == null ? url('./images/default.webp') : asset('storage/' . $l->photo) }}"
                                     alt="">
                             </div>
                             <div class="contentBx ">
@@ -65,7 +65,7 @@
                     <div class="card" style="border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
                         <div class="content">
                             <div class="imgBx">
-                                <img src="{{ $secr->photo == null ? url('./images/default.jpg') : asset('storage/' . $secr->photo) }}"
+                                <img src="{{ $secr->photo == null ? url('./images/default.webp') : asset('storage/' . $secr->photo) }}"
                                     alt="">
                             </div>
                             <div class="contentBx">
@@ -117,14 +117,14 @@
                     @endphp
 
                     @foreach ($members as $member)
-                        <div class="card max-w-52 max-h-64">
-                            <div class="content">
+                        <div class="card max-w-60 h-80 lg:h-72 max-h-96">
+                            <div class="content static">
                                 <div class="imgBx max-h-32 max-w-32">
-                                    <img src="{{ $member->photo == null ? url('./images/default.jpg') : asset('storage/' . $member->photo) }}"
+                                    <img src="{{ $member->photo == null ? url('./images/default.webp') : asset('storage/' . $member->photo) }}"
                                         alt="">
                                 </div>
                                 <div class="contentBx">
-                                    <h2 class="xl">{{ $member->name }}<br>
+                                    <h2 class="max-w-56">{{ $member->name }}<br>
                                         <span
                                             class="text-lg">{{ $member->position->value == '1' ? 'Ketua Divisi' : 'Anggota Divisi' }}</span>
                                     </h2>

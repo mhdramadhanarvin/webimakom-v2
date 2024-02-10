@@ -73,6 +73,8 @@ class BoardResource extends Resource
                     FileUpload::make('photo')
                         ->label('Foto')
                         ->image()
+                        ->optimize('webp')
+                        ->resize(50)
                         ->imageEditor()
                         ->imageResizeMode('cover')
                         ->imageCropAspectRatio('1:1')
@@ -96,7 +98,7 @@ class BoardResource extends Resource
                     ->badge(),
                 ViewColumn::make('sosmed')->view('tables.columns.board-socmed'),
                 ImageColumn::make('photo')
-                    ->defaultImageUrl(url('./images/default.jpg')),
+                    ->defaultImageUrl(url('./images/default.webp')),
                 ToggleColumn::make('status'),
             ])
             ->filters([

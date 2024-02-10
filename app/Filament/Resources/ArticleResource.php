@@ -74,6 +74,8 @@ class ArticleResource extends Resource
                         FileUpload::make('thumbnail')
                             ->label('Thumbnail')
                             ->image()
+                            ->optimize('webp')
+                            ->resize(50)
                             ->imageEditor()
                             ->imageResizeMode('cover')
                             ->imageCropAspectRatio('1:1')

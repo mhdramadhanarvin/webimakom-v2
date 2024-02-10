@@ -2,13 +2,13 @@
     <!-- HEADER -->
     <div class="fullscreen full-image lg:max-h-[40em] max-h-full">
         <div class="image">
-            <img src="{{ url('./images/pancabudi.jpg') }}" />
+            <img src="{{ url('./images/pancabudi.webp') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
                     <div class="col-6 flex justify-center lg:justify-normal mb-10 lg:mb-0">
-                        <img class="responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.png') }}">
+                        <img class="responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.webp') }}">
                     </div>
                     <div class="col-6">
                         <span class="text-4xl">Selamat datang di</span>
@@ -185,8 +185,8 @@
             TA 2023/2024
         </span>
         <div class="inline-flex">
-            <img src="{{ url('./images/logo_imakom.png') }}" width="70" height="70" alt="">
-            <img src="{{ url('./images/logo_pancabudi.png') }}" width="70" height="70" alt="">
+            <img src="{{ url('./images/logo_imakom.webp') }}" width="70" height="70" alt="">
+            <img src="{{ url('./images/logo_pancabudi.webp') }}" width="70" height="70" alt="">
         </div>
     </div>
 
@@ -196,7 +196,7 @@
                 <div class="card">
                     <div class="content">
                         <div class="imgBx">
-                            <img src="{{ $l->photo == null ? url('./images/default.jpg') : asset('storage/' . $l->photo) }}"
+                            <img src="{{ $l->photo == null ? url('./images/default.webp') : asset('storage/' . $l->photo) }}"
                                 alt="">
                         </div>
                         <div class="contentBx">
@@ -230,7 +230,7 @@
                 <div class="card">
                     <div class="content">
                         <div class="imgBx">
-                            <img src="{{ $secr->photo == null ? url('./images/default.jpg') : asset('storage/' . $secr->photo) }}"
+                            <img src="{{ $secr->photo == null ? url('./images/default.webp') : asset('storage/' . $secr->photo) }}"
                                 alt="">
                         </div>
                         <div class="contentBx">

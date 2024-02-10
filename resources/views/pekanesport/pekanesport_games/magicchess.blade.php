@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">MAGIC CHEES</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/MC-min.png') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/MC-min.webp') }}" alt="">
         <p class="text-center">Selamat datang, para pemain berjiwa strategis dan penuh keajaiban! Kami dengan bangga
             menghadirkan ajang pertarungan yang penuh intrik dan kecerdasan taktis - Turnamen Magic Chess MLBB! Suasana
             ajaib dan keajaiban tak terbatas akan menyertai setiap langkah para pemain dalam pertarungan yang epik ini.

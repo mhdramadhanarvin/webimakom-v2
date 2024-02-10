@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">PUBGM</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/pubg-min.jpg') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/pubg-min.webp') }}" alt="">
         <p class="text-center">Selamat datang, para penggemar PUBG Mobile! Kami dengan bangga mempersembahkan turnamen seru yang akan menggetarkan dunia game, di mana skill, taktik, dan kekompakan tim akan diuji dalam pertarungan yang intens. Ini adalah panggung bagi tim-tim pilihan yang siap mengukir namanya dalam sejarah kejayaan PUBG Mobile.</p>
         <div class="mt-4">
             <h1 class="text-center text-3xl font-bold">PERSYARATAN PENDAFTARAN</h1>

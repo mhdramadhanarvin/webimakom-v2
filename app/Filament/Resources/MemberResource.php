@@ -58,6 +58,8 @@ class MemberResource extends Resource
                 FileUpload::make('photo')
                     ->label('Foto')
                     ->image()
+                    ->optimize('webp')
+                    ->resize(50)
                     ->imageEditor()
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('1:1')
@@ -79,7 +81,7 @@ class MemberResource extends Resource
                     ->sortable()
                     ->searchable(),
                 ImageColumn::make('photo')
-                    ->defaultImageUrl(url('./images/default.jpg'))
+                    ->defaultImageUrl(url('./images/default.webp'))
             ])
             ->filters([
                 //
