@@ -1,4 +1,5 @@
-@section('title', 'Documentation each do work plan in organization, describe each event to show for public about anything do in organization')
+@section('title', 'Galeri - Imakom Unpab')
+@section('description', 'Documentation each do work plan in organization, describe each event to show for public about anything do in organization')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
