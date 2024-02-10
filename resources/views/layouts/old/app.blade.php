@@ -3,8 +3,8 @@
 
 <head>
     <title>Imakom - UNPAB</title>
-    <link rel="shortcut icon" href="{{ url('./images/logo_imakom.png') }}" type="image/x-icon" />
-    <link rel="icon" href="{{ url('./images/logo_imakom.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
