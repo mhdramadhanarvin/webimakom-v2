@@ -7,6 +7,18 @@
     <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WRVPWRHSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9WRVPWRHSN');
+    </script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <html>
