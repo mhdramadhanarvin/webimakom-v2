@@ -1,7 +1,7 @@
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/foto_imakom2.jpeg') }}" />
+            <img src="{{ url('./images/foto_imakom2.webp') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
@@ -58,7 +58,7 @@
                                         <div class="relative max-w-96 p-1 md:p-2">
                                             <img alt="gallery"
                                                 class="block h-full w-full rounded-lg object-cover object-center"
-                                                src="{{ $gallery->photo == null ? url('./images/default.jpg') : asset('storage/' . $gallery->photo) }}" />
+                                                src="{{ $gallery->photo == null ? url('./images/default.webp') : asset('storage/' . $gallery->photo) }}" />
                                             <div
                                                 class="absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
                                                 <div class="flex-row text-center">

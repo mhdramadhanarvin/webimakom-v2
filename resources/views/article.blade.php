@@ -1,7 +1,7 @@
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         {{-- <div class="image">
-            <img src="{{ url('./images/foto_imakom2.jpeg') }}" />
+            <img src="{{ url('./images/foto_imakom2.webp') }}" />
         </div> --}}
         <div class="overlay content-center first-content tertienary">
         </div>
@@ -36,7 +36,7 @@
                         <p class="mb-5 text-gray-500">{!! Illuminate\Support\Str::words($all->content, 25, '...') !!}</p>
                         <div class="flex items-center">
                             <img class="h-10 w-10 rounded-full object-cover"
-                                src="{{ $all->user->photo == null ? url('./images/default.jpg') : asset('storage/' . $all->user->photo) }}"
+                                src="{{ $all->user->photo == null ? url('./images/default.webp') : asset('storage/' . $all->user->photo) }}"
                                 alt="Simon Lewis" />
                             <p class="ml-4 w-56">
                                 <strong class="block font-medium text-gray-700">{{ $all->user->name }}</strong>

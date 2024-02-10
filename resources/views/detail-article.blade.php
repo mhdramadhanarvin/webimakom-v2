@@ -13,7 +13,7 @@
                             <address class="flex items-center mb-6 not-italic">
                                 <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
                                     <img class="mr-4 w-16 h-16 rounded-full"
-                                        src="{{ $article->user->photo == null ? url('./images/default.jpg') : asset('storage/' . $article->user->photo) }}"
+                                        src="{{ $article->user->photo == null ? url('./images/default.webp') : asset('storage/' . $article->user->photo) }}"
                                         alt="{{ $article->user->name }}">
                                     <div>
                                         <a href="#" rel="author"
