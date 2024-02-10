@@ -98,7 +98,7 @@ class BoardResource extends Resource
                     ->badge(),
                 ViewColumn::make('sosmed')->view('tables.columns.board-socmed'),
                 ImageColumn::make('photo')
-                    ->defaultImageUrl(url('./images/default.jpg')),
+                    ->defaultImageUrl(url('./images/default.webp')),
                 ToggleColumn::make('status'),
             ])
             ->filters([

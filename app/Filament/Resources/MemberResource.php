@@ -81,7 +81,7 @@ class MemberResource extends Resource
                     ->sortable()
                     ->searchable(),
                 ImageColumn::make('photo')
-                    ->defaultImageUrl(url('./images/default.jpg'))
+                    ->defaultImageUrl(url('./images/default.webp'))
             ])
             ->filters([
                 //

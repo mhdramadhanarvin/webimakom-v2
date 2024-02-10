@@ -67,7 +67,7 @@ class GalleryResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('photo')
-                    ->defaultImageUrl(url('./images/default.jpg')),
+                    ->defaultImageUrl(url('./images/default.webp')),
                 TextColumn::make('caption')
                     ->limit(50)
                     ->searchable(),
