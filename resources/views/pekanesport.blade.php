@@ -12,7 +12,7 @@
     <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 p-7">
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/valorant-min.jpeg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/valorant-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">
@@ -26,7 +26,7 @@
 
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/pubg-min.jpg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/pubg-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">
@@ -40,7 +40,7 @@
 
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/ML-min.jpg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/ML-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">
@@ -54,7 +54,7 @@
 
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/ff-min.jpg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/ff-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">
@@ -68,7 +68,7 @@
 
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/football-min.jpg')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/football-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">
@@ -82,7 +82,7 @@
 
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/MC-min.png')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/MC-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">
@@ -96,7 +96,7 @@
 
         {{-- CARD TEMPLATE --}}
         <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/DynaStones-min.png')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+            <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('../../public/images/DynaStones-min.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">

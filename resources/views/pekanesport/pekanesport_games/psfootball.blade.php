@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">PS FootBall</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/football-min.jpg') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/football-min.webp') }}" alt="">
         <p class="text-center">Sambut dengan antusias, para penggemar sepak bola dan dunia game! Kami hadirkan
             satu-satunya acara yang penuh gairah –
             turnamen PES (PlayStation) yang akan menguji keterampilan dan strategi pemain terbaik.</p>

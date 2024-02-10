@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">DYNASTONES</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/DynaStones-min.png') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/DynaStones-min.webp') }}" alt="">
         <p class="text-center">Selamat datang, para pemberani yang haus petualangan! Kami mempersembahkan sebuah
             undangan eksklusif untuk bergabung dalam petualangan epik di dunia Dynastones. Ayo saksikan keajaiban,
             hadapi tantangan, dan kembangkan kemampuan taktismu dalam turnamen Dynastones yang akan merubah sejarah!</p>

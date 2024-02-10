@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">FREE FIRE</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/ff-min.jpg') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/ff-min.webp') }}" alt="">
         <p class="text-center">Sambut dengan hangat, para pahlawan kawula muda di Land of Dawn! Kami menghadirkan
             sesuatu yang tak terlupakan – Free Fire Championship, sebuah ajang penuh aksi dan kegembiraan yang akan
             menggetarkan hati para pecinta battle royale. Siapkan diri Anda untuk menyaksikan pertarungan epik di dalam

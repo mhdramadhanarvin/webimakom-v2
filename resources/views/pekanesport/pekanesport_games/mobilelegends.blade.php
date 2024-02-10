@@ -5,7 +5,7 @@
     </div>
     <div class="max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">MOBILE LEGENDS</h1>
-        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/ML-min.jpg') }}" alt="">
+        <img class="h-auto max-w-lg rounded-lg mx-auto my-5" src="{{ url('./images/ML-min.webp') }}" alt="">
         <p class="text-center">Selamat datang, para pecinta Mobile Legends! Persiapkan diri Anda untuk pertarungan epik
             yang akan memukau di Land of Dawn, di mana para pemain akan
             bersaing untuk memenangkan gelar juara. Mari daftarkan tim pilihan mu yang siap menunjukkan kehebatannya
