@@ -12,7 +12,6 @@
                     <div class="col-6">
                         <h1 class="text-3xl" style=" color:tomato;">GALERY KEGIATAN IMAKOM </h1>
                         <p class="text-lg">Dokumentasi dari setiap kegiatan yang dilakukan oleh imakom.</p>
-                        <button class="scroll-for-more"></button>
                     </div>
                 </div>
             </div>

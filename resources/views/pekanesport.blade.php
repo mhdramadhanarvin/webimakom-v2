@@ -1,4 +1,5 @@
 @section('title', 'Pekan Esport Vol. 2 - Imakom Unpab')
+@section('description', 'Pekan Esport Vol.2 is an annual event organized by imakom unpab, which provides a place to compete by players of esport games such as mobile legend, pubg mobile, valorant, and others.')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">

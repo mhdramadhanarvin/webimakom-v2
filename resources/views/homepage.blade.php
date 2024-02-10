@@ -1,14 +1,15 @@
+@section('description', 'Homepage of imakom unpab website describe about what the Imakom organization, vision and mision, and what is the current structural organization')
 <x-new-app-layout>
     <!-- HEADER -->
     <div class="fullscreen full-image lg:max-h-[40em] max-h-full">
         <div class="image">
-            <img src="{{ url('./images/pancabudi.webp') }}" />
+            <img src="{{ url('./images/pancabudi.webp') }}" alt="" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
                     <div class="col-6 flex justify-center lg:justify-normal mb-10 lg:mb-0">
-                        <img class="responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.webp') }}">
+                        <img class="responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.webp') }}" alt="">
                     </div>
                     <div class="col-6">
                         <span class="text-4xl">Selamat datang di</span>
@@ -18,7 +19,6 @@
                             merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di
                             Universitas Pembangunan Panca Budi.
                         </p>
-                        <button class="scroll-for-more"></button>
                     </div>
                 </div>
                 <div class="responsive-gap"></div>
@@ -76,106 +76,6 @@
         </div>
     </div>
 
-    <!-- FOTO-FOTO -->
-    {{-- <div class="content-shadow">
-        <div class="row no-padding">
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/sasude (2).jpeg" />
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/sasude (5).jpeg" />
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/sasude (10).jpeg" />
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/sasude (7).jpeg" />
-                    </div>
-                </a>
-            </div>
-
-        </div>
-        <div class="row no-padding">
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/ibb/3.jpeg" />
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/ibb/ibb1 (1).jpg" />
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/ibb/ibb1 (3).jpg" />
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-3">
-                <a class="ukm-box full-image">
-                    <div class="image">
-                        <img src="images/ibb/ibb2.jpg" />
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div> --}}
-
-    <!-- vidio singkat -->
-    {{-- <div class="fullscreen tertienary" id="first-content">
-        <div class="header-clear"></div>
-        <div class="content">
-            <div class="row">
-                <div class="col-6" style="margin-top:-60px; ">
-                    <video style="border:5px solid orange; border-radius:15px; box-shadow:0 0 5px 5px;" width="430vh"
-                        height="400px" controls>
-                        <source src="images/VS.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="col-6">
-                    <h1>IMAKOM <span style="background:tomato;">MENGABDI</span> </h1>
-                    <h5 style="font-family:cursive;"> TEMA : "meningkatkan potensi anak dalam bidang IT di era Digital"
-                    </h5>
-                    <h4># SASUDE 🖐</h4>
-                    <p style="margin-top:-10px;">Kegiatan ini berlangsung di salah satu sanggar yang bernama sanggar
-                        anak
-                        sungai deli tepat nya di <u style="color:orange;">Tapian sungai deli Jln.Brigjen katamso
-                            kelurahan
-                            sei mati kecamatan medan maimun</u> </p>
-                    <hr class="split tertienary" />
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-
-    <!-- vidio singkat end-->
     <!-- Struktur Kepengurusan -->
     <div class="text-center mt-20">
         <h3 class="text-3xl font-bold">
