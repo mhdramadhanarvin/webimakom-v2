@@ -2,7 +2,7 @@
 <html lang="en" ng-app="uscope">
 
 <head>
-    <title>Imakom - UNPAB</title>
+    <title>@yield('title', 'Imakom Unpab')</title>
     <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <meta charset="UTF-8">

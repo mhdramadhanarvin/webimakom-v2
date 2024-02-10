@@ -1,3 +1,4 @@
+@section('title', 'Struktur Kepengurusan - Imakom Unpab')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">

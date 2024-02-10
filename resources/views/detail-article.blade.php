@@ -1,3 +1,4 @@
+@section('title', $article->title . '- Imakom Unpab')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">
