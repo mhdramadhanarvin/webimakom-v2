@@ -26,16 +26,16 @@ class PekanEsportResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Event';
+    protected static ?string $navigationGroup = 'Pekan Esport';
 
     public static function getPluralLabel(): string
     {
-        return __('Pekan Esport');
+        return __('Pendaftar');
     }
 
     public static function getModelLabel(): string
     {
-        return __('Pekan Esport');
+        return __('Pendaftar');
     }
 
     public static function form(Form $form): Form
@@ -53,7 +53,7 @@ class PekanEsportResource extends Resource
                 TextColumn::make('team_name')->label('Nama Tim')->sortable()->searchable(),
                 TextColumn::make('email')->label('Email')->searchable(),
                 TextColumn::make('whatsapp_number')->label('Nomor Whatsapp')->searchable(),
-                TextColumn::make('game_id')
+                TextColumn::make('game.game_name')
                     ->sortable()
                     ->label('Cabor Game')
                     ->badge(),
@@ -83,6 +83,7 @@ class PekanEsportResource extends Resource
                 Section::make("")
                     ->schema([
                         TextEntry::make('team_name')->label('Nama Tim'),
+                        TextEntry::make('game.game_name')->label('Cabang Olahraga Game'),
                         TextEntry::make('email'),
                         TextEntry::make('whatsapp_number')->label('Nomor Whatsapp'),
                         TextEntry::make('created_at')
@@ -109,8 +110,6 @@ class PekanEsportResource extends Resource
         return [
             'index' => Pages\ListPekanEsports::route('/'),
             'view' => Pages\ViewPekanEsport::route('/{record}'),
-            // 'create' => Pages\CreatePekanEsport::route('/create'),
-            // 'edit' => Pages\EditPekanEsport::route('/{record}/edit'),
         ];
     }
 

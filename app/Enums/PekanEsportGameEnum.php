@@ -3,9 +3,8 @@
 namespace App\Enums;
 
 use Filament\Support\Contracts\HasColor;
-use Filament\Support\Contracts\HasLabel;
 
-enum PekanEsportGameEnum: string implements HasLabel, HasColor
+enum PekanEsportGameEnum: string implements HasColor
 {
     case VALORANT = '1';
     case PUBGM = '2';
@@ -14,19 +13,6 @@ enum PekanEsportGameEnum: string implements HasLabel, HasColor
     case PS = '5';
     case MAGICCHESS = '6';
     case DYNASTONES = '7';
-
-    public function getLabel(): ?string
-    {
-        return match ($this) {
-            self::VALORANT => 'VALORANT',
-            self::PUBGM => 'PUBGM',
-            self::ML => 'MOBILE LEGEND',
-            self::FF => 'FREE FIRE',
-            self::PS => 'PS FOOTBALL',
-            self::MAGICCHESS => 'MAGIC CHESS',
-            self::DYNASTONES => 'DYNASTONES',
-        };
-    }
 
     public function getColor(): string | array | null
     {
