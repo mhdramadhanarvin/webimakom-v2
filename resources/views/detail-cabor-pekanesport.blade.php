@@ -5,7 +5,7 @@
         <div class="overlay content-center first-content tertienary">
         </div>
     </div>
-    <div class="max-w-4xl mx-auto my-20">
+    <div class="px-3 max-w-4xl mx-auto my-20">
         <h1 class="text-center text-6xl font-bold">{{ $detail_cabor->game_name }}</h1>
         <div class="bg-cover">
             <img class="relative h-auto max-w-lg max-h-60 rounded-lg mx-auto my-5" src="{{ $detail_cabor->thumbnail == null ? url('/images/default.webp') : asset('storage' . $detail_cabor->thumbnail) }}" alt="">
