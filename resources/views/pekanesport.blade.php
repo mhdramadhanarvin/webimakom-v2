@@ -8,7 +8,7 @@
     <div class="block w-screen pt-20 pb-8">
         <h1 class="text-center text-4xl font-black">PEKAN ESPORT Vol. 2</h1>
     </div>
-    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 p-7 custom-style">
+    <div class="max-w-4xl mx-auto p-7 custom-style">
         {!! $content->content !!}
     </div>
     <div class="block w-screen pt-20 pb-8">
@@ -17,9 +17,9 @@
     <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 p-7">
         @foreach ($cabor as $value)
         {{-- CARD TEMPLATE --}}
-        <div class="my-3 lg:m-5 relative grid h-[25rem] lg:h-80 w-full lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+        <div class="my-3 lg:m-5 mx-auto relative grid h-72 lg:h-80 w-60 lg:w-full lg:max-w-[15rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
             <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-            <img class="absolute h-full" src="{{ $value->thumbnail == null ? url('/images/default.webp') : asset('storage' . $value->thumbnail) }}" alt="" />
+            <img class="absolute h-full w-full" src="{{ $value->thumbnail == null ? url('/images/default.webp') : asset('storage' . $value->thumbnail) }}" alt="" />
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
             <div class="relative p-2 px-2 py-8 md:px-6">

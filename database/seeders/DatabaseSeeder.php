@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             ArticleCategorySeeder::class,
             WorkplanSeeder::class,
             CaborSeeder::class,
+            ContentSeeder::class,
         ]);
     }
 }
