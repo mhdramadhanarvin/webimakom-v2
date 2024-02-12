@@ -23,13 +23,9 @@
                 <label for="game_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Cabang Olahraga</label>
                 <select id="game_id" name="game_id" class="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     <option value="" selected>Pilih</option>
-                    <option value="1">VALORANT</option>
-                    <option value="2">PUBGM</option>
-                    <option value="3">MOBILE LEGENDS</option>
-                    <option value="4">FREE FIRE</option>
-                    <option value="5">PS FOOTBALL</option>
-                    <option value="6">MAGIC CHESS - MOBILE LEGENDS</option>
-                    <option value="7">DYNASTONES</option>
+                    @foreach ($optionCabor as $cabor)
+                    <option value="{{ $cabor->id }}">{{ $cabor->game_name }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="mb-5">
@@ -184,7 +180,7 @@
                     this.fields.splice(this.fields.indexOf(field), 1);
                 },
                 increment(int) {
-                    return int+2
+                    return int + 2
                 }
             }
         }

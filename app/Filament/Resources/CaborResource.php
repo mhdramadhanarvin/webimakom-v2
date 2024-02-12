@@ -96,6 +96,7 @@ class CaborResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('game_name')->label('Nama Game'),
+                TextColumn::make('registered_count')->label('Jumlah Pendaftar')->counts('registered'),
                 ImageColumn::make('thumbnail')
                     ->defaultImageUrl(url('./images/default.webp')),
                 TextColumn::make('created_at')

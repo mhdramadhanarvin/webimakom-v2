@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cabor extends Model
 {
@@ -15,4 +16,9 @@ class Cabor extends Model
         'description',
         'thumbnail'
     ];
+
+    public function registered(): HasMany
+    {
+        return $this->hasMany(PekanEsport::class, 'game_id', 'id');
+    }
 }

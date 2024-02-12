@@ -30,7 +30,8 @@ class PekanEsportController extends Controller
 
     public function form(): View
     {
-        return view('pekanesport/pekanesport_form/formpendaftaran');
+        $optionCabor = Cabor::all();
+        return view('form-pekanesport', compact('optionCabor'));
     }
 
     public function formSubmit(PekanEsportFormValidation $request)

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('pekan_esports', function (Blueprint $table) {
             $table->id();
-            $table->integer('game_id');
+            $table->unsignedBigInteger('game_id');
+            $table->foreign('game_id')->references('id')->on('cabors');
             $table->string('team_name');
             $table->string('email');
             $table->string('whatsapp_number');
