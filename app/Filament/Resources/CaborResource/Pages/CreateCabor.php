@@ -9,4 +9,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateCabor extends CreateRecord
 {
     protected static string $resource = CaborResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

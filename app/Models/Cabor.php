@@ -11,7 +11,7 @@ class Cabor extends Model
     use HasFactory;
 
     protected $fillable = [
-        'game_name'.
+        'game_name',
         'slug',
         'description',
         'thumbnail'
