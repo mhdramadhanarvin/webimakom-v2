@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PekanEsportFormValidation;
 use App\Models\Cabor;
+use App\Models\Content;
 use App\Models\PekanEsport;
 use App\Notifications\PekanEsportRegisterSuccess;
 // use Illuminate\Http\Request;
@@ -14,7 +15,8 @@ class PekanEsportController extends Controller
     public function index(): View
     {
         $cabor = Cabor::all();
-        return view('pekanesport', compact('cabor'));
+        $content = Content::first();
+        return view('pekanesport', compact('cabor', 'content'));
     }
 
     public function game($game): View

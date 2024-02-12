@@ -8,7 +8,8 @@
     <div class="block w-screen pt-20 pb-8">
         <h1 class="text-center text-4xl font-black">PEKAN ESPORT Vol. 2</h1>
     </div>
-    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 p-7">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 p-7 custom-style">
+        {!! $content->content !!}
     </div>
     <div class="block w-screen pt-20 pb-8">
         <h3 class="text-center text-2xl font-black">CABANG OLAHRAGA</h3>
