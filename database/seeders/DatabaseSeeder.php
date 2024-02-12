@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             GallerySeeder::class,
             ArticleCategorySeeder::class,
             WorkplanSeeder::class,
+            CaborSeeder::class,
         ]);
     }
 }

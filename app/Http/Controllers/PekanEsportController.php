@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PekanEsportFormValidation;
+use App\Models\Cabor;
 use App\Models\PekanEsport;
 use App\Notifications\PekanEsportRegisterSuccess;
 // use Illuminate\Http\Request;
@@ -12,43 +13,17 @@ class PekanEsportController extends Controller
 {
     public function index(): View
     {
-        return view('pekanesport');
+        $cabor = Cabor::all();
+        return view('pekanesport', compact('cabor'));
     }
 
     public function game($game): View
     {
-        switch ($game) {
-            case 'valorant':
-                return view('pekanesport/pekanesport_games/valorant');
-                break;
+        $detail_cabor = Cabor::where('slug', $game)->first();
 
-            case 'pubgm':
-                return view('pekanesport/pekanesport_games/pubgm');
-                break;
+        if (!$detail_cabor) abort(404);
 
-            case 'mobilelegends':
-                return view('pekanesport/pekanesport_games/mobilelegends');
-                break;
-
-            case 'freefire':
-                return view('pekanesport/pekanesport_games/freefire');
-                break;
-
-            case 'psfootball':
-                return view('pekanesport/pekanesport_games/psfootball');
-                break;
-
-            case 'magicchess':
-                return view('pekanesport/pekanesport_games/magicchess');
-                break;
-
-            case 'dynastones':
-                return view('pekanesport/pekanesport_games/dynastones');
-                break;
-
-            default:
-                return abort(404);
-        }
+        return view('detail-cabor-pekanesport', compact('detail_cabor'));
     }
 
     public function form(): View

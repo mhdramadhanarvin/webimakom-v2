@@ -26,16 +26,16 @@ class PekanEsportResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Event';
+    protected static ?string $navigationGroup = 'Pekan Esport';
 
     public static function getPluralLabel(): string
     {
-        return __('Pekan Esport');
+        return __('Pendaftar');
     }
 
     public static function getModelLabel(): string
     {
-        return __('Pekan Esport');
+        return __('Pendaftar');
     }
 
     public static function form(Form $form): Form
