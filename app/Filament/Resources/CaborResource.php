@@ -59,7 +59,7 @@ class CaborResource extends Resource
                     ->label('Thumbnail')
                     ->image()
                     ->optimize('webp')
-                    ->resize(50)
+                    ->resize(80)
                     ->imageEditor()
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('1:1')
