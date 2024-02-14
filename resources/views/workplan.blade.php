@@ -26,7 +26,7 @@
                         @foreach ($workplan as $plan)
                             <div
                                 class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <a href="{{ $plan->link ?? "#" }}">
+                                <a href="{{ $plan->link ?? "javascript:void(0);" }}") aria-label="Work plan anchor to {{ $plan->title }}">
                                     <h3 class="text-xl font-semibold tracki">{{ $plan->title }}</h3>
                                 </a>
                                 <time

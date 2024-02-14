@@ -43,17 +43,17 @@
 
                         <ul class="sci">
                             <li style="--i:1">
-                                <a href="{{ $l->facebook ?? '#' }}">
+                                <a href="{{ $l->facebook ?? 'javascript:void(0);' }}" aria-label="Facebook of {{ $l->name }}">
                                     <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li style="--i:2">
-                                <a href="{{ $l->instagram ?? '#' }}">
+                                <a href="{{ $l->instagram ?? 'javascript:void(0);' }}" aria-label="Instagram of {{ $l->name }}">
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li style="--i:3">
-                                <a href="{{ $l->linkedin ?? '#' }}">
+                                <a href="{{ $l->linkedin ?? 'javascript:void(0);' }}" aria-label="LinkedIn of {{ $l->name }}">
                                     <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -78,17 +78,17 @@
 
                         <ul class="sci">
                             <li style="--i:1">
-                                <a href="{{ $secr->facebook ?? '#' }}">
+                                <a href="{{ $secr->facebook ?? 'javascript:void(0);' }}" aria-label="Facebook of {{$secr->name}}">
                                     <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li style="--i:2">
-                                <a href="{{ $secr->instagram ?? '#' }}">
+                                <a href="{{ $secr->instagram ?? 'javascript:void(0);' }}" aria-label="Instagram of {{$secr->name}}">
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li style="--i:3">
-                                <a href="{{ $secr->linkedin ?? '#' }}">
+                                <a href="{{ $secr->linkedin ?? 'javascript:void(0);' }}" aria-label="LinkedIn of {{$secr->name}}">
                                     <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -108,7 +108,7 @@
             @foreach ($division as $div)
                 <div class="container">
                     <div class="card" style="height:70px; border-radius: 15px; background: orange;">
-                        <a href="" style="text-decoration:none;">
+                        <a href="javascript:void(0);" style="text-decoration:none;" aria-label="Card of {{ $div->name }}">
                             <h4 style="margin:0 auto; color: white; font-size: 30px;">{{ $div->name }}</h4>
                         </a>
                     </div>

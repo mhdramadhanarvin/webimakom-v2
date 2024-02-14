@@ -18,8 +18,8 @@
                                         src="{{ $article->user->photo == null ? url('./images/default.webp') : asset('storage/' . $article->user->photo) }}"
                                         alt="{{ $article->user->name }}">
                                     <div>
-                                        <a href="#" rel="author"
-                                            class="text-xl font-bold text-gray-900 dark:text-white">{{ $article->user->name }}</a>
+                                        <a href="javascript:void(0);" rel="author"
+                                            class="text-xl font-bold text-gray-900 dark:text-white" aria-label="Penulis artikel {{ $article->user->name }}">{{ $article->user->name }}</a>
                                         <p class="text-base text-gray-500 dark:text-gray-400">
                                             {{ $article->user->roles()->first()->name }}</p>
                                         <p class="text-base text-gray-500 dark:text-gray-400">
@@ -38,28 +38,28 @@
                                     </span>
                                 @endif
                             </h1>
-                            <a href="#"
-                                class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">{{ $article->article_category->name }}</a>
+                            <a href="javascript:void(0);"
+                                class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10" aria-label="Kategori artikel {{ $article->article_category->name }}">{{ $article->article_category->name }}</a>
                         </header>
                         <div>{!! $article->content !!}</div>
                         <div class="row mt-10">
                             <span class="align-text-bottom mr-2"> KATA KUNCI : </span>
                             @foreach ($article->keyword as $keyword)
-                                <a href="#"
+                                <a href="javascript:void(0);"
                                     class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 m-1">{{ $keyword }}</a>
                             @endforeach
                         </div>
                         <div class="pt-5 justify-center">
                             <hr class="h-px my-8 bg-zinc-400 border-0 dark:bg-gray-700">
-                            <a href="{{ $l->facebook ?? '#' }}">
+                            <a href="{{ $l->facebook ?? 'javascript:void(0);' }}" aria-label="Share link facebook">
                                 <i class="text-3xl mr-5 fa-brands fa-facebook hover:text-blue-700"
                                     aria-hidden="true"></i>
                             </a>
-                            <a href="{{ $l->instagram ?? '#' }}">
+                            <a href="{{ $l->instagram ?? 'javascript:void(0);' }}" aria-label="Share link instagram">
                                 <i class="text-3xl mr-5 fa-brands fa-twitter hover:text-blue-700"
                                     aria-hidden="true"></i>
                             </a>
-                            <a href="{{ $l->linkedin ?? '#' }}">
+                            <a href="{{ $l->linkedin ?? 'javascript:void(0);' }}" aria-label="Share link linkedin">
                                 <i class="text-2xl mr-5 fa-solid fa-link hover:text-blue-700" aria-hidden="true"></i>
                             </a>
                             <span class="justify-start">{{ $article->visit_count_total }}x dilihat</span>
@@ -77,7 +77,7 @@
                 <article
                     class="flex max-w-md flex-col rounded-2xl px-8 lg:px-4 my-5 lg:my-0 md:max-w-5xl md:flex-row md:items-center">
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
-                        <a href="{{ route('article.detail', ['slug' => $related->slug]) }}">
+                        <a href="{{ route('article.detail', ['slug' => $related->slug]) }}" aria-label="Thumbnail related artikel {{ $related->title }}">
                             <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
                                 src="{{ asset('storage/' . $related->thumbnail) }}" alt="" />
                         </a>
@@ -88,7 +88,7 @@
                                 class="">{{ \Carbon\Carbon::parse($related->created_at)->format('d M Y') }}</span>
                         </div>
                         <a href="{{ route('article.detail', ['slug' => $related->slug]) }}"
-                            class="mb-1 block text-lg font-medium text-gray-700">
+                            class="mb-1 block text-lg font-medium text-gray-700" aria-label="Related artikel {{ $related->title }}">
                             {{ $related->title }}
                         </a>
                         <div class="">
