@@ -45,6 +45,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.PROTOCOL_FTP }}
           local-dir: ./deploy/
           log-level: verbose
           timeout: 60000
