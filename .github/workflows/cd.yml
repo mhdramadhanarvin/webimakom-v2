@@ -40,6 +40,12 @@ jobs:
         with:
           args: zip -qq -r deploy/app.zip ./ -x ".git/*" -x "node_modules/*"
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: deploy/app.zip
+          retention-days: 1
+
       - uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
