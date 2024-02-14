@@ -74,7 +74,7 @@ class BoardResource extends Resource
                         ->label('Foto')
                         ->image()
                         ->optimize('webp')
-                        ->resize(70)
+                        ->resize(80)
                         ->imageEditor()
                         ->imageResizeMode('cover')
                         ->imageCropAspectRatio('1:1')
