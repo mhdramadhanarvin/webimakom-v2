@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="uscope">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <title>@yield('title', 'Imakom Unpab')</title>
     <meta name="description" content="@yield('description')">
     <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WRVPWRHSN"></script>
     <script>
@@ -27,7 +27,7 @@
 
 <body>
     {{-- <div class="loading-screen loader-visible" id="loader">
-        <img src="{{ url('./images/logo_imakom.webp') }}" />
+            <img src="{{ url('./images/logo_imakom.webp') }}" />
     </div> --}}
 
     <!-- Header -->
@@ -87,13 +87,11 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="responsive-gap"></div> --}}
-
             </div>
         </div>
     </div>
-    <div class="text-center text-slate-300 p-3" style="background-color:rgba(51, 46, 77, 0.82);">
-        <span>Copyright &copy; {{ date('Y') }} All Right Reserved. Ikatan Mahasiswa Komputer.</span>
+    <div class="text-center text-slate-300 p-3 bg-[#332e4dd1]">
+        <span>Copyright &copy; {{ date('Y') }} All Right Reserved. Ikatan Mahasiswa Komputer. Version {{ env('VERSION', '1.0.0') }}. Hash #{{ env('HASH_VERSION', '000000') }}.</span>
     </div>
 </body>
 
