@@ -26,7 +26,7 @@
                 <h2 class="block font-sans text-xl font-medium leading-[1.5] tracking-normal text-white antialiased">
                     {{ $value->game_name }}
                 </h2>
-                <a href="{{ route('pekanesport.game', ['game' => $value->slug]) }}" type="button" class="mx-auto focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black">Daftar</a>
+                <a href="{{ route('pekanesport.game', ['game' => $value->slug]) }}" type="button" class="mx-auto focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-5 mx-auto font-black" aria-label="Button Daftar {{ $value->game_name }}">Daftar</a>
             </div>
         </div>
         {{-- END CARD TEMPLATE --}}

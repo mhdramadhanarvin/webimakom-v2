@@ -107,17 +107,17 @@
 
                     <ul class="sci">
                         <li style="--i:1">
-                            <a href="{{ $l->facebook ?? '#' }}">
+                            <a href="{{ $l->facebook ?? '#' }}" aria-label="Facebook of {{ $l->name }}">
                                 <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li style="--i:2">
-                            <a href="{{ $l->instagram ?? '#' }}">
+                            <a href="{{ $l->instagram ?? '#' }}" aria-label="Instagram of {{ $l->name }}">
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li style="--i:3">
-                            <a href="{{ $l->linkedin ?? '#' }}">
+                            <a href="{{ $l->linkedin ?? '#' }}" aria-label="LinkedIn of {{ $l->name }}">
                                 <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -141,17 +141,17 @@
 
                     <ul class="sci">
                         <li style="--i:1">
-                            <a href="{{ $secr->facebook ?? '#' }}">
+                            <a href="{{ $secr->facebook ?? '#' }}" aria-label="Facebook of {{ $l->name }}">
                                 <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li style="--i:2">
-                            <a href="{{ $secr->instagram ?? '#' }}">
+                            <a href="{{ $secr->instagram ?? '#' }}" aria-label="Instagram of {{ $l->name }}">
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li style="--i:3">
-                            <a href="{{ $secr->linkedin ?? '#' }}">
+                            <a href="{{ $secr->linkedin ?? '#' }}" aria-label="LinkedIn of {{ $l->name }}">
                                 <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             </a>
                         </li>

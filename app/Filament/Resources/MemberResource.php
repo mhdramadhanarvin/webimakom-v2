@@ -59,7 +59,7 @@ class MemberResource extends Resource
                     ->label('Foto')
                     ->image()
                     ->optimize('webp')
-                    ->resize(50)
+                    ->resize(80)
                     ->imageEditor()
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('1:1')
