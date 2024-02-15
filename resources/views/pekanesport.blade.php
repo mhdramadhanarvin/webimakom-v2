@@ -22,7 +22,7 @@
             <img class="absolute h-full w-full" src="{{ $value->thumbnail == null ? url('/images/default.webp') : asset('storage' . $value->thumbnail) }}" alt="" />
                 <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
             </div>
-            <div class="relative p-2 px-2 py-8 md:px-6">
+            <div class="relative p-2 px-2 py-8 lg:py-0 md:px-6">
                 <h2 class="block font-sans text-xl font-medium leading-[1.5] tracking-normal text-white antialiased">
                     {{ $value->game_name }}
                 </h2>

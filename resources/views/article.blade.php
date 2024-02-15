@@ -53,7 +53,7 @@
             </div>
             @if ($all_article->count() == 0)
                 <div class="p-5">
-                    BELUM ADA ARTIKEL
+                    BELUM ADA DATA
                 </div>
             @endif
         </div>
