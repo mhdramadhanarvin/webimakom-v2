@@ -98,18 +98,15 @@
             </div>
         </div>
 
-        <div style="text-align: center; ">
-            <h3 class="fw-black text-3xl"> DIVISI IMAKOM </h3>
-            <p style="font-size:20px; color: orange;"></p><br />
-        </div>
+        <h3 class="text-3xl font-bold text-center pb-0 mb-0"> DIVISI IMAKOM </h3>
 
         <section>
             <!-- START DIVISI IMAKOM -->
             @foreach ($division as $div)
-                <div class="container">
-                    <div class="card" style="height:70px; border-radius: 15px; background: orange;">
+                <div class="container mx-auto">
+                    <div class="card h-16 rounded-xl bg-orange-400">
                         <a href="javascript:void(0);" style="text-decoration:none;" aria-label="Card of {{ $div->name }}">
-                            <h4 style="margin:0 auto; color: white; font-size: 30px;">{{ $div->name }}</h4>
+                            <h4 class="mx-auto text-white" style="margin:0 auto; color: white; font-size: 30px;">{{ $div->name }}</h4>
                         </a>
                     </div>
 
