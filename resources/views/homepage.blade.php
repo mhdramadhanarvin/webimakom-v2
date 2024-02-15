@@ -15,7 +15,7 @@
                         <span class="text-4xl">Selamat datang di</span>
                         <span class="text-4xl text-violet-500 inline-block">IMAKOM</span>
                         <p class="text-xl">
-                            <span class="text-red-500"> Mahasiswa Komputer (IMAKOM) </span>
+                            <span class="text-red-500">Ikatan Mahasiswa Komputer (IMAKOM) </span>
                             merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di
                             Universitas Pembangunan Panca Budi.
                         </p>
