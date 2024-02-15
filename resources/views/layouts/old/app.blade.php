@@ -91,7 +91,7 @@
         </div>
     </div>
     <div class="text-center text-slate-300 p-3 bg-[#332e4dd1]">
-        <span>Copyright &copy; {{ date('Y') }} All Right Reserved. Ikatan Mahasiswa Komputer. Version {{ env('VERSION', '1.0.0') }}. Hash #{{ env('HASH_VERSION', '000000') }}.</span>
+        <span>Copyright &copy; {{ date('Y') }} All Right Reserved. Ikatan Mahasiswa Komputer. Version {{ env('VERSION', '1.0.0') }}. Commit #{{ Illuminate\Support\Str::of(env('HASH_VERSION', '000000'))->limit(6, '') }}.</span>
     </div>
 </body>
 
