@@ -11,7 +11,7 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://imakomunpab.com/article</loc>
+        <loc>https://imakomunpab.com/gallery</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
@@ -21,7 +21,7 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://imakomunpab.com/gallery</loc>
+        <loc>https://imakomunpab.com/article</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
@@ -36,17 +36,22 @@
         <priority>0.8</priority>
             </url>
     <url>
+        <loc>https://imakomunpab.com/pekanesport/ps-football</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://imakomunpab.com/pekanesport/magic-chess-mobile-legends</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
         <loc>https://imakomunpab.com/pekanesport/valorant</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>https://imakomunpab.com/pekanesport/pubg-mobile</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>https://imakomunpab.com/pekanesport/ps-football</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
@@ -62,11 +67,6 @@
             </url>
     <url>
         <loc>https://imakomunpab.com/pekanesport/dynastones</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>https://imakomunpab.com/pekanesport/magic-chess-mobile-legends</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
