@@ -2,12 +2,23 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>@yield('title', 'Imakom Unpab')</title>
-    <meta name="description" content="@yield('description', '')">
-    <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
-    <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
+    <title>@yield('title', 'Ikatan Mahasiswa Komputer | Universitas Pembangunan Pancabudi')</title>
+    <meta name="description" content="Ikatan Mahasiswa Komputer IMAKOM merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di Universitas Pembangunan Panca Budi.">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="IMAKOM, IMAKOM UNPAB, Ikatan Mahasiswa Komputer, Universitas Pembangunan Pancabudi Budi, organisasi Pancabudi Budi">
+    <meta name="author" content="Ikatan Mahasiswa Komputer" />
+    <meta image="{{ url('/images/logo_imakom.webp') }}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{ url('/images/logo_imakom.webp') }}">
+    <meta property="og:title" content="Ikatan Mahasiswa Komputer | Universitas Pembangunan Pancabudi">
+    <meta property="og:site_name" content="Imakom Unpab">
+    <meta property="og:url" content="https://imakomunpab.com/">
+    <meta property="og:description" content="Ikatan Mahasiswa Komputer IMAKOM merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di Universitas Pembangunan Panca Budi.">
+    <link rel="icon" type="image/png" href="{{ url('/images/favicon.ico') }}" />
+    <link rel="apple-touch-icon" href="{{ url('/images/favicon.ico') }}">
+    <link rel="canonical" href="https://imakomunpab.com">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WRVPWRHSN"></script>

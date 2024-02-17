@@ -1,5 +1,4 @@
-@section('title', 'Pendaftaran Pekan Esport Vol.2 - Imakom Unpab')
-@section('description', 'Form registration to be participant in event Pekan Esport Vol. 2')
+@section('title', 'Pendaftaran Pekan Esport Vol.2 | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">

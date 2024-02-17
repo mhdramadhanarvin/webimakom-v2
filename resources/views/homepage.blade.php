@@ -1,9 +1,8 @@
-@section('description', 'Homepage of imakom unpab website describe about what the Imakom organization, vision and mision, and what is the current structural organization')
 <x-new-app-layout>
     <!-- HEADER -->
     <div class="fullscreen full-image lg:max-h-[40em] max-h-full">
         <div class="image">
-            <img src="{{ url('./images/pancabudi.webp') }}" alt="" />
+            <img src="{{ url('images/pancabudi.webp') }}" alt="" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
@@ -14,11 +13,11 @@
                     <div class="col-6">
                         <span class="text-4xl">Selamat datang di</span>
                         <span class="text-4xl text-violet-500 inline-block">IMAKOM</span>
-                        <p class="text-md lg:text-xl">
+                        <h1 class="text-md lg:text-xl">
                             <span class="text-red-500">Ikatan Mahasiswa Komputer (IMAKOM) </span>
                             merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di
                             Universitas Pembangunan Panca Budi.
-                        </p>
+                        </h1>
                     </div>
                 </div>
                 <div class="responsive-gap"></div>

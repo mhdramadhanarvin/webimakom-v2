@@ -1,5 +1,4 @@
-@section('title', 'Program Kerja - Imakom Unpab')
-@section('description', 'List of workplan organization in current structural including already done, ongoing, and on coming')
+@section('title', 'Program Kerja | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         {{-- <div class="image">
@@ -14,7 +13,7 @@
             <div class="grid gap-4 mx-0 lg:mx-4 sm:grid-cols-12">
                 <div class="col-span-12 sm:col-span-3">
                     <div class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-violet-400">
-                        <h3 class="text-3xl font-semibold">Program Kerja</h3>
+                        <h1 class="text-3xl font-semibold">Program Kerja</h1>
                         <span class="text-sm font-bold tracki uppercase dark:text-gray-400">Kepengurusan Tahun
                             2023/2024</span>
                     </div>

@@ -1,9 +1,8 @@
-@section('title', 'Struktur Kepengurusan - Imakom Unpab')
-@section('description', 'Page for each member in structural organization not only the top of leader but including the member of each division of organization')
+@section('title', 'Struktur Kepengurusan | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/agenda.webp') }}" />
+            <img src="{{ url('images/agenda.webp') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
@@ -23,7 +22,7 @@
     <!-- ARTIKEL -->
     <div class="tertienary bg-white">
         <div class="text-center pt-20">
-            <h2 class="text-3xl font-bold">STRUKTUR KEPENGURUSAN IMAKOM</h2>
+            <h1 class="text-3xl font-bold">STRUKTUR KEPENGURUSAN IMAKOM</h1>
         </div>
         <div class="grid justify-center mb-10">
             <div class="container mb-0">

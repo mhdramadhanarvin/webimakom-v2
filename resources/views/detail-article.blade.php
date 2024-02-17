@@ -1,5 +1,4 @@
-@section('title', $article->title . '- Imakom Unpab')
-@section('description', Illuminate\Support\Str::words(strip_tags($article->content), 30, '...') )
+@section('title', $article->title . ' | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">
