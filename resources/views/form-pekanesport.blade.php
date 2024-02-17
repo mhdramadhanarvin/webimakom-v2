@@ -21,7 +21,7 @@
             @endif
             <div class="mb-5">
                 <label for="game_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Cabang Olahraga</label>
-                <select id="game_id" name="game_id" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" required>
+                <select id="game_id" name="game_id" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" required>
                     <option value="" selected>Pilih</option>
                     @foreach ($optionCabor as $cabor)
                     <option value="{{ $cabor->id }}">{{ $cabor->game_name }}</option>
@@ -30,42 +30,42 @@
             </div>
             <div class="mb-5">
                 <label for="nama_tim" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Tim</label>
-                <input type="text" id="nama_tim" name="team_name" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nama tim" value="{{ old('team_name') }}">
+                <input type="text" id="nama_tim" name="team_name" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nama tim" value="{{ old('team_name') }}" required>
             </div>
             <div class="mb-5">
                 <label for="nomor_wa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomor WA Pemain 1</label>
-                <input type="text" id="nomor_wa" name="whatsapp_leader" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nomor WA pemain 1" value="{{ old('whatsapp_leader') }}" required>
+                <input type="text" id="nomor_wa" name="whatsapp_leader" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nomor WA pemain 1" value="{{ old('whatsapp_leader') }}" required>
             </div>
             <div class="mb-5">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Pemain 1</label>
-                <input type="email" id="email" name="email" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan email pemain 1" value="{{ old('email') }}" required>
+                <input type="email" id="email" name="email" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan email pemain 1" value="{{ old('email') }}" required>
             </div>
 
             {{-- PLAYER 1 (LEADER) --}}
             <div class="mb-5">
                 <label for="name_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pemain 1</label>
-                <input type="text" id="name_player[]" name="name_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nama pemain 1" value="{{ old('name_player.0') }}" required>
+                <input type="text" id="name_player[]" name="name_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nama pemain 1" value="{{ old('name_player.0') }}" required>
             </div>
             <div class="mb-5">
                 <label for="nickname_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nickname Game Pemain 1</label>
-                <input type="text" id="nickname_player[]" name="nickname_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nickname game pemain 1" value="{{ old('nickname_player.0') }}" required>
+                <input type="text" id="nickname_player[]" name="nickname_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nickname game pemain 1" value="{{ old('nickname_player.0') }}" required>
             </div>
             <div class="mb-5">
                 <label for="id_player[]" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Game Pemain 1</label>
-                <input type="text" id="id_player[]" name="id_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan id game pemain 1" value="{{ old('id_player.0') }}" required>
+                <input type="text" id="id_player[]" name="id_player[player1]" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan id game pemain 1" value="{{ old('id_player.0') }}" required>
             </div>
 
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ss_game">
                     Screenshot Profile Game Pemain 1
                 </label>
-                <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-500 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="ss_game" name="ss_game[player1]" type="file" accept="image/png, image/jpeg" required>
+                <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="ss_game" name="ss_game[player1]" type="file" accept="image/png, image/jpeg" required>
             </div>
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ktp">
                     Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain 1
                 </label>
-                <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="ktp" name="identity_card[player1]" type="file" accept="image/png, image/jpeg" required>
+                <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="ktp" name="identity_card[player1]" type="file" accept="image/png, image/jpeg" required>
             </div>
 
 
@@ -79,30 +79,30 @@
                             <label :for="index+'name_player'" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Nama Pemain <span x-text="index+2"></span>
                             </label>
-                            <input type="text" :id="index+'name_player'" :name="'name_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nama pemain 2" required>
+                            <input type="text" :id="index+'name_player'" :name="'name_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nama pemain 2" required>
                         </div>
                         <div class="mb-5">
                             <label :for="index+'nickname_player'" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Nickname Game Pemain <span x-text="index+2"></span>
                             </label>
-                            <input type="text" :id="index+'nickname_player'" :name="'nickname_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nickname game pemain 2" required>
+                            <input type="text" :id="index+'nickname_player'" :name="'nickname_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan nickname game pemain 2" required>
                         </div>
                         <div class="mb-5">
                             <label :for="index+'id_player'" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Game Pemain <span x-text="index+2"></span></label>
-                            <input type="text" :id="index+'id_player'" :name="'id_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan id game pemain 2" required>
+                            <input type="text" :id="index+'id_player'" :name="'id_player[player'+ increment(index) +']'" class="bg-slate-100 text-gray-900 text-sm rounded-lg border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" placeholder="Masukkan id game pemain 2" required>
                         </div>
 
                         <div class="mb-5">
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" :for="index+'ss_game'">
                                 Screenshot Profile Game Pemain <span x-text="index+2"></span></label>
                             </label>
-                            <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" :id="index+'ss_game'" :name="'ss_game[player'+ increment(index) +']'" type="file" accept="image/png, image/jpeg" required>
+                            <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" :id="index+'ss_game'" :name="'ss_game[player'+ increment(index) +']'" type="file" accept="image/png, image/jpeg" required>
                         </div>
                         <div class="mb-5">
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" :for="index+'ktp'">
                                 Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain <span x-text="index+2"></span></label>
                             </label>
-                            <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-400 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" :id="index+'ktp'" type="file" :name="'identity_card[player'+ increment(index) +']'" accept="image/png, image/jpeg" required>
+                            <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" :id="index+'ktp'" type="file" :name="'identity_card[player'+ increment(index) +']'" accept="image/png, image/jpeg" required>
                         </div>
                     </div>
                 </template>
@@ -117,30 +117,10 @@
     @if (session('status'))
     <div x-data="{ open: true }">
         <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="open">
-            <!--
-            Background backdrop, show/hide based on modal state.
-
-            Entering: "ease-out duration-300"
-              From: "opacity-0"
-              To: "opacity-100"
-            Leaving: "ease-in duration-200"
-              From: "opacity-100"
-              To: "opacity-0"
-        -->
             <div class="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity"></div>
 
             <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
                 <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <!--
-                Modal panel, show/hide based on modal state.
-
-                Entering: "ease-out duration-300"
-                  From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                  To: "opacity-100 translate-y-0 sm:scale-100"
-                Leaving: "ease-in duration-200"
-                  From: "opacity-100 translate-y-0 sm:scale-100"
-                  To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              -->
                     <div class="relative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-96">
                         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                             <div class="text-center">
