@@ -29,7 +29,7 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // modify this to your own needs
-        SitemapGenerator::create("https://imakomunpab.com")
+        SitemapGenerator::create(config('app.url'))
             ->getSitemap()
             ->writeToFile(public_path('sitemap.xml'));
     }
