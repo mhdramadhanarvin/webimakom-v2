@@ -5,7 +5,7 @@
         <div class="overlay content-center first-content tertienary">
         </div>
     </div>
-    <div class="block w-screen pt-20 pb-8">
+    <div class="block w-screen pt-20 pb-8 px-5 lg:px-0">
         <h1 class="text-center text-4xl font-black">PEKAN ESPORT Vol. 2</h1>
     </div>
     <div class="max-w-4xl mx-auto p-7 custom-style">

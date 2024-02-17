@@ -37,7 +37,7 @@
 
 @media only screen and (max-width: 900px)
 {
-    [class*="col-"] 
+    [class*="col-"]
     {
         width: 100%;
         padding: 0px;
