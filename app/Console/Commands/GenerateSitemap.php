@@ -30,6 +30,7 @@ class GenerateSitemap extends Command
     {
         // modify this to your own needs
         SitemapGenerator::create(config('app.url'))
+            ->getSitemap()
             ->writeToFile(public_path('sitemap.xml'));
     }
 }
