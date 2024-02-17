@@ -3,7 +3,10 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Jaybizzle\CrawlerDetect\Fixtures\Crawlers;
 use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Tags\Url;
+use Symfony\Component\DomCrawler\Crawler;
 
 class GenerateSitemap extends Command
 {
@@ -29,8 +32,7 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // modify this to your own needs
-        SitemapGenerator::create(config('app.url'))
-            ->getSitemap()
-            ->writeToFile(public_path('sitemap.xml'));
+        SitemapGenerator::create("https://imakomunpab.com")
+            ->writeToFile(public_path('new_sitemap.xml'));
     }
 }
