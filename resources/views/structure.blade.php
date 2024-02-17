@@ -26,7 +26,7 @@
             <h2 class="text-3xl font-bold">STRUKTUR KEPENGURUSAN IMAKOM</h2>
         </div>
         <div class="grid justify-center mb-10">
-            <div class="container">
+            <div class="container mb-0">
                 @foreach ($lead as $l)
                 <div class="card" style=" border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
                     <div class="content">
@@ -59,7 +59,7 @@
                 </div>
                 @endforeach
             </div>
-            <div class="container">
+            <div class="container mt-0">
                 @foreach ($secretary as $secr)
                 <div class="card" style="border: 2px solid rgba(51, 46, 77, 0.82); border-radius: 15px;">
                     <div class="content">

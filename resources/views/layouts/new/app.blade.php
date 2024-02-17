@@ -3,7 +3,7 @@
 
 <head>
     <title>@yield('title', 'Imakom Unpab')</title>
-    <meta name="description" content="@yield('description')">
+    <meta name="description" content="@yield('description', '')">
     <link rel="shortcut icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <link rel="icon" href="{{ url('./images/logo_imakom.webp') }}" type="image/x-icon" />
     <meta charset="utf-8">

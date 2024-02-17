@@ -27,12 +27,12 @@
     </div>
 
     <!-- ARTIKEL -->
-    <div class="tertienary py-16" id="first-content">
+    <div class="tertienary pt-16">
         <div class="content">
             <div class="row">
                 <div class="col-6">
                     <h3 class="font-bold mb-2 text-2xl">Tentang IMAKOM</h3>
-                    <p class="text-lg">
+                    <p class="text-md lg:text-lg">
                         Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi (IMAKOM-UNPAB) bersifat mandiri,
                         kekeluargaan, adil, aspiratif, artisipatif, representatif, efektif, efisien, beserta transparan.
                         IMAKOM-UNPAB diselenggarakan berdasarkan prinsip dari, oleh, dan untuk mahasiswa komputer dengan
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-6">
                     <h3 class="font-bold mb-2 text-2xl">Visi</h3>
-                    <ol class="list-decimal list-inside text-lg">
+                    <ol class="list-decimal list-inside text-md lg:text-lg">
                         <li>
                             Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi diharapkan dapat menjadi suatu
                             kesatuan yang utuh dalam mewujudkan solidaritas dan sinergi
@@ -55,7 +55,7 @@
                     </ol>
                     <x-heading-line/>
                     <h3 class="font-bold mb-2 text-2xl">Misi</h3>
-                    <ol class="list-decimal list-inside text-lg">
+                    <ol class="list-decimal list-inside text-md lg:text-lg">
                         <li>
                             Menaungi mahasiswa komputer UNPAB agar dapat menjadi pribadi yang bermafaat bagi masyarakat.
                         </li>
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Struktur Kepengurusan -->
-    <div class="text-center mt-20">
+    <div class="text-center mt-10">
         <h3 class="text-3xl px-2 lg:px-0 font-bold">
             STRUKTUR KEPENGURUSAN IMAKOM
         </h3>
@@ -88,7 +88,7 @@
     </div>
 
     <div class="grid justify-center">
-        <div class="container">
+        <div class="container mx-3 mb-0">
             @foreach ($lead as $l)
             <div class="card">
                 <div class="content">
@@ -121,7 +121,7 @@
             </div>
             @endforeach
         </div>
-        <div class="container">
+        <div class="container mx-3 mt-0">
             @foreach ($secretary as $secr)
             <div class="card">
                 <div class="content">
