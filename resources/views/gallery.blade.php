@@ -1,9 +1,8 @@
-@section('title', 'Galeri - Imakom Unpab')
-@section('description', 'Documentation each do work plan in organization, describe each event to show for public about anything do in organization')
+@section('title', 'Galeri | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('./images/foto_imakom2.webp') }}" />
+            <img src="{{ url('images/foto_imakom2.webp') }}" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
@@ -12,7 +11,7 @@
                         <!-- <img class="responsive-img logo-stempel" src="images/logo imakom.png" /> -->
                     </div>
                     <div class="col-6">
-                        <h1 class="text-3xl" style=" color:tomato;">GALERY KEGIATAN IMAKOM </h1>
+                        <h1 class="text-3xl text-red-500">GALERY KEGIATAN IMAKOM </h1>
                         <p class="text-lg">Dokumentasi dari setiap kegiatan yang dilakukan oleh imakom.</p>
                     </div>
                 </div>

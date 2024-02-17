@@ -1,5 +1,4 @@
-@section('title', 'Artikel - Imakom Unpab')
-@section('description', 'List of article posted about news in technology, entreprenuer, and event or agenda in organization')
+@section('title', 'Artikel | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         {{-- <div class="image">
@@ -11,7 +10,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-6">
         <div class="col-span-4 pr-0 pl-0 lg:pl-20 lg:pr-0 py-10">
             <div class="block w-screen p-5">
-                <h2 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Terbaru </h2>
+                <h1 class="text-2xl text-center lg:text-left font-extrabold"> Artikel Terbaru </h1>
             </div>
             @foreach ($all_article as $all)
                 <article

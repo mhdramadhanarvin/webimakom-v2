@@ -1,12 +1,11 @@
-@section('title', $detail_cabor->game_name . ' - Imakom Unpab')
-@section('description', $detail_cabor->game_name . ' is one of the games that will be competed in the Pekan Esport Vol. 2 Esport.')
+@section('title', $detail_cabor->game_name . ' | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
         <div class="overlay content-center first-content tertienary">
         </div>
     </div>
     <div class="px-3 max-w-4xl mx-auto my-20">
-        <h1 class="text-center text-6xl font-bold">{{ $detail_cabor->game_name }}</h1>
+        <h1 class="text-center text-5xl font-bold">{{ $detail_cabor->game_name }}</h1>
         <div class="bg-cover">
             <img class="relative h-auto max-w-lg max-h-60 rounded-lg mx-auto my-5" src="{{ $detail_cabor->thumbnail == null ? url('/images/default.webp') : asset('storage' . $detail_cabor->thumbnail) }}" alt="">
         </div>
