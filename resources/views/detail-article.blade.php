@@ -78,7 +78,7 @@
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <a href="{{ route('article.detail', ['slug' => $related->slug]) }}" aria-label="Thumbnail related artikel {{ $related->title }}">
                             <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
-                                src="{{ asset('storage/' . $related->thumbnail) }}" alt="" />
+                                src="{{ asset('storage/' . $related->thumbnail) }}" alt="Thumbnail related article {{ $related->title }}" />
                         </a>
                     </div>
                     <div class="">

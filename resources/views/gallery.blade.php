@@ -2,13 +2,12 @@
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[40em]">
         <div class="image">
-            <img src="{{ url('images/foto_imakom2.webp') }}" />
+            <img src="{{ url('images/foto_imakom2.webp') }}" alt="Background Gallery"/>
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
                     <div class="col-6">
-                        <!-- <img class="responsive-img logo-stempel" src="images/logo imakom.png" /> -->
                     </div>
                     <div class="col-6">
                         <h1 class="text-3xl text-red-500">GALERY KEGIATAN IMAKOM </h1>
@@ -17,8 +16,6 @@
                 </div>
             </div>
         </div>
-
-
         <!-- ARTIKEL -->
     </div>
     <div class="row p-4">
@@ -39,12 +36,12 @@
                         </h2>
                         <div id="collapse{{ $row }}" class="!visible {{ $row > 0 ? 'hidden' : '' }}" data-te-collapse-item {{ $row > 0 ? '' : 'data-te-collapse-show' }} aria-labelledby="heading{{ $row }}" data-te-parent="#accordionExample">
                             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                                @foreach ($cat->galleries as $gallery)
+                                @foreach ($cat->galleries as $row => $gallery)
                                 {{-- <div class="px-5 py-4"> --}}
                                 {{-- <div class="-m-1 flex flex-wrap md:-m-2">
                                             <div class="flex w-1/3 flex-wrap"> --}}
                                 <div class="relative max-w-96 p-1 md:p-2">
-                                    <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{ $gallery->photo == null ? url('./images/default.webp') : asset('storage/' . $gallery->photo) }}" />
+                                    <img class="block h-full w-full rounded-lg object-cover object-center" src="{{ $gallery->photo == null ? url('./images/default.webp') : asset('storage/' . $gallery->photo) }}" alt="Image Gallery {{ $cat->name }} {{ $row }}"/>
                                     <div class="absolute top-0 left-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-60 hover:bg-black text-white rounded-lg object-cover object-center">
                                         <div class="flex-row text-center">
                                             <h3 class="text-gray-50 font-bold text-lg">
