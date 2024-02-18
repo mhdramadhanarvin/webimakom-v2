@@ -1,9 +1,6 @@
 @section('title', 'Artikel | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
-        {{-- <div class="image">
-            <img src="{{ url('./images/foto_imakom2.webp') }}" />
-        </div> --}}
         <div class="overlay content-center first-content tertienary">
         </div>
     </div>
@@ -18,7 +15,7 @@
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <a href="{{ route('article.detail', ['slug' => $all->slug]) }}" aria-label="Thumbnail Artikel link ke {{ $all->title }}">
                             <img class="rounded-2xl object-cover h-60 w-full lg:w-60"
-                                src="{{ asset('storage/' . $all->thumbnail) }}" alt="" />
+                                src="{{ asset('storage/' . $all->thumbnail) }}" alt="Thumbnail {{ $all->title }}" />
                         </a>
                     </div>
                     <div class="py-4 sm:py-8">
@@ -38,7 +35,7 @@
                         <div class="flex items-center">
                             <img class="h-10 w-10 rounded-full object-cover"
                                 src="{{ $all->user->photo == null ? url('./images/default.webp') : asset('storage/' . $all->user->photo) }}"
-                                alt="Simon Lewis" />
+                                alt="Photo profile author {{ $all->title }}" />
                             <p class="ml-4 w-56">
                                 <strong class="block font-medium text-gray-700">{{ $all->user->name }}</strong>
                                 <span class="text-sm text-gray-400">{{ $all->user->roles()->first()->name }}</span>
@@ -66,7 +63,7 @@
                     <div class="shrink-0 my-4 md:mr-8 md:max-w-sm">
                         <a href="{{ route('article.detail', ['slug' => $popular->slug]) }}" aria-label="Thumbnail artikel popular {{ $popular->title }}">
                             <img class="rounded-2xl object-cover h-48 lg:h-32 w-screen lg:w-32"
-                                src="{{ asset('storage/' . $popular->thumbnail) }}" alt="" />
+                                src="{{ asset('storage/' . $popular->thumbnail) }}" alt="Thumbnail popular article {{ $popular->title }}" />
                         </a>
                     </div>
                     <div class="">

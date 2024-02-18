@@ -2,13 +2,13 @@
     <!-- HEADER -->
     <div class="fullscreen full-image lg:max-h-[40em] max-h-full">
         <div class="image">
-            <img src="{{ url('images/pancabudi.webp') }}" alt="" />
+            <img src="{{ url('images/pancabudi.webp') }}" alt="Background Bangunan Pancabudi" />
         </div>
         <div class="overlay content-center first-content tertienary">
             <div class="content">
                 <div class="row">
                     <div class="col-6 flex justify-center lg:justify-normal mb-10 lg:mb-0">
-                        <img class="responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.webp') }}" alt="">
+                        <img class="hidden lg:block responsive-img logo-stempel lg:max-h-full max-h-52 lg:max-w-full max-w-52" src="{{ url('./images/logo_imakom.webp') }}" alt="Logo Imakom">
                     </div>
                     <div class="col-6">
                         <span class="text-4xl">Selamat datang di</span>
@@ -81,8 +81,8 @@
             TA 2023/2024
         </span>
         <div class="inline-flex">
-            <img src="{{ url('./images/logo_imakom.webp') }}" width="70" height="70" alt="">
-            <img src="{{ url('./images/logo_pancabudi.webp') }}" width="70" height="70" alt="">
+            <img src="{{ url('./images/logo_imakom.webp') }}" width="70" height="70" alt="Logo Mini Imakom">
+            <img src="{{ url('./images/logo_pancabudi.webp') }}" width="70" height="70" alt="Logo Mini Pancabudi">
         </div>
     </div>
 
@@ -92,7 +92,7 @@
             <div class="card">
                 <div class="content">
                     <div class="imgBx">
-                        <img src="{{ $l->photo == null ? url('./images/default.webp') : asset('storage/' . $l->photo) }}" alt="">
+                        <img src="{{ $l->photo == null ? url('./images/default.webp') : asset('storage/' . $l->photo) }}" alt="Foto {{ $l->name }}">
                     </div>
                     <div class="contentBx">
                         <h2 class="text-xl">{{ $l->name }}<br><span class="text-yellow-300 text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($l->position->name))->replace('_', ' ')) . ' Umum' }}</span>
@@ -125,7 +125,7 @@
             <div class="card">
                 <div class="content">
                     <div class="imgBx">
-                        <img src="{{ $secr->photo == null ? url('./images/default.webp') : asset('storage/' . $secr->photo) }}" alt="">
+                        <img src="{{ $secr->photo == null ? url('./images/default.webp') : asset('storage/' . $secr->photo) }}" alt="Foto {{ $secr->name }}">
                     </div>
                     <div class="contentBx">
                         <h2 class="text-xl">{{ $secr->name }}<br><span class="text-yellow-300 text-lg">{{ str()->ucwords(Illuminate\Support\Str::of(str()->snake($secr->position->name))->replace('_', ' ')) . ' Umum' }}</span>

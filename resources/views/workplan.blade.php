@@ -1,11 +1,8 @@
 @section('title', 'Program Kerja | Ikatan Mahasiswa Komputer Universitas Pembangunan Panca Budi')
 <x-new-app-layout>
     <div class="fullscreen full-image max-h-[7em]">
-        {{-- <div class="image">
-            <img src="{{ url('./images/foto_imakom2.jpeg') }}" />
-    </div> --}}
-    <div class="overlay content-center first-content tertienary">
-    </div>
+        <div class="overlay content-center first-content tertienary">
+        </div>
     </div>
     <!-- component -->
     <section class="dark:bg-gray-800 dark:text-gray-100">
