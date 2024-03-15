@@ -154,7 +154,7 @@ Contoh
 2. Buat branch baru dari issue tersebut.
 ![Alt text](docs/create-branch.png)
 ![Alt text](docs/image-1.png)
-3. Jalankan perintah ini di local.
+3. Jalankan perintah ini di local..
 
     ```bash
     # fetch semua perubahan dari origin termasuk branch baru
