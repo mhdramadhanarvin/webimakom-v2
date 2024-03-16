@@ -2,12 +2,17 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\PekanEsportStatusEnum;
 use App\Filament\Resources\PekanEsportResource\Pages;
+use App\Http\Controllers\PekanEsportController;
 use App\Infolists\Components\PekanEsportImageEntry;
 // use App\Filament\Resources\PekanEsportResource\RelationManagers;
 use App\Models\PekanEsport;
+use Filament\Forms\Components\TextInput;
 // use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Infolists\Components\Actions;
+use Filament\Infolists\Components\Actions\Action as ActionInfolist;
 use Filament\Infolists\Components\Grid;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
@@ -17,6 +22,8 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Infolists\Components\KeyValueEntry;
+use Filament\Tables\Actions\Action;
+
 // use Illuminate\Database\Eloquent\Builder;
 // use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -71,13 +78,30 @@ class PekanEsportResource extends Resource
                 //
             ])
             ->actions([
+                Action::make('approve')
+                    ->icon('heroicon-c-check')
+                    ->color('success')
+                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                    ->requiresConfirmation()
+                    ->action(fn (PekanEsport $record) => (new PekanEsportController)->approve($record)),
+                Action::make('reject')
+                    ->icon('heroicon-c-x-mark')
+                    ->color('danger')
+                    ->form([
+                        TextInput::make('reason')
+                            ->label('Alasan Penolakan')
+                            ->required(),
+                    ])
+                    ->requiresConfirmation()
+                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                    ->action(fn (array $data, PekanEsport $record) => (new PekanEsportController)->reject($record, $data)),
                 Tables\Actions\ViewAction::make(),
                 // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 
@@ -87,6 +111,7 @@ class PekanEsportResource extends Resource
             ->schema([
                 Section::make("")
                     ->schema([
+                        TextEntry::make('status')->label('Status')->badge(),
                         TextEntry::make('team_name')->label('Nama Tim'),
                         TextEntry::make('game.game_name')->label('Cabang Olahraga Game'),
                         TextEntry::make('email'),
@@ -100,6 +125,25 @@ class PekanEsportResource extends Resource
                         PekanEsportImageEntry::make('screenshot_profile_player')->label('Screenshot Profile Pemain'),
                         PekanEsportImageEntry::make('identity_player')->label('Identitas Pemain'),
                         PekanEsportImageEntry::make('proof_of_payment')->label('Bukti Pembayaran'),
+                        Actions::make([
+                            ActionInfolist::make('approve')
+                                ->icon('heroicon-c-check')
+                                ->color('success')
+                                ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                                ->requiresConfirmation()
+                                ->action(fn (PekanEsport $record) => (new PekanEsportController)->approve($record)),
+                            ActionInfolist::make('reject')
+                                ->icon('heroicon-c-x-mark')
+                                ->color('danger')
+                                ->form([
+                                    TextInput::make('reason')
+                                        ->label('Alasan Penolakan')
+                                        ->required(),
+                                ])
+                                ->requiresConfirmation()
+                                ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                                ->action(fn (array $data, PekanEsport $record) => (new PekanEsportController)->reject($record, $data)),
+                        ])->fullWidth(),
                     ])
             ]);
     }

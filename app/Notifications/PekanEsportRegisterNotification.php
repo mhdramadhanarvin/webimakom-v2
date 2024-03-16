@@ -2,12 +2,13 @@
 
 namespace App\Notifications;
 
+use App\Enums\PekanEsportStatusEnum;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class PekanEsportRegisterSuccess extends Notification
+class PekanEsportRegisterNotification extends Notification
 {
     use Queueable;
 
@@ -34,15 +35,23 @@ class PekanEsportRegisterSuccess extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
-        // return (new MailMessage)
-        //     ->greeting('Hai ' . $notifiable->player_name[0])
-        //     ->line('Terima kasih telah mendaftar di Pekan Esport Vol. 2')
-        //     // ->action('Notification Action', url('/'))
-        //     ->line('Berikut rangkuman data yang kami terima :');
-
+        switch ($notifiable->status) {
+            case PekanEsportStatusEnum::WAITING_CONFIRMATION:
+                $subject = 'Pendaftaran Pekan Esport Vol. 2';
+                $markdownFile = 'mail.pekanesport.registration';
+                break;
+            case PekanEsportStatusEnum::APPROVED:
+                $subject = 'Lolos Verifikasi Pendaftaran Pekan Esport Vol. 2';
+                $markdownFile = 'mail.pekanesport.approved';
+                break;
+            case PekanEsportStatusEnum::REJECTED:
+                $subject = 'Tidak Lolos Verifikasi Pendaftaran Pekan Esport Vol. 2';
+                $markdownFile = 'mail.pekanesport.rejected';
+                break;
+        }
         return (new MailMessage)
-            ->subject('Pendaftaran Pekan Esport Vol. 2')
-            ->markdown('mail.pekanesport.registration', ['notifiable' => $notifiable]);
+            ->subject($subject)
+            ->markdown($markdownFile, ['notifiable' => $notifiable]);
     }
 
     /**

@@ -1,8 +1,9 @@
 <x-mail::message>
 # Hai, {{ $notifiable->team_name }}
 
-Terima kasih sudah mendaftar pada **Pekan E-Sport Vol. 2**
-Berikut rangkuman data yang kami terima.
+Terima kasih sudah mendaftar pada **Pekan E-Sport Vol. 2**\
+Dapat kami sampaikan bahwa tim dengan detail informasi dibawah ini dinyatakan
+**Lolos Verifikasi** sebagai peserta pada **Pekan E-Sport Vol. 2**
 
 <x-mail::table>
 |                 |                                    |
@@ -36,8 +37,8 @@ Berikut rangkuman data yang kami terima.
 <x-mail::subcopy>
 </x-mail::subcopy>
 
-Mohon simpan pesan ini sebagai bukti bahwa telah melakukan pendaftaran.
-Silahkan tunggu maksimal 2x24 jam untuk dilakukan verifikasi data dan akan diinformasikan melalui email.
+Mohon simpan pesan ini sebagai bukti bahwa pendaftaran telah **Lolos Verifikasi**
+dan selanjutnya tim kami akan menghubungi melalui kontak whatsapp yang diberikan.
 
 Salam,<br>
 {{ config('app.name') }}

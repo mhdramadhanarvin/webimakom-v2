@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\PekanEsportStatusEnum;
 use App\Http\Requests\PekanEsportFormValidation;
 use App\Models\Cabor;
 use App\Models\Content;
 use App\Models\PekanEsport;
-use App\Notifications\PekanEsportRegisterSuccess;
+use App\Notifications\PekanEsportRegisterNotification;
 use Illuminate\Support\Facades\DB;
-// use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class PekanEsportController extends Controller
@@ -79,12 +79,13 @@ class PekanEsportController extends Controller
                 'player_name'       => $request->name_player,
                 'nickname_player'   => $request->nickname_player,
                 'id_player'         => $request->id_player,
-                'screenshot_profile_player'         => $pathSSProfile,
-                'identity_player'         => $pathIdentityCard,
-                'proof_of_payment' => $pathProofOfPayment
+                'screenshot_profile_player' => $pathSSProfile,
+                'identity_player' => $pathIdentityCard,
+                'proof_of_payment' => $pathProofOfPayment,
+                'status' => PekanEsportStatusEnum::WAITING_CONFIRMATION
             ]);
 
-            $pekanesport->notify(new PekanEsportRegisterSuccess);
+            $pekanesport->notify(new PekanEsportRegisterNotification);
 
             DB::commit();
             return redirect()->route('pekanesport.form')->with([
@@ -98,5 +99,32 @@ class PekanEsportController extends Controller
                 'message' => $e->getMessage()
             ]);
         }
+    }
+
+    public function approve(PekanEsport $pekanEsport)
+    {
+        DB::beginTransaction();
+        try {
+            $pekanEsport->update(['status' => 'approved']);
+            $pekanEsport->notify(new PekanEsportRegisterNotification);
+            DB::commit();
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            return $e->getMessage();
+        }
+    }
+
+    public function reject(PekanEsport $pekanEsport, $data)
+    {
+        DB::beginTransaction();
+        try {
+            $pekanEsport->update(['status' => 'rejected', 'reason' => $data['reason']]);
+            $pekanEsport->notify(new PekanEsportRegisterNotification);
+            DB::commit();
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            return $e->getMessage();
+        }
+        $pekanEsport->update(['status' => 'rejected', 'reason' => $data['reason']]);
     }
 }
