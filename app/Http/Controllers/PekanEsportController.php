@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\PekanEsportStatusEnum;
 use App\Http\Requests\PekanEsportFormValidation;
 use App\Models\Cabor;
 use App\Models\Content;
 use App\Models\PekanEsport;
-use App\Notifications\PekanEsportRegisterSuccess;
-// use Illuminate\Http\Request;
+use App\Notifications\PekanEsportRegisterNotification;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class PekanEsportController extends Controller
@@ -30,42 +31,100 @@ class PekanEsportController extends Controller
 
     public function form(): View
     {
-        $optionCabor = Cabor::all();
+        $optionCabor = Cabor::withCount(['registered' => function ($query) {
+            $query->where('status', 'confirmed');
+        }])->get();
         return view('form-pekanesport', compact('optionCabor'));
     }
 
     public function formSubmit(PekanEsportFormValidation $request)
     {
-        $pathSSProfile = [];
-        foreach ($request->file('ss_game') as $key => $file) {
-            $pathSSProfile[$key] = $file->storeAs(
-                'public/ss_game',
-                md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+        DB::beginTransaction();
+        try {
+
+            $cabor =  Cabor::withCount(['registered' => function ($query) {
+                $query->where('status', 'confirmed');
+            }])->find($request->game_id);
+
+            if ($cabor->registered_count >= $cabor->max_registered) {
+                throw new \Exception("Slot tim untuk cabor " . $cabor->game_name . " sudah penuh, silahkan mendaftar pada cabor lain.");
+            }
+
+            $pathSSProfile = [];
+            foreach ($request->file('ss_game') as $key => $file) {
+                $pathSSProfile[$key] = $file->storeAs(
+                    'public/ss_game',
+                    md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+                );
+            }
+
+            $pathIdentityCard = [];
+            foreach ($request->file('identity_card') as $key => $file) {
+                $pathIdentityCard[$key] = $file->storeAs(
+                    'public/identity_card',
+                    md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
+                );
+            }
+            $proof_of_payment = $request->file('proof_of_payment');
+            $pathProofOfPayment = $proof_of_payment->storeAs(
+                'public/proof_of_payment',
+                md5(uniqid(rand(), true)) . "." . $proof_of_payment->getClientOriginalExtension()
             );
+
+            $pekanesport = PekanEsport::create([
+                'game_id'           => $request->game_id,
+                'team_name'         => $request->team_name,
+                'whatsapp_number'   => $request->whatsapp_leader,
+                'email'             => $request->email,
+                'player_name'       => $request->name_player,
+                'nickname_player'   => $request->nickname_player,
+                'id_player'         => $request->id_player,
+                'screenshot_profile_player' => $pathSSProfile,
+                'identity_player' => $pathIdentityCard,
+                'proof_of_payment' => $pathProofOfPayment,
+                'status' => PekanEsportStatusEnum::WAITING_CONFIRMATION
+            ]);
+
+            $pekanesport->notify(new PekanEsportRegisterNotification);
+
+            DB::commit();
+            return redirect()->route('pekanesport.form')->with([
+                'status' => true,
+                'message' => "Terima kasih telah melakukan perdaftaran, selanjutnya menunggu verifikasi oleh tim IMAKOM - UNPAB dan akan diinformasikan melalui email yang didaftarkan."
+            ]);
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            return redirect()->route('pekanesport.form')->with([
+                'status' => false,
+                'message' => $e->getMessage()
+            ]);
         }
+    }
 
-        $pathIdentityCard = [];
-        foreach ($request->file('identity_card') as $key => $file) {
-            $pathIdentityCard[$key] = $file->storeAs(
-                'public/identity_card',
-                md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
-            );
+    public function approve(PekanEsport $pekanEsport)
+    {
+        DB::beginTransaction();
+        try {
+            $pekanEsport->update(['status' => 'approved']);
+            $pekanEsport->notify(new PekanEsportRegisterNotification);
+            DB::commit();
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            return $e->getMessage();
         }
+    }
 
-        $pekanesport = PekanEsport::create([
-            'game_id'           => $request->game_id,
-            'team_name'         => $request->team_name,
-            'whatsapp_number'   => $request->whatsapp_leader,
-            'email'             => $request->email,
-            'player_name'       => $request->name_player,
-            'nickname_player'   => $request->nickname_player,
-            'id_player'         => $request->id_player,
-            'screenshot_profile_player'         => $pathSSProfile,
-            'identity_player'         => $pathIdentityCard,
-        ]);
-
-        $pekanesport->notify(new PekanEsportRegisterSuccess);
-
-        return redirect()->route('pekanesport.form')->with('status', true);
+    public function reject(PekanEsport $pekanEsport, $data)
+    {
+        DB::beginTransaction();
+        try {
+            $pekanEsport->update(['status' => 'rejected', 'reason' => $data['reason']]);
+            $pekanEsport->notify(new PekanEsportRegisterNotification);
+            DB::commit();
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            return $e->getMessage();
+        }
+        $pekanEsport->update(['status' => 'rejected', 'reason' => $data['reason']]);
     }
 }

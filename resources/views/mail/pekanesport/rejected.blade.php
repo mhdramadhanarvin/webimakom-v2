@@ -1,8 +1,10 @@
 <x-mail::message>
 # Hai, {{ $notifiable->team_name }}
 
-Terima kasih sudah mendaftar pada **Pekan E-Sport Vol. 2**
-Berikut rangkuman data yang kami terima.
+Terima kasih sudah mendaftar pada **Pekan E-Sport Vol. 2**\
+Dapat kami sampaikan bahwa tim dengan detail informasi dibawah ini dinyatakan
+**Tidak Lolos Verifikas** sebagai peserta pada **Pekan E-Sport Vol. 2**
+dikarenakan **{{ $notifiable->reason }}**
 
 <x-mail::table>
 |                 |                                    |
@@ -36,8 +38,8 @@ Berikut rangkuman data yang kami terima.
 <x-mail::subcopy>
 </x-mail::subcopy>
 
-Mohon simpan pesan ini sebagai bukti bahwa telah melakukan pendaftaran.
-Silahkan tunggu maksimal 2x24 jam untuk dilakukan verifikasi data dan akan diinformasikan melalui email.
+Mohon maaf atas ketidaknyamanan ini, namun apabila ada hal-hal yang kurang jelas
+dan ingin dipertanyakan bisa hubungi kami dengan balas pesan email ini.
 
 Salam,<br>
 {{ config('app.name') }}

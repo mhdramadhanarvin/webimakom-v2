@@ -14,7 +14,8 @@ class Cabor extends Model
         'game_name',
         'slug',
         'description',
-        'thumbnail'
+        'thumbnail',
+        'max_registered'
     ];
 
     public function registered(): HasMany

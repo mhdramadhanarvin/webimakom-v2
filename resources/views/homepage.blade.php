@@ -13,7 +13,7 @@
                     <div class="col-6">
                         <span class="text-4xl">Selamat datang di</span>
                         <span class="text-4xl text-violet-500 inline-block">IMAKOM</span>
-                        <h1 class="text-md lg:text-xl">
+                        <h1 class="text-base lg:text-xl">
                             <span class="text-red-500">Ikatan Mahasiswa Komputer (IMAKOM) </span>
                             merupakan organisasi resmi kemahasiswaan pada tingkat program studi sebagai eksekutor di
                             Universitas Pembangunan Panca Budi.
@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-6">
                     <h3 class="font-bold mb-2 text-2xl">Tentang IMAKOM</h3>
-                    <p class="text-md lg:text-lg">
+                    <p class="text-base lg:text-lg">
                         Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi (IMAKOM-UNPAB) bersifat mandiri,
                         kekeluargaan, adil, aspiratif, artisipatif, representatif, efektif, efisien, beserta transparan.
                         IMAKOM-UNPAB diselenggarakan berdasarkan prinsip dari, oleh, dan untuk mahasiswa komputer dengan
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-6">
                     <h3 class="font-bold mb-2 text-2xl">Visi</h3>
-                    <ol class="list-decimal list-inside text-md lg:text-lg">
+                    <ol class="list-decimal list-inside text-base lg:text-lg">
                         <li>
                             Ikatan Mahasiswa Imakom Universitas Pembangunan Panca Budi diharapkan dapat menjadi suatu
                             kesatuan yang utuh dalam mewujudkan solidaritas dan sinergi
@@ -54,7 +54,7 @@
                     </ol>
                     <x-heading-line/>
                     <h3 class="font-bold mb-2 text-2xl">Misi</h3>
-                    <ol class="list-decimal list-inside text-md lg:text-lg">
+                    <ol class="list-decimal list-inside text-base lg:text-lg">
                         <li>
                             Menaungi mahasiswa komputer UNPAB agar dapat menjadi pribadi yang bermafaat bagi masyarakat.
                         </li>

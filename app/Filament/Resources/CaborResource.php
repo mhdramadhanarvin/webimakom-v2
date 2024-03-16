@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\PekanEsportStatusEnum;
 use App\Filament\Resources\CaborResource\Pages;
-// use App\Filament\Resources\CaborResource\RelationManagers;
 use App\Models\Cabor;
-// use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\RichEditor;
@@ -18,8 +17,6 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
-// use Illuminate\Database\Eloquent\Builder;
-// use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CaborResource extends Resource
 {
@@ -64,6 +61,9 @@ class CaborResource extends Resource
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('1:1')
                     ->required(),
+                TextInput::make('max_registered')
+                    ->label('Max Slot Tim Mendaftar')
+                    ->required(),
                 Grid::make(1)
                     ->schema([
                         RichEditor::make('description')
@@ -96,7 +96,11 @@ class CaborResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('game_name')->label('Nama Game'),
-                TextColumn::make('registered_count')->label('Jumlah Pendaftar')->counts('registered'),
+                TextColumn::make('registered_count')
+                    ->label('Jumlah Pendaftar Dikonfirmasi')
+                    ->getStateUsing(fn ($record) => $record->registered()->where('status', PekanEsportStatusEnum::APPROVED)->count()),
+                TextColumn::make('max_registered')
+                    ->label('Max Slot Tim Mendaftar'),
                 ImageColumn::make('thumbnail')
                     ->defaultImageUrl(url('./images/default.webp')),
                 TextColumn::make('created_at')
