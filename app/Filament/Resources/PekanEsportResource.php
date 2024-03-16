@@ -55,8 +55,13 @@ class PekanEsportResource extends Resource
                 TextColumn::make('whatsapp_number')->label('Nomor Whatsapp')->searchable(),
                 TextColumn::make('game.game_name')
                     ->sortable()
+                    ->searchable()
                     ->label('Cabor Game')
                     ->badge(),
+                TextColumn::make('status')
+                    ->label('Status')
+                    ->badge()
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime('d M Y H:i')
                     ->label('Daftar Pada')
@@ -94,6 +99,7 @@ class PekanEsportResource extends Resource
                         KeyValueEntry::make('id_player')->label('ID Pemain')->keyLabel('Property name')->valueLabel('Property value'),
                         PekanEsportImageEntry::make('screenshot_profile_player')->label('Screenshot Profile Pemain'),
                         PekanEsportImageEntry::make('identity_player')->label('Identitas Pemain'),
+                        PekanEsportImageEntry::make('proof_of_payment')->label('Bukti Pembayaran'),
                     ])
             ]);
     }

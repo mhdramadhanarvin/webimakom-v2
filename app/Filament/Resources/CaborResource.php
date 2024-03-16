@@ -64,6 +64,9 @@ class CaborResource extends Resource
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('1:1')
                     ->required(),
+                TextInput::make('max_registered')
+                    ->label('Max Slot Tim Mendaftar')
+                    ->required(),
                 Grid::make(1)
                     ->schema([
                         RichEditor::make('description')
@@ -97,6 +100,8 @@ class CaborResource extends Resource
             ->columns([
                 TextColumn::make('game_name')->label('Nama Game'),
                 TextColumn::make('registered_count')->label('Jumlah Pendaftar')->counts('registered'),
+                TextColumn::make('max_registered')
+                    ->label('Max Slot Tim Mendaftar'),
                 ImageColumn::make('thumbnail')
                     ->defaultImageUrl(url('./images/default.webp')),
                 TextColumn::make('created_at')
