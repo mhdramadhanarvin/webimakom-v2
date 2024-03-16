@@ -6,15 +6,11 @@ use App\Enums\PekanEsportStatusEnum;
 use App\Filament\Resources\PekanEsportResource\Pages;
 use App\Http\Controllers\PekanEsportController;
 use App\Infolists\Components\PekanEsportImageEntry;
-// use App\Filament\Resources\PekanEsportResource\RelationManagers;
 use App\Models\PekanEsport;
 use Filament\Forms\Components\TextInput;
-// use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Infolists\Components\Actions;
 use Filament\Infolists\Components\Actions\Action as ActionInfolist;
-use Filament\Infolists\Components\Fieldset;
-use Filament\Infolists\Components\Grid;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
@@ -25,9 +21,6 @@ use Filament\Tables\Table;
 use Filament\Infolists\Components\KeyValueEntry;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Filters\SelectFilter;
-
-// use Illuminate\Database\Eloquent\Builder;
-// use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class PekanEsportResource extends Resource
 {
