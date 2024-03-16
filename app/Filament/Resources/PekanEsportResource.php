@@ -183,6 +183,6 @@ class PekanEsportResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::count();
+        return static::getModel()::where('status', PekanEsportStatusEnum::WAITING_CONFIRMATION)->count();
     }
 }
