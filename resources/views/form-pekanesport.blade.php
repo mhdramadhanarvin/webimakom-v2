@@ -182,7 +182,6 @@
                                     <div class="mt-2 text-left">
                                         Silahkan lakukan pembayaran sesuai dengan biaya pendaftaran masing masing cabang olahraga (Cabor) ke rekening dibawah ini
                                         <ul class="mt-2 font-bold">
-                                            <li>BSI 7211222306 a/n Desti Amanda.</li>
                                             <li>DANA 0858 3148 8786 a/n Desti Amanda.</li>
                                         </ul>
                                     </div>
