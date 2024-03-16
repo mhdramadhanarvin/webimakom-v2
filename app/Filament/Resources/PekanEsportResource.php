@@ -13,6 +13,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Infolists\Components\Actions;
 use Filament\Infolists\Components\Actions\Action as ActionInfolist;
+use Filament\Infolists\Components\Fieldset;
 use Filament\Infolists\Components\Grid;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
@@ -23,6 +24,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Infolists\Components\KeyValueEntry;
 use Filament\Tables\Actions\Action;
+use Filament\Tables\Filters\SelectFilter;
 
 // use Illuminate\Database\Eloquent\Builder;
 // use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -75,7 +77,8 @@ class PekanEsportResource extends Resource
                     ->sortable()
             ])
             ->filters([
-                //
+                SelectFilter::make('status')
+                    ->options(PekanEsportStatusEnum::class),
             ])
             ->actions([
                 Action::make('approve')
@@ -102,6 +105,14 @@ class PekanEsportResource extends Resource
                 // Tables\Actions\BulkActionGroup::make([
                 //     Tables\Actions\DeleteBulkAction::make(),
                 // ]),
+            ])->groups([
+                Tables\Grouping\Group::make('created_at')
+                    ->label('Tanggal Daftar')
+                    ->date()
+                    ->collapsible(),
+                Tables\Grouping\Group::make('status')
+                    ->label('Status')
+                    ->collapsible(),
             ]);
     }
 
@@ -109,22 +120,31 @@ class PekanEsportResource extends Resource
     {
         return $infolist
             ->schema([
-                Section::make("")
+                Section::make("Detail Pendaftar")
                     ->schema([
-                        TextEntry::make('status')->label('Status')->badge(),
-                        TextEntry::make('team_name')->label('Nama Tim'),
-                        TextEntry::make('game.game_name')->label('Cabang Olahraga Game'),
-                        TextEntry::make('email'),
-                        TextEntry::make('whatsapp_number')->label('Nomor Whatsapp'),
-                        TextEntry::make('created_at')
-                            ->label('Daftar Pada')
-                            ->dateTime('d M Y H:i'),
-                        KeyValueEntry::make('player_name')->label('Name Pemain')->keyLabel('Property name')->valueLabel('Property value'),
-                        KeyValueEntry::make('nickname_player')->label('Nickname Pemain')->keyLabel('Property name')->valueLabel('Property value'),
-                        KeyValueEntry::make('id_player')->label('ID Pemain')->keyLabel('Property name')->valueLabel('Property value'),
-                        PekanEsportImageEntry::make('screenshot_profile_player')->label('Screenshot Profile Pemain'),
-                        PekanEsportImageEntry::make('identity_player')->label('Identitas Pemain'),
-                        PekanEsportImageEntry::make('proof_of_payment')->label('Bukti Pembayaran'),
+                        Section::make()->columns(['sm' => 5])->schema([
+                            TextEntry::make('status')->label('Status')->badge(),
+                            TextEntry::make('reason')->label('Alasan Penolakan')->default('-'),
+                        ]),
+                        Section::make()->columns(['sm' => 5])->schema([
+                            TextEntry::make('team_name')->label('Nama Tim'),
+                            TextEntry::make('game.game_name')->label('Cabang Olahraga Game'),
+                            TextEntry::make('created_at')
+                                ->label('Daftar Pada')
+                                ->dateTime('d M Y H:i'),
+                            TextEntry::make('email'),
+                            TextEntry::make('whatsapp_number')->label('Nomor Whatsapp'),
+                        ]),
+                        Section::make()->columns(['sm' => 3])->schema([
+                            KeyValueEntry::make('player_name')->label('Name Pemain')->keyLabel('Property name')->valueLabel('Property value'),
+                            KeyValueEntry::make('nickname_player')->label('Nickname Pemain')->keyLabel('Property name')->valueLabel('Property value'),
+                            KeyValueEntry::make('id_player')->label('ID Pemain')->keyLabel('Property name')->valueLabel('Property value'),
+                        ]),
+                        Section::make()->columns(['sm' => 3])->schema([
+                            PekanEsportImageEntry::make('screenshot_profile_player')->label('Screenshot Profile Pemain'),
+                            PekanEsportImageEntry::make('identity_player')->label('Identitas Pemain'),
+                            PekanEsportImageEntry::make('proof_of_payment')->label('Bukti Pembayaran'),
+                        ]),
                         Actions::make([
                             ActionInfolist::make('approve')
                                 ->icon('heroicon-c-check')
