@@ -52,9 +52,16 @@ class PekanEsportResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('team_name')->label('Nama Tim')->sortable()->searchable(),
-                TextColumn::make('email')->label('Email')->searchable(),
-                TextColumn::make('whatsapp_number')->label('Nomor Whatsapp')->searchable(),
+                TextColumn::make('team_name')
+                    ->label('Nama Tim')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('email')
+                    ->label('Email')
+                    ->searchable(),
+                TextColumn::make('whatsapp_number')
+                    ->label('Nomor Whatsapp')
+                    ->searchable(),
                 TextColumn::make('game.game_name')
                     ->sortable()
                     ->searchable()
@@ -116,27 +123,46 @@ class PekanEsportResource extends Resource
                 Section::make("Detail Pendaftar")
                     ->schema([
                         Section::make()->columns(['sm' => 5])->schema([
-                            TextEntry::make('status')->label('Status')->badge(),
-                            TextEntry::make('reason')->label('Alasan Penolakan')->default('-'),
+                            TextEntry::make('status')
+                                ->label('Status')
+                                ->badge(),
+                            TextEntry::make('reason')
+                                ->label('Alasan Penolakan')
+                                ->default('-'),
                         ]),
                         Section::make()->columns(['sm' => 5])->schema([
-                            TextEntry::make('team_name')->label('Nama Tim'),
-                            TextEntry::make('game.game_name')->label('Cabang Olahraga Game'),
+                            TextEntry::make('team_name')
+                                ->label('Nama Tim'),
+                            TextEntry::make('game.game_name')
+                                ->label('Cabang Olahraga Game'),
                             TextEntry::make('created_at')
                                 ->label('Daftar Pada')
                                 ->dateTime('d M Y H:i'),
                             TextEntry::make('email'),
-                            TextEntry::make('whatsapp_number')->label('Nomor Whatsapp'),
+                            TextEntry::make('whatsapp_number')
+                                ->label('Nomor Whatsapp'),
                         ]),
                         Section::make()->columns(['sm' => 3])->schema([
-                            KeyValueEntry::make('player_name')->label('Name Pemain')->keyLabel('Property name')->valueLabel('Property value'),
-                            KeyValueEntry::make('nickname_player')->label('Nickname Pemain')->keyLabel('Property name')->valueLabel('Property value'),
-                            KeyValueEntry::make('id_player')->label('ID Pemain')->keyLabel('Property name')->valueLabel('Property value'),
+                            KeyValueEntry::make('player_name')
+                                ->label('Name Pemain')
+                                ->keyLabel('Property name')
+                                ->valueLabel('Property value'),
+                            KeyValueEntry::make('nickname_player')
+                                ->label('Nickname Pemain')
+                                ->keyLabel('Property name')
+                                ->valueLabel('Property value'),
+                            KeyValueEntry::make('id_player')
+                                ->label('ID Pemain')
+                                ->keyLabel('Property name')
+                                ->valueLabel('Property value'),
                         ]),
                         Section::make()->columns(['sm' => 3])->schema([
-                            PekanEsportImageEntry::make('screenshot_profile_player')->label('Screenshot Profile Pemain'),
-                            PekanEsportImageEntry::make('identity_player')->label('Identitas Pemain'),
-                            PekanEsportImageEntry::make('proof_of_payment')->label('Bukti Pembayaran'),
+                            PekanEsportImageEntry::make('screenshot_profile_player')
+                                ->label('Screenshot Profile Pemain'),
+                            PekanEsportImageEntry::make('identity_player')
+                                ->label('Identitas Pemain'),
+                            PekanEsportImageEntry::make('proof_of_payment')
+                                ->label('Bukti Pembayaran'),
                         ]),
                         Actions::make([
                             ActionInfolist::make('approve')
