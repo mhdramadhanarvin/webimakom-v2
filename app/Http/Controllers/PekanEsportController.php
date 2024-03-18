@@ -9,6 +9,7 @@ use App\Models\Content;
 use App\Models\PekanEsport;
 use App\Notifications\PekanEsportRegisterNotification;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
 class PekanEsportController extends Controller
@@ -32,7 +33,7 @@ class PekanEsportController extends Controller
     public function form(): View
     {
         $optionCabor = Cabor::withCount(['registered' => function ($query) {
-            $query->where('status', 'confirmed');
+            $query->where('status', PekanEsportStatusEnum::APPROVED);
         }])->get();
         return view('form-pekanesport', compact('optionCabor'));
     }
@@ -43,7 +44,7 @@ class PekanEsportController extends Controller
         try {
 
             $cabor =  Cabor::withCount(['registered' => function ($query) {
-                $query->where('status', 'confirmed');
+                $query->where('status', PekanEsportStatusEnum::APPROVED);
             }])->find($request->game_id);
 
             if ($cabor->registered_count >= $cabor->max_registered) {
@@ -94,6 +95,7 @@ class PekanEsportController extends Controller
             ]);
         } catch (\Throwable $e) {
             DB::rollBack();
+            Log::error($e->getMessage());
             return redirect()->route('pekanesport.form')->with([
                 'status' => false,
                 'message' => $e->getMessage()
