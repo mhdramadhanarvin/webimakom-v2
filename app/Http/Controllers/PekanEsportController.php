@@ -91,7 +91,7 @@ class PekanEsportController extends Controller
             DB::commit();
             return redirect()->route('pekanesport.form')->with([
                 'status' => true,
-                'message' => "Terima kasih telah melakukan perdaftaran, selanjutnya menunggu verifikasi oleh tim IMAKOM - UNPAB dan akan diinformasikan melalui email yang didaftarkan."
+                'message' => "Terima kasih telah melakukan perdaftaran, selanjutnya menunggu verifikasi oleh tim PEKAN E-SPORT V-2 UNPAB dan akan diinformasikan melalui email yang didaftarkan."
             ]);
         } catch (\Throwable $e) {
             DB::rollBack();
