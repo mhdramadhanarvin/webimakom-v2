@@ -7,6 +7,7 @@ use App\Filament\Resources\PekanEsportResource\Pages;
 use App\Http\Controllers\PekanEsportController;
 use App\Infolists\Components\PekanEsportImageEntry;
 use App\Models\PekanEsport;
+use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Infolists\Components\Actions;
@@ -39,14 +40,58 @@ class PekanEsportResource extends Resource
     {
         return __('Pendaftar');
     }
-
-    public static function form(Form $form): Form
+    
+    public static function form(Form $form, ?PekanEsport $pekanesport = null): Form
     {
-        return $form
-            ->schema([
-                //
-            ]);
+        $playerNameEntries = [];
+
+        $form = $form->schema([
+            TextInput::make('team_name')
+                ->label('Nama Tim')
+                ->placeholder('Masukkan Nama Tim')
+                ->required(),
+
+            TextInput::make('email')
+                ->label('Email')
+                ->placeholder('Masukkan Email')
+                ->required(),
+
+            TextInput::make('whatsapp_number')
+                ->label('Nomor WhatsApp Tim')
+                ->placeholder('Masukkan Nomor WhatsApp')
+                ->required(),
+
+            // KeyValueEntry::make('player_name')
+            //     ->label('Nama Pemain')
+            //     ->keyLabel('Nama')
+            //     ->valueLabel('Masukkan Nama Pemain')
+            //     ->value($pekanesport ? $pekanesport->player_name : '')
+            //     ->editable(true),
+        ]);
+
+        if ($pekanesport) {
+            $playerNames = json_decode($pekanesport->player_name, true);
+
+            // foreach ($playerNames as $key => $value) {
+            //     $playerNameEntries[] = KeyValueEntry::make('player_name_' . $key)
+            //         ->label('Player ' . $key)
+            //         ->keyLabel('Player ' . $key)
+            //         ->valueLabel('Nama Pemain')
+            //         ->value($value)
+            //         ->editable(true);
+            // }
+
+            $form->schema($playerNameEntries);
+        }
+
+        if ($pekanesport) {
+            $form->getModel()->fill($pekanesport);
+        }
+
+        return $form;
     }
+
+    
 
     public static function table(Table $table): Table
     {
