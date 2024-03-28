@@ -63,12 +63,14 @@
                         Screenshot Profile Game Pemain 1
                     </label>
                     <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="ss_game" name="ss_game[player1]" type="file" accept="image/png, image/jpeg, image/jpg" required>
+                    <span class="text-xs">Format file jpg, jpeg, png, dengan ukuran maksimal 2MB.</span>
                 </div>
                 <div class="mb-5">
                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="ktp">
                         Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain 1
                     </label>
                     <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="ktp" name="identity_card[player1]" type="file" accept="image/png, image/jpeg, image/jpg" required>
+                    <span class="text-xs">Format file jpg, jpeg, png, dengan ukuran maksimal 2MB.</span>
                 </div>
                 <div class="mb-5">
                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -76,6 +78,7 @@
                         <span class="underline underline-offset-2 text-blue-800" @click="payment= true">(Lihat Petunjuk)</span>
                     </label>
                     <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" id="proof_of_payment" name="proof_of_payment" type="file" accept="image/png, image/jpeg, image/jpg" required>
+                    <span class="text-xs">Format file jpg, jpeg, png, dengan ukuran maksimal 2MB.</span>
                 </div>
 
 
@@ -107,12 +110,14 @@
                                     Screenshot Profile Game Pemain <span x-text="index+2"></span></label>
                                 </label>
                                 <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" :id="index+'ss_game'" :name="'ss_game[player'+ increment(index) +']'" type="file" accept="image/png, image/jpeg, image/jpg" required>
+                                <span class="text-xs">Format file jpg, jpeg, png, dengan ukuran maksimal 2MB.</span>
                             </div>
                             <div class="mb-5">
                                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" :for="index+'ktp'">
                                     Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah Pemain <span x-text="index+2"></span></label>
                                 </label>
                                 <input class="bg-slate-100 text-gray-900 text-sm rounded-lg border border-slate-300 focus:ring-purple-700 focus:border-blue-500 block w-full p-2.5 placeholder-zinc-400" :id="index+'ktp'" type="file" :name="'identity_card[player'+ increment(index) +']'" accept="image/png, image/jpeg, image/jpg" required>
+                                <span class="text-xs">Format file jpg, jpeg, png, dengan ukuran maksimal 2MB.</span>
                             </div>
                         </div>
                     </template>
