@@ -123,6 +123,8 @@ class PekanEsportResource extends Resource
             ->filters([
                 SelectFilter::make('status')
                     ->options(PekanEsportStatusEnum::class),
+                SelectFilter::make('game.game_name')
+                    ->relationship('game', 'game_name'),
             ])
             ->actions([
                 Action::make('approve')
