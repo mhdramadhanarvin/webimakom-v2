@@ -8,6 +8,7 @@ use App\Models\Cabor;
 use App\Models\Content;
 use App\Models\PekanEsport;
 use App\Notifications\PekanEsportRegisterNotification;
+use App\Services\InterventionImage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
@@ -53,24 +54,17 @@ class PekanEsportController extends Controller
 
             $pathSSProfile = [];
             foreach ($request->file('ss_game') as $key => $file) {
-                $pathSSProfile[$key] = $file->storeAs(
-                    'public/ss_game',
-                    md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
-                );
+                $pathSSProfile[$key] = (new InterventionImage($file, 'public/ss_game'))->compress(60);
             }
 
             $pathIdentityCard = [];
             foreach ($request->file('identity_card') as $key => $file) {
-                $pathIdentityCard[$key] = $file->storeAs(
-                    'public/identity_card',
-                    md5(uniqid(rand(), true)) . "." . $file->getClientOriginalExtension()
-                );
+                $pathIdentityCard[$key] = (new InterventionImage($file, 'public/identity_card'))->compress(60);
             }
+
             $proof_of_payment = $request->file('proof_of_payment');
-            $pathProofOfPayment = $proof_of_payment->storeAs(
-                'public/proof_of_payment',
-                md5(uniqid(rand(), true)) . "." . $proof_of_payment->getClientOriginalExtension()
-            );
+            $pathProofOfPayment = (new InterventionImage($proof_of_payment, 'public/proof_of_payment'))->compress(60);
+
 
             $pekanesport = PekanEsport::create([
                 'game_id'           => $request->game_id,
@@ -91,7 +85,7 @@ class PekanEsportController extends Controller
             DB::commit();
             return redirect()->route('pekanesport.form')->with([
                 'status' => true,
-                'message' => "Terima kasih telah melakukan perdaftaran, selanjutnya menunggu verifikasi oleh tim PEKAN E-SPORT V-2 UNPAB dan akan diinformasikan melalui email yang didaftarkan."
+                'message' => "Terima kasih telah melakukan perdaftaran, selanjutnya menunggu verifikasi oleh tim Pekan Esport Vol. 2 UNPAB dan akan diinformasikan melalui email yang didaftarkan."
             ]);
         } catch (\Throwable $e) {
             DB::rollBack();
