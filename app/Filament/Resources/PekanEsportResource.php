@@ -7,8 +7,10 @@ use App\Filament\Resources\PekanEsportResource\Pages;
 use App\Http\Controllers\PekanEsportController;
 use App\Infolists\Components\PekanEsportImageEntry;
 use App\Models\PekanEsport;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Form;
 use Filament\Infolists\Components\Actions;
 use Filament\Infolists\Components\Actions\Action as ActionInfolist;
@@ -40,58 +42,55 @@ class PekanEsportResource extends Resource
     {
         return __('Pendaftar');
     }
-    
+
     public static function form(Form $form, ?PekanEsport $pekanesport = null): Form
     {
-        $playerNameEntries = [];
+        return $form
+            ->schema([
 
-        $form = $form->schema([
-            TextInput::make('team_name')
-                ->label('Nama Tim')
-                ->placeholder('Masukkan Nama Tim')
-                ->required(),
-
-            TextInput::make('email')
-                ->label('Email')
-                ->placeholder('Masukkan Email')
-                ->required(),
-
-            TextInput::make('whatsapp_number')
-                ->label('Nomor WhatsApp Tim')
-                ->placeholder('Masukkan Nomor WhatsApp')
-                ->required(),
-
-            // KeyValueEntry::make('player_name')
-            //     ->label('Nama Pemain')
-            //     ->keyLabel('Nama')
-            //     ->valueLabel('Masukkan Nama Pemain')
-            //     ->value($pekanesport ? $pekanesport->player_name : '')
-            //     ->editable(true),
-        ]);
-
-        if ($pekanesport) {
-            $playerNames = json_decode($pekanesport->player_name, true);
-
-            // foreach ($playerNames as $key => $value) {
-            //     $playerNameEntries[] = KeyValueEntry::make('player_name_' . $key)
-            //         ->label('Player ' . $key)
-            //         ->keyLabel('Player ' . $key)
-            //         ->valueLabel('Nama Pemain')
-            //         ->value($value)
-            //         ->editable(true);
-            // }
-
-            $form->schema($playerNameEntries);
-        }
-
-        if ($pekanesport) {
-            $form->getModel()->fill($pekanesport);
-        }
-
-        return $form;
+                // ToggleButtons::make('status')
+                //     ->options(PekanEsportStatusEnum::class)
+                //     ->inline(),
+                // TextInput::make('team_name')
+                //     ->label('Nama Tim')
+                //     ->placeholder('Masukkan Nama Tim')
+                //     ->required(),
+                //
+                // TextInput::make('email')
+                //     ->label('Email')
+                //     ->placeholder('Masukkan Email')
+                //     ->required(),
+                //
+                // TextInput::make('whatsapp_number')
+                //     ->label('Nomor WhatsApp Tim')
+                //     ->placeholder('Masukkan Nomor WhatsApp')
+                //     ->required(),
+                //
+                // Grid::make('')
+                //     ->columns(3)
+                //     ->schema([
+                //         Repeater::make('player_name')
+                //             ->simple(
+                //                 TextInput::make('player_name')
+                //                     ->required(),
+                //             )->mutateRelationshipDataBeforeSaveUsing(function (array $data): array {
+                //                 dd($data);
+                //             }),
+                //         Repeater::make('nickname_player')
+                //             ->simple(
+                //                 TextInput::make('nickname_player')
+                //                     ->required(),
+                //             ),
+                //         Repeater::make('id_player')
+                //             ->simple(
+                //                 TextInput::make('id_player')
+                //                     ->required(),
+                //             ),
+                //     ]),
+            ]);
     }
 
-    
+
 
     public static function table(Table $table): Table
     {
