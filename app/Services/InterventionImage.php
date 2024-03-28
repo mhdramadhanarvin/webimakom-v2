@@ -17,9 +17,7 @@ class InterventionImage
     {
         $this->file = $file;
         $this->pathDestination = $pathDestination;
-        // dd($this->file);
         $this->manager = Image::make($existingFile == false ? $this->file->getRealPath() : $this->file);
-        // dd($this->manager);
     }
 
     public function compress($quality)

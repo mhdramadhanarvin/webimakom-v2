@@ -48,7 +48,7 @@ class PekanEsportFormValidation extends FormRequest
         return [
             'ss_game.*.max' => 'Screenshot Profile Game maksimal ukuran 2MB',
             'identity_card.*.max' => 'Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah maksimal ukuran 2MB',
-            'proof_of_payment.max' => 'Bukti Pembayaran tidak maksimal ukuran 2MB',
+            'proof_of_payment.max' => 'Bukti Pembayaran maksimal ukuran 2MB',
         ];
     }
 }
