@@ -28,8 +28,27 @@ class PekanEsportFormValidation extends FormRequest
             'name_player.*' => ['required', 'string', 'max:255'],
             'nickname_player.*' => ['required', 'string', 'max:255'],
             'id_player.*' => ['required', 'string', 'max:255'],
-            'ss_game.*' => ['required', 'file'],
-            'identity_card.*' => ['required', 'file'],
+            'ss_game.*' => ['required', 'image', 'max:2048'],
+            'identity_card.*' => ['required', 'image', 'max:2048'],
+            'proof_of_payment' => ['required', 'image', 'max:2048'],
+        ];
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'ss_game.*' => 'Screenshot Profile Game',
+            'identity_card.*' => 'Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah',
+            'proof_of_payment' => 'Bukti Pembayaran',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'ss_game.*.max' => 'Screenshot Profile Game maksimal ukuran 2MB',
+            'identity_card.*.max' => 'Kartu Tanda Penduduk / Kartu Pelajar / Raport Sekolah maksimal ukuran 2MB',
+            'proof_of_payment.max' => 'Bukti Pembayaran tidak maksimal ukuran 2MB',
         ];
     }
 }
