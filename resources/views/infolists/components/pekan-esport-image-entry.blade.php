@@ -1,7 +1,7 @@
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php $totalData = count(\Illuminate\Support\Arr::wrap($getState()));@endphp
     @foreach (\Illuminate\Support\Arr::wrap($getState()) as $key => $state)
-    <x-filament::modal>
+    <x-filament::modal width="4xl">
         <x-slot name="trigger">
             <x-filament::button>
                 {{ $totalData == 1 ? "Lihat" : ucwords($key) }}
