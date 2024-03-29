@@ -147,8 +147,7 @@ class PekanEsportResource extends Resource
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
-            ->bulkActions([
-            ])->groups([
+            ->bulkActions([])->groups([
                 Tables\Grouping\Group::make('created_at')
                     ->label('Tanggal Daftar')
                     ->date()
