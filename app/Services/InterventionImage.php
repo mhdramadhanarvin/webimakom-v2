@@ -29,10 +29,12 @@ class InterventionImage
         $tmpFilePath = sys_get_temp_dir() . '/' . Str::uuid()->toString();
         file_put_contents($tmpFilePath, $encoded);
         $tmpFile = new File($tmpFilePath);
-        return (string) Storage::putFileAs(
+        $fullUrl = (string) Storage::putFileAs(
             $this->pathDestination,
             $tmpFile,
             md5(uniqid(rand(), true)) . "." . $this->file->getClientOriginalExtension()
         );
+
+        return Str::remove('public/', $fullUrl);
     }
 }
