@@ -48,7 +48,6 @@ class PekanEsportResource extends Resource
     {
         return $form
             ->schema([
-
                 ToggleButtons::make('status')
                     ->options(PekanEsportStatusEnum::class)
                     ->inline(),
