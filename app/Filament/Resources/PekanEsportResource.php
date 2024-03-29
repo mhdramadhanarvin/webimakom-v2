@@ -50,7 +50,8 @@ class PekanEsportResource extends Resource
             ->schema([
                 ToggleButtons::make('status')
                     ->options(PekanEsportStatusEnum::class)
-                    ->inline(),
+                    ->inline()
+                    ->disabled(),
                 TextInput::make('team_name')
                     ->label('Nama Tim')
                     ->placeholder('Masukkan Nama Tim')
@@ -144,7 +145,8 @@ class PekanEsportResource extends Resource
                     ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
                     ->action(fn (array $data, PekanEsport $record) => (new PekanEsportController)->reject($record, $data)),
                 Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION),
             ])
             ->bulkActions([])->groups([
                 Tables\Grouping\Group::make('created_at')
