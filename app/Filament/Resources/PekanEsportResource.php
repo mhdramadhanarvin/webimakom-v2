@@ -74,17 +74,23 @@ class PekanEsportResource extends Resource
                             ->simple(
                                 TextInput::make('player_name')
                                     ->required(),
-                            ),
+                            )
+                            ->addable(false)
+                            ->deletable(false),
                         Repeater::make('nickname_player')
                             ->simple(
                                 TextInput::make('nickname_player')
                                     ->required(),
-                            ),
+                            )
+                            ->addable(false)
+                            ->deletable(false),
                         Repeater::make('id_player')
                             ->simple(
                                 TextInput::make('id_player')
                                     ->required(),
-                            ),
+                            )
+                            ->addable(false)
+                            ->deletable(false),
                     ]),
                 FileUpload::make('proof_of_payment')
                     ->label('Bukti Pembayaran')
@@ -100,6 +106,7 @@ class PekanEsportResource extends Resource
             ->columns([
                 TextColumn::make('team_name')
                     ->label('Nama Tim')
+                    ->limit(15)
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('whatsapp_number')
@@ -159,7 +166,8 @@ class PekanEsportResource extends Resource
                 Tables\Grouping\Group::make('game.game_name')
                     ->label('Game')
                     ->collapsible(),
-            ]);
+            ])
+            ->defaultSort('created_at', 'desc');
     }
 
     public static function infolist(Infolist $infolist): Infolist
