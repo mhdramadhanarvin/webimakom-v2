@@ -25,6 +25,8 @@ use Filament\Tables\Table;
 use Filament\Infolists\Components\KeyValueEntry;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Filters\SelectFilter;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Database\Eloquent\Builder;
 
 class PekanEsportResource extends Resource
 {
@@ -127,6 +129,7 @@ class PekanEsportResource extends Resource
                     ->sortable()
             ])
             ->filters([
+                Tables\Filters\TrashedFilter::make(),
                 SelectFilter::make('status')
                     ->options(PekanEsportStatusEnum::class),
                 SelectFilter::make('game_id')
@@ -137,7 +140,7 @@ class PekanEsportResource extends Resource
                 Action::make('approve')
                     ->icon('heroicon-c-check')
                     ->color('success')
-                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION && $record->trashed() != true)
                     ->requiresConfirmation()
                     ->action(fn (PekanEsport $record) => (new PekanEsportController)->approve($record)),
                 Action::make('reject')
@@ -149,13 +152,19 @@ class PekanEsportResource extends Resource
                             ->required(),
                     ])
                     ->requiresConfirmation()
-                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION && $record->trashed() != true)
                     ->action(fn (array $data, PekanEsport $record) => (new PekanEsportController)->reject($record, $data)),
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make()
-                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION),
+                    ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION && $record->trashed() != true),
             ])
-            ->bulkActions([])->groups([
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\ForceDeleteBulkAction::make(),
+                    Tables\Actions\RestoreBulkAction::make(),
+                ]),
+            ])->groups([
                 Tables\Grouping\Group::make('created_at')
                     ->label('Tanggal Daftar')
                     ->date()
@@ -222,7 +231,7 @@ class PekanEsportResource extends Resource
                             ActionInfolist::make('approve')
                                 ->icon('heroicon-c-check')
                                 ->color('success')
-                                ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                                ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION && $record->trashed() != true)
                                 ->requiresConfirmation()
                                 ->action(fn (PekanEsport $record) => (new PekanEsportController)->approve($record)),
                             ActionInfolist::make('reject')
@@ -234,7 +243,7 @@ class PekanEsportResource extends Resource
                                         ->required(),
                                 ])
                                 ->requiresConfirmation()
-                                ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION)
+                                ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION && $record->trashed() != true)
                                 ->action(fn (array $data, PekanEsport $record) => (new PekanEsportController)->reject($record, $data)),
                         ])->fullWidth(),
                     ])
@@ -265,5 +274,13 @@ class PekanEsportResource extends Resource
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::where('status', PekanEsportStatusEnum::WAITING_CONFIRMATION)->count();
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
     }
 }

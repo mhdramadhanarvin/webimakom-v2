@@ -15,14 +15,15 @@ class EditPekanEsport extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make()
-                ->after(function (PekanEsport $record) {
-                    // delete multiple
-                    foreach ($record->screenshot_profile_player as $value) Storage::delete('public/' . $value);
-                    foreach ($record->identity_player as $value) Storage::delete('public/' . $value);
-                    // delete single
-                    Storage::delete('public/' . $record->proof_of_payment);
-                }),
+            Actions\DeleteAction::make(),
+            // ->after(function (PekanEsport $record) {
+            //     // delete multiple
+            //     foreach ($record->screenshot_profile_player as $value) Storage::delete('public/' . $value);
+            //     foreach ($record->identity_player as $value) Storage::delete('public/' . $value);
+            //     // delete single
+            //     Storage::delete('public/' . $record->proof_of_payment);
+            // }),
+            Actions\RestoreAction::make(),
         ];
     }
 

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Cabor;
+// use App\Models\PekanEsport;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +19,15 @@ class CaborSeeder extends Seeder
             "slug" => "valorant",
             "description" => "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
             "thumbnail" => ""
+        ])->registered()->create([
+            "team_name" => "team",
+            "email" => "user@gmail.com",
+            "whatsapp_number" => "08",
+            "player_name" => json_decode("{\"player1\":\"a\"}"),
+            "nickname_player" => json_decode("{\"player1\":\"a\"}"),
+            "id_player" => json_decode("{\"player1\":\"a\"}"),
+            "screenshot_profile_player" => json_decode("{\"player1\":\"a\"}"),
+            "identity_player" => json_decode("{\"player1\":\"a\"}"),
         ]);
 
         Cabor::create([

@@ -2,7 +2,6 @@
 
 namespace App\Policies;
 
-use App\Enums\PekanEsportStatusEnum;
 use App\Models\User;
 use App\Models\PekanEsport;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -54,7 +53,7 @@ class PekanEsportPolicy
      */
     public function update(User $user, PekanEsport $pekanEsport): bool
     {
-        return $user->can('update_pekan::esport') && $pekanEsport->status == PekanEsportStatusEnum::WAITING_CONFIRMATION;
+        return $user->can('update_pekan::esport');
     }
 
     /**
