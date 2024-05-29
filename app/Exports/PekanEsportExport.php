@@ -7,6 +7,7 @@ use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
+use Illuminate\Support\Str;
 
 class PekanEsportExport implements FromQuery, WithHeadings, WithMapping
 {
@@ -21,7 +22,7 @@ class PekanEsportExport implements FromQuery, WithHeadings, WithMapping
 
     public function query()
     {
-        $query = PekanEsport::query()->select('team_name', 'player_name', 'game_id')
+        $query = PekanEsport::query()->select('team_name', 'player_name', 'game_id', 'proof_of_payment')
             ->with('game:id,game_name'); // Memuat hanya kolom id dan game_name dari tabel game
 
         if (!empty($this->filters['cabor'])) {
@@ -40,7 +41,8 @@ class PekanEsportExport implements FromQuery, WithHeadings, WithMapping
         return [
             'Nama Tim',
             'Nama Pemain',
-            'Cabor',
+            'Cabang Olahraga',
+            'Bukti Pembayaran',
         ];
     }
 
@@ -49,7 +51,8 @@ class PekanEsportExport implements FromQuery, WithHeadings, WithMapping
         return [
             $row->team_name,
             $row->player_name,
-            $row->game->game_name ?? 'N/A', // Mengakses nama game melalui relasi
+            $row->game->game_name, // Mengakses nama game melalui relasi
+            Str::remove('public/', asset('storage/' . $row->proof_of_payment)),
         ];
     }
 }

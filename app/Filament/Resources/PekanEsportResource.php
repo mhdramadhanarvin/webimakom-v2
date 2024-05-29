@@ -29,7 +29,6 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\PekanEsportExport;
-use Filament\Tables\Actions\DownloadAction;
 use App\Models\Cabor;
 use Filament\Forms\Components\Select;
 
@@ -110,6 +109,23 @@ class PekanEsportResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->headerActions([
+                Action::make('export')
+                    ->label('Export to Excel')
+                    ->form([
+                        Select::make('cabor')
+                            ->label('Cabang Olahraga')
+                            ->options(Cabor::all()->pluck('game_name', 'id'))
+                            ->searchable()
+                            ->required(),
+                        Select::make('status')
+                            ->label('Status')
+                            ->options(PekanEsportStatusEnum::class),
+                    ])
+                    ->action(function (array $data) {
+                        return Excel::download(new PekanEsportExport($data), 'PekanEsport-' . now()->toDateString() . '.xlsx');
+                    }),
+            ])
             ->columns([
                 TextColumn::make('team_name')
                     ->label('Nama Tim')
@@ -162,21 +178,6 @@ class PekanEsportResource extends Resource
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make()
                     ->visible(fn ($record) => $record->status == PekanEsportStatusEnum::WAITING_CONFIRMATION && $record->trashed() != true),
-                Action::make('export')
-                    ->label('Export to Excel')
-                    ->form([
-                        Select::make('cabor')
-                            ->label('Cabang Olahraga')
-                            ->options(Cabor::all()->pluck('game_name', 'id'))
-                            ->searchable()
-                            ->required(),
-                        Select::make('status')
-                            ->label('Status')
-                            ->options(PekanEsportStatusEnum::class),
-                    ])
-                    ->action(function (array $data) {
-                        return Excel::download(new PekanEsportExport($data), 'pekan_esport.xlsx');
-                    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
